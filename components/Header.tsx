@@ -117,7 +117,7 @@ export default function Header({
                     className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   >
                     {item.name}
-                  </motion.a>
+                  </a>
                 ))}
               </nav>
             </div>
