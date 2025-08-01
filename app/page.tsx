@@ -6,22 +6,22 @@ import CtaButton from '@/components/CtaButton';
 import BrandChatbot from '@/components/BrandChatbot';
 
 export const metadata: Metadata = {
-  title: 'BrandKernel - Transform Your Brand',
-  description: 'Professional branding solutions that help your business stand out. Join our waitlist for early access.',
-  keywords: 'branding, brand strategy, visual identity, digital presence, brand design',
-  authors: [{ name: 'BrandKernel Team' }],
+  title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
+  description: 'You\'re a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.',
+  keywords: 'brand clarity, founder positioning, strategic dialogue, brand strategy, personal branding, startup clarity',
+  authors: [{ name: 'Max, Founder' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
-    title: 'BrandKernel - Transform Your Brand',
-    description: 'Professional branding solutions that help your business stand out.',
+    title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
+    description: 'You\'re a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BrandKernel - Transform Your Brand',
-    description: 'Professional branding solutions that help your business stand out.',
+    title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
+    description: 'You\'re a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable.',
   }
 };
 
@@ -48,21 +48,38 @@ export default function HomePage() {
                   paddingTop: '100px',
                   paddingBottom: '3rem'
                 }} className="text-brand-black">
-                  Your Breakthrough<br />
-                  Starts With Clarity.
+                  Finally. The Conversation<br />
+                  That Changes Everything.
                 </h1>
                 
-                {/* Hero Description */}
+                {/* Hero Subheadline */}
+                <div style={{ 
+                  fontSize: '1.25rem', 
+                  lineHeight: '1.75rem',
+                  fontWeight: 'bold',
+                  paddingBottom: '2rem'
+                }} className="text-brand-black">
+                  <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
+                </div>
+
+                {/* Hero Body Copy */}
                 <div style={{ 
                   fontSize: '1rem', 
                   lineHeight: '1.5rem',
-                  fontWeight: 'bold',
-                  paddingTop: '3rem',
                   paddingBottom: '3rem'
                 }} className="text-brand-black">
-                  <p>You're a brilliant entrepreneur lost in the noise.</p>
-                  <p>One dialogue away from the clarity that makes you unstoppable.</p>
-                  <p>Welcome to your breakthrough.</p>
+                  <p className="mb-4">You've tried everything.</p>
+                  <p className="mb-4">But you're still stuck. Still invisible. Still wondering why your brilliance isn't breaking through.</p>
+                  <p className="mb-4">Here's what nobody tells you: You're not missing tactics. You're missing clarity.</p>
+                  <p className="mb-4">The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
+                  
+                  <div className="mt-6 space-y-2">
+                    <p><strong>For Founders:</strong> Transform from invisible builder to industry voice</p>
+                    <p><strong>For Freelancers:</strong> Escape the commodity trap with crystal-clear positioning</p>
+                    <p><strong>For Creators:</strong> Turn followers into a real business with strategic clarity</p>
+                  </div>
+                  
+                  <p className="mt-6 font-bold">Your breakthrough is waiting.</p>
                 </div>
 
                 {/* Profession Selection */}
@@ -105,7 +122,17 @@ export default function HomePage() {
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </button>
-                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">247 people already joined</p>
+                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">400+ people already joined</p>
+                </div>
+
+                {/* Max Quote */}
+                <div className="mt-8 p-6 bg-gray-50 rounded-lg border-l-4 border-[#957FFF]">
+                  <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black italic mb-2">
+                    "After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation."
+                  </p>
+                  <p style={{ fontSize: '0.875rem' }} className="text-brand-black/70 font-medium">
+                    - Max, Founder
+                  </p>
                 </div>
               </div>
             </div>
