@@ -42,8 +42,17 @@ function ChatHeader() {
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-[#957FFF] rounded-lg flex items-center justify-center">
+            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
           <div>
             <h3 className="text-sm font-semibold text-brand-black">Felix</h3>
+            <div className="flex items-center gap-1">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="text-xs text-neutral-500">Online</span>
+            </div>
           </div>
         </div>
         <div className="text-xs text-neutral-400 font-medium">
@@ -164,9 +173,9 @@ export default function BrandChatbot() {
       initial={{ opacity: 0, scale: 0.95, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/20 flex flex-col"
+      className="w-full h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/30 flex flex-col"
       style={{
-        background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
+        background: 'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1))',
         backdropFilter: 'blur(20px)',
         boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
         minHeight: '500px'

@@ -97,7 +97,7 @@ export default function Header({
             >
               <a 
                 href="/" 
-                style={{ fontSize: '1.125rem', fontWeight: 'bold' }}
+                style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                 className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
                 aria-label="BrandKernel Home"
               >
@@ -111,7 +111,7 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  style={{ fontSize: '1.125rem', fontWeight: 'bold' }}
+                  style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                   className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
@@ -129,7 +129,7 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  style={{ fontSize: '1.125rem', fontWeight: 'bold' }}
+                  style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                   className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
@@ -141,7 +141,7 @@ export default function Header({
               ))}
               <motion.button
                 onClick={handleJoinWaitlist}
-                style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                 className="bg-brand-white text-brand-black px-5 py-2 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
@@ -269,8 +269,6 @@ export default function Header({
         )}
       </AnimatePresence>
 
-      {/* Spacer for fixed header */}
-      {fixed && <div className="h-16 lg:h-20" />}
     </>
   );
 }

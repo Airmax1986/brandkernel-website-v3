@@ -35,7 +35,7 @@ export default function HomePage() {
 
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="h-screen flex flex-col lg:flex-row z-1">
+        <section id="home" className="h-screen flex flex-col lg:flex-row" style={{ zIndex: 1, marginTop: '0rem', paddingTop: '0rem' }}>
           {/* Left Side - White Background */}
           <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative">
             <div className="flex-1 flex flex-col justify-center items-center px-6">
@@ -43,8 +43,8 @@ export default function HomePage() {
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
                 <h1 style={{ 
-                  fontSize: '8.5rem', 
-                  lineHeight: '9.2rem',
+                  fontSize: '6rem', 
+                  lineHeight: '6rem',
                   fontWeight: 'normal',
                   paddingBottom: '100px'
                 }} className="text-brand-black">
@@ -54,8 +54,8 @@ export default function HomePage() {
                 
                 {/* Hero Description */}
                 <div style={{ 
-                  fontSize: '1.25rem', 
-                  lineHeight: '2.2rem',
+                  fontSize: '1rem', 
+                  lineHeight: '1.5rem',
                   fontWeight: 'bold',
                   paddingBottom: '100px'
                 }} className="text-brand-black">
@@ -65,23 +65,48 @@ export default function HomePage() {
                 </div>
 
                 {/* Profession Selection */}
-                <div>
+                <div className="mb-8">
                   <p style={{ 
-                    fontSize: '1.25rem', 
-                    lineHeight: '2.2rem',
+                    fontSize: '1rem', 
+                    lineHeight: '1.5rem',
                     fontWeight: 'bold'
                   }} className="text-brand-black mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <button style={{ fontSize: '1.25rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <button style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Freelancer
                     </button>
-                    <button style={{ fontSize: '1.25rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <button style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Founder
                     </button>
-                    <button style={{ fontSize: '1.25rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <button style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Creator
                     </button>
                   </div>
+                </div>
+
+                {/* Waitlist Form */}
+                <div className="text-left">
+                  <p style={{ 
+                    fontSize: '1rem', 
+                    lineHeight: '1.5rem',
+                    fontWeight: 'bold'
+                  }} className="text-brand-black mb-4">Join our Waitlist</p>
+                  <div className="flex items-center gap-2 max-w-md">
+                    <div className="flex-1 relative">
+                      <input
+                        type="email"
+                        placeholder="name@email.com"
+                        style={{ fontSize: '1rem' }}
+                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
+                      />
+                    </div>
+                    <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 mt-2">247 people already joined</p>
                 </div>
               </div>
             </div>
@@ -99,179 +124,64 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* Manifest Section */}
-        <section id="manifest" className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
-                Our Manifest
-              </h2>
-              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
-                We believe that every brand has a unique story to tell. Our mission is to help you discover, 
-                refine, and share that story with the world in a way that resonates with your audience and drives growth.
-              </p>
-              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
-                <a href="/manifest" className="text-white">Read Full Manifest</a>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Approach Section */}
-        <section id="approach" className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
-                Our Approach
-              </h2>
-              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
-                We take a strategic, research-driven approach to branding. Every project begins with deep discovery 
-                to understand your business, audience, and market position before we craft your brand identity.
-              </p>
-              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
-                <a href="/approach" className="text-white">Learn About Our Approach</a>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <section id="how-it-works" className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
-                How It Works
-              </h2>
-              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
-                Our proven 4-step process takes you from brand confusion to brand clarity. 
-                We guide you through discovery, strategy, design, and implementation phases.
-              </p>
-              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
-                <a href="/how-it-works" className="text-white">See Our Process</a>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section id="features" className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
-                Features
-              </h2>
-              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
-                From logo design to complete brand systems, we offer comprehensive branding solutions 
-                that cover every aspect of your brand identity and communications.
-              </p>
-              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
-                <a href="/features" className="text-white">Explore Features</a>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
-                Pricing
-              </h2>
-              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
-                Transparent, value-based pricing that scales with your needs. 
-                From startup packages to enterprise solutions, we have options for every business size.
-              </p>
-              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
-                <a href="/pricing" className="text-white">View Pricing Plans</a>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Waitlist Section - Centered */}
-        <section className="py-20 bg-gradient-to-br from-[#DAFF96] to-[#957FFF]">
-          <div className="container mx-auto px-6">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
-                Join Our Waitlist
-              </h2>
-              <p style={{ fontSize: '1.25rem' }} className="text-brand-black mb-8 leading-relaxed">
-                Be the first to access our branding services when we launch. 
-                Get exclusive early access, special pricing, and priority support.
-              </p>
-              <div className="flex items-center gap-2 mb-3 max-w-md mx-auto">
-                <div className="flex-1 relative">
-                  <input
-                    type="email"
-                    placeholder="name@email.com"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent text-base shadow-sm"
-                  />
-                </div>
-                <button className="bg-white text-brand-black p-3 rounded-lg hover:bg-neutral-50 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-              <p className="text-sm text-brand-black/80">247 people already joined</p>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
       <footer className="bg-brand-black text-brand-white py-12">
-        <div className="container-ultra">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              
+              {/* Brand */}
+              <div className="mb-6 md:mb-0 text-center md:text-left">
+                <h3 style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="text-brand-white mb-2">
+                  BrandKernel
+                </h3>
+                <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400">
+                  Your breakthrough starts with clarity.
+                </p>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+                <a href="/about" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">About</a>
+                <a href="/blog" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Blog</a>
+                <a href="/privacy" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Privacy</a>
+                <a href="/terms" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Terms</a>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                <a href="#" className="text-neutral-400 hover:text-brand-white transition-colors duration-200" aria-label="Twitter">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a href="#" className="text-neutral-400 hover:text-brand-white transition-colors duration-200" aria-label="LinkedIn">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+                <a href="#" className="text-neutral-400 hover:text-brand-white transition-colors duration-200" aria-label="Instagram">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.017 0C8.396 0 7.989.013 6.808.06 5.63.107 4.793.266 4.076.502 3.339.747 2.707 1.092 2.076 1.724.444 3.355.099 3.987-.145 4.724c-.236.717-.395 1.554-.442 2.732C-.04 8.637-.027 9.044-.027 12.664s-.013 4.027.06 5.208c.047 1.178.206 2.015.442 2.732.244.737.589 1.369 1.221 2.001.632.632 1.264.977 2.001 1.221.717.236 1.554.395 2.732.442 1.181.047 1.588.06 5.208.06s4.027-.013 5.208-.06c1.178-.047 2.015-.206 2.732-.442.737-.244 1.369-.589 2.001-1.221.632-.632.977-1.264 1.221-2.001.236-.717.395-1.554.442-2.732.047-1.181.06-1.588.06-5.208s-.013-4.027-.06-5.208c-.047-1.178-.206-2.015-.442-2.732C23.2.746 22.855.114 22.223.482c-.632-.632-1.264-.977-2.001-1.221C19.505.025 18.668-.134 17.49-.181 16.309-.228 15.902-.241 12.282-.241h-.265zm-.265 2.401c3.584 0 4.009.014 5.42.06 1.308.059 2.019.273 2.491.454.626.243 1.073.534 1.543 1.004.47.47.761.917 1.004 1.543.181.472.395 1.183.454 2.491.046 1.411.06 1.836.06 5.42s-.014 4.009-.06 5.42c-.059 1.308-.273 2.019-.454 2.491-.243.626-.534 1.073-1.004 1.543-.47.47-.917.761-1.543 1.004-.472.181-1.183.395-2.491.454-1.411.046-1.836.06-5.42.06s-4.009-.014-5.42-.06c-1.308-.059-2.019-.273-2.491-.454-.626-.243-1.073-.534-1.543-1.004-.47-.47-.761-.917-1.004-1.543-.181-.472-.395-1.183-.454-2.491-.046-1.411-.06-1.836-.06-5.42s.014-4.009.06-5.42c.059-1.308.273-2.019.454-2.491.243-.626.534-1.073 1.004-1.543.47-.47.917-.761 1.543-1.004.472-.181 1.183-.395 2.491-.454 1.411-.046 1.836-.06 5.42-.06z"/>
+                    <path d="M12.017 15.33c-1.797 0-3.254-1.457-3.254-3.254s1.457-3.254 3.254-3.254 3.254 1.457 3.254 3.254-1.457 3.254-3.254 3.254zM12.017 7.729c-2.56 0-4.637 2.077-4.637 4.637s2.077 4.637 4.637 4.637 4.637-2.077 4.637-4.637-2.077-4.637-4.637-4.637z"/>
+                    <circle cx="16.806" cy="7.207" r="1.078"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
             
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-bold text-brand-green">BrandKernel</h3>
-              <p className="text-neutral-400 text-sm mt-1">
-                Transform Your Brand Into a Powerful Story
+            {/* Copyright */}
+            <div className="border-t border-neutral-800 mt-8 pt-6 text-center">
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400">
+                © 2025 BrandKernel. All rights reserved.
               </p>
             </div>
-
-            <div className="flex items-center space-x-6">
-              <a 
-                href="#" 
-                className="text-neutral-400 hover:text-brand-green transition-colors duration-200"
-                aria-label="Twitter"
-              >
-                Twitter
-              </a>
-              <a 
-                href="#" 
-                className="text-neutral-400 hover:text-brand-green transition-colors duration-200"
-                aria-label="LinkedIn"
-              >
-                LinkedIn
-              </a>
-              <a 
-                href="#" 
-                className="text-neutral-400 hover:text-brand-green transition-colors duration-200"
-                aria-label="Instagram"
-              >
-                Instagram
-              </a>
-            </div>
-          </div>
-          
-          <div className="border-t border-neutral-800 mt-8 pt-8 text-center">
-            <p className="text-neutral-400 text-sm">
-              © 2025 BrandKernel. All rights reserved.
-            </p>
           </div>
         </div>
       </footer>
 
-      {/* Floating Waitlist Form (shows on scroll) */}
-      <WaitlistForm 
-        variant="floating"
-        showCounter={true}
-        isHidden={false}
-      />
     </div>
   );
 }
