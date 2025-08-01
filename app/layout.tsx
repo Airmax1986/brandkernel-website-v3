@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import FooterController from "@/components/FooterController";
 
 const inter = Inter({ subsets: ["latin"], weight: ["300", "500", "700"] });
 
@@ -26,7 +25,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
-        <FooterController />
       </body>
     </html>
   );

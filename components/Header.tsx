@@ -89,8 +89,9 @@ export default function Header({
         <div className="w-full">
           <div className="flex" style={{ height: '3rem' }}>
             
-            {/* Left 50% - Logo */}
-            <div className="w-[50vw] flex items-center justify-start px-6">
+            {/* Left 50% - Logo + Main Navigation */}
+            <div className="w-[50vw] bg-white flex items-center justify-between px-6">
+              {/* Logo */}
               <motion.div
                 className="flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
@@ -105,12 +106,7 @@ export default function Header({
                   BrandKernel
                 </a>
               </motion.div>
-            </div>
 
-            {/* Right 50% - Main Navigation + Secondary Nav + Sign Up */}
-            <div className="w-[50vw] flex items-center justify-between px-6" style={{
-              background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
-            }}>
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
                 {navItems.map((item, index) => (
@@ -128,7 +124,12 @@ export default function Header({
                   </motion.a>
                 ))}
               </nav>
+            </div>
 
+            {/* Right 50% - Secondary Nav + Sign Up */}
+            <div className="w-[50vw] flex items-center justify-end px-6" style={{
+              background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
+            }}>
               {/* Secondary Nav + Sign Up */}
               <div className="hidden md:flex items-center space-x-3">
                 {secondaryNavItems.map((item, index) => (
