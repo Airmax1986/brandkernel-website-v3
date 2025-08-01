@@ -34,10 +34,10 @@ export default function HomePage() {
 
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="h-screen flex flex-col lg:flex-row" style={{ zIndex: 1, marginTop: '-3rem', paddingTop: '3rem' }}>
+        <section id="home" className="min-h-screen flex flex-col lg:flex-row absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
           {/* Left Side - White Background */}
           <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative">
-            <div className="flex-1 flex flex-col justify-center items-center px-6">
+            <div className="flex-1 flex flex-col justify-center items-center px-6" style={{ paddingTop: '3rem' }}>
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
@@ -116,7 +116,7 @@ export default function HomePage() {
             background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
           }}>
             {/* Chat Window - Larger and responsive */}
-            <div className="absolute inset-0 flex items-center justify-center p-8">
+            <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
               <div className="w-full max-w-lg h-full max-h-[600px]">
                 <BrandChatbot />
               </div>
@@ -125,7 +125,7 @@ export default function HomePage() {
         </section>
 
         {/* Manifest Section */}
-        <section id="manifest" className="py-20 bg-gray-50">
+        <section id="manifest" className="py-20 bg-gray-50" style={{ marginTop: '100vh' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
