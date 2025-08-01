@@ -127,9 +127,7 @@ export default function Header({
             </div>
 
             {/* Right 50% - Secondary Nav + Sign Up */}
-            <div className="w-[50vw] flex items-center justify-end px-6" style={{
-              background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
-            }}>
+            <div className="w-[50vw] flex items-center justify-end px-6 bg-white">
               {/* Secondary Nav + Sign Up */}
               <div className="hidden md:flex items-center space-x-3">
                 {secondaryNavItems.map((item, index) => (
@@ -149,7 +147,7 @@ export default function Header({
                 <motion.button
                   onClick={handleJoinWaitlist}
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                  className="bg-white/20 backdrop-blur-sm text-brand-black px-3 py-1.5 rounded-full border border-white/30 hover:bg-white/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-lg hover:shadow-xl"
+                  className="bg-brand-white text-brand-black px-3 py-1.5 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
                   whileHover={{ scale: 1.02, y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   initial={{ opacity: 0, x: 20 }}
