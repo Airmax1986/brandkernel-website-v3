@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import SolutionsSection from '@/components/SolutionsSection';
 import WaitlistForm from '@/components/WaitlistForm';
+import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
 import BrandChatbot from '@/components/BrandChatbot';
 
@@ -53,33 +54,7 @@ export default function HomePage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-16">
-                  <CtaButton 
-                    variant="primary" 
-                    size="lg"
-                    onClick={() => {
-                      const solutionsElement = document.getElementById('solutions');
-                      if (solutionsElement) {
-                        solutionsElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Explore Solutions
-                  </CtaButton>
-                  
-                  <CtaButton 
-                    variant="outline" 
-                    size="lg"
-                    onClick={() => {
-                      const waitlistElement = document.getElementById('waitlist');
-                      if (waitlistElement) {
-                        waitlistElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Join Waitlist
-                  </CtaButton>
-                </div>
+                <ClientCtaButtons />
 
                 {/* Social Proof */}
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-neutral-500">

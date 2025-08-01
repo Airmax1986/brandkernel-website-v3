@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -8,7 +8,12 @@ const inter = Inter({ subsets: ["latin"], weight: ["300", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "BrandKernel - Stand out with positioning that feels like you",
-  description: "Your empathetic AI brand consultant guidse you through a deep, personal brand discovery.",
+  description: "Your empathetic AI brand consultant guides you through a deep, personal brand discovery.",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
