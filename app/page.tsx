@@ -38,10 +38,10 @@ export default function HomePage() {
         <section id="home" className="relative min-h-screen" style={{
           background: 'linear-gradient(135deg, #DAFF96 0%, #ffffff 50%, #957FFF 100%)'
         }}>
-          <div className="container-ultra pt-20 pb-20">
+          <div className="container-ultra pt-16 pb-20">
             <div className="relative min-h-screen flex items-center">
               {/* Left: Hero Content */}
-              <div className="text-left max-w-2xl lg:max-w-xl z-10">
+              <div className="text-left max-w-2xl lg:max-w-2xl z-10 lg:pr-8">
                 {/* Hero Heading */}
                 <h1 className="text-6xl lg:text-9xl font-black text-brand-black leading-[0.85] mb-12 tracking-tight">
                   Your Breakthrough<br />
@@ -73,6 +73,7 @@ export default function HomePage() {
 
                 {/* Waitlist Form */}
                 <div className="mb-8">
+                  <p className="text-lg font-semibold text-brand-black mb-4">Join our Waitlist</p>
                   <div className="flex items-center gap-2 mb-3 max-w-md">
                     <div className="flex-1 relative">
                       <input

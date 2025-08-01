@@ -103,14 +103,14 @@ function ChatInput({ onSendMessage }: { onSendMessage: (message: string) => void
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 bg-brand-light rounded-b-brand-lg">
+    <form onSubmit={handleSubmit} className="p-4 bg-white/10 backdrop-blur-sm">
       <div className="relative">
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Ask Felix about your brand..."
-          className="w-full px-4 py-3 pr-12 rounded-brand bg-brand-white border-1 border-brand-light focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-brand-purple transition-all duration-200 text-sm"
+          placeholder="Type a message..."
+          className="w-full px-4 py-3 pr-12 rounded-xl bg-white/20 backdrop-blur-sm border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-purple/50 focus:border-brand-purple/50 transition-all duration-200 text-sm text-brand-black placeholder-neutral-500"
         />
         <motion.button
           type="submit"
