@@ -35,41 +35,12 @@ export default function HomePage() {
 
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="h-screen flex flex-col lg:flex-row">
+        <section id="home" className="h-screen flex flex-col lg:flex-row z-1">
           {/* Left Side - White Background */}
           <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative">
-            <div className="flex-1" style={{ margin: '1.5rem' }}>
-              {/* Content will go here later */}
-            </div>
-            
-            {/* Waitlist Form - Bottom of left side */}
-            <div className="absolute bottom-0 left-0 right-0" style={{ margin: '1.5rem' }}>
-              <p className="text-lg font-semibold text-brand-black mb-4">Join our Waitlist</p>
-              <div className="flex items-center gap-2 mb-3 max-w-md">
-                <div className="flex-1 relative">
-                  <input
-                    type="email"
-                    placeholder="name@email.com"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
-                  />
-                </div>
-                <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-              <p className="text-sm text-neutral-600">247 people already joined</p>
-            </div>
-          </div>
-
-          {/* Right Side - Gradient Background */}
-          <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative" style={{
-            background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
-          }}>
-            <div className="flex-1 flex flex-col justify-center items-center h-full" style={{ margin: '1.5rem' }}>
-              {/* Text Block - Center of right side */}
-              <div className="text-center">
+            <div className="flex-1 flex flex-col justify-center items-center px-6">
+              {/* Text Block - Center of left side */}
+              <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
                 <h1 style={{ 
                   fontSize: '8.5rem', 
@@ -83,7 +54,7 @@ export default function HomePage() {
                 
                 {/* Hero Description */}
                 <div style={{ 
-                  fontSize: '1.8rem', 
+                  fontSize: '1.25rem', 
                   lineHeight: '2.2rem',
                   fontWeight: 'bold',
                   paddingBottom: '100px'
@@ -96,134 +67,155 @@ export default function HomePage() {
                 {/* Profession Selection */}
                 <div>
                   <p style={{ 
-                    fontSize: '1.8rem', 
+                    fontSize: '1.25rem', 
                     lineHeight: '2.2rem',
                     fontWeight: 'bold'
                   }} className="text-brand-black mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <button style={{ fontSize: '1.8rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <button style={{ fontSize: '1.25rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Freelancer
                     </button>
-                    <button style={{ fontSize: '1.8rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <button style={{ fontSize: '1.25rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Founder
                     </button>
-                    <button style={{ fontSize: '1.8rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <button style={{ fontSize: '1.25rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Creator
                     </button>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/* Chat Window - Exactly centered */}
-              <div className="absolute inset-0 flex items-center justify-center">
+          {/* Right Side - Gradient Background */}
+          <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative" style={{
+            background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
+          }}>
+            {/* Chat Window - Larger and responsive */}
+            <div className="absolute inset-0 flex items-center justify-center p-8">
+              <div className="w-full max-w-lg h-full max-h-[600px]">
                 <BrandChatbot />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Solutions Section */}
-        <SolutionsSection />
-
-        {/* About Section */}
-        <section id="about" className="py-section-padding bg-brand-white">
-          <div className="container-ultra">
+        {/* Manifest Section */}
+        <section id="manifest" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              
-              <h2 className="text-hero-lg text-brand-black h1-spacing">
-                Why Choose BrandKernel?
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                Our Manifest
               </h2>
-              
-              <p className="text-body-lg text-neutral-600 mb-16 leading-relaxed">
-                We're not just another design agency. We're brand strategists who understand 
-                that great branding goes beyond beautiful visuals—it's about creating meaningful 
-                connections between your business and your customers.
+              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
+                We believe that every brand has a unique story to tell. Our mission is to help you discover, 
+                refine, and share that story with the world in a way that resonates with your audience and drives growth.
               </p>
-
-              {/* Feature Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="text-left">
-                  <div className="text-3xl mb-4">🎯</div>
-                  <h3 className="text-subheading text-brand-black mb-4">Strategic Approach</h3>
-                  <p className="text-neutral-600 leading-relaxed">
-                    Every brand we create is backed by thorough research, strategic thinking, 
-                    and a deep understanding of your market and audience.
-                  </p>
-                </div>
-                
-                <div className="text-left">
-                  <div className="text-3xl mb-4">⚡</div>
-                  <h3 className="text-subheading text-brand-black mb-4">Fast Delivery</h3>
-                  <p className="text-neutral-600 leading-relaxed">
-                    We understand that time is money. Our streamlined process ensures 
-                    you get exceptional results without the long wait times.
-                  </p>
-                </div>
-                
-                <div className="text-left">
-                  <div className="text-3xl mb-4">🎨</div>
-                  <h3 className="text-subheading text-brand-black mb-4">Creative Excellence</h3>
-                  <p className="text-neutral-600 leading-relaxed">
-                    Our team of experienced designers and strategists brings fresh, 
-                    innovative ideas to every project we undertake.
-                  </p>
-                </div>
-                
-                <div className="text-left">
-                  <div className="text-3xl mb-4">🤝</div>
-                  <h3 className="text-subheading text-brand-black mb-4">Partnership Mindset</h3>
-                  <p className="text-neutral-600 leading-relaxed">
-                    We don't just work for you—we work with you. Your success is our success, 
-                    and we're committed to building long-term relationships.
-                  </p>
-                </div>
-              </div>
+              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
+                <a href="/manifest" className="text-white">Read Full Manifest</a>
+              </button>
             </div>
           </div>
         </section>
 
-        {/* Contact/Waitlist Section */}
-        <section id="waitlist" className="py-section-padding bg-gradient-to-br from-brand-light to-brand-white">
-          <div className="container-ultra">
-            <div className="max-w-2xl mx-auto text-center">
-              
-              <h2 className="text-hero-lg text-brand-black h1-spacing">
-                Ready to Transform Your Brand?
+        {/* Approach Section */}
+        <section id="approach" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                Our Approach
               </h2>
-              
-              <p className="text-body-lg text-neutral-600 mb-12 leading-relaxed">
-                Join our waitlist to be the first to access our branding services when we launch. 
+              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
+                We take a strategic, research-driven approach to branding. Every project begins with deep discovery 
+                to understand your business, audience, and market position before we craft your brand identity.
+              </p>
+              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
+                <a href="/approach" className="text-white">Learn About Our Approach</a>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                How It Works
+              </h2>
+              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
+                Our proven 4-step process takes you from brand confusion to brand clarity. 
+                We guide you through discovery, strategy, design, and implementation phases.
+              </p>
+              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
+                <a href="/how-it-works" className="text-white">See Our Process</a>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                Features
+              </h2>
+              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
+                From logo design to complete brand systems, we offer comprehensive branding solutions 
+                that cover every aspect of your brand identity and communications.
+              </p>
+              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
+                <a href="/features" className="text-white">Explore Features</a>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                Pricing
+              </h2>
+              <p style={{ fontSize: '1.25rem' }} className="text-neutral-600 mb-8 leading-relaxed">
+                Transparent, value-based pricing that scales with your needs. 
+                From startup packages to enterprise solutions, we have options for every business size.
+              </p>
+              <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all">
+                <a href="/pricing" className="text-white">View Pricing Plans</a>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Waitlist Section - Centered */}
+        <section className="py-20 bg-gradient-to-br from-[#DAFF96] to-[#957FFF]">
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 style={{ fontSize: '3rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                Join Our Waitlist
+              </h2>
+              <p style={{ fontSize: '1.25rem' }} className="text-brand-black mb-8 leading-relaxed">
+                Be the first to access our branding services when we launch. 
                 Get exclusive early access, special pricing, and priority support.
               </p>
-
-              {/* Waitlist Form */}
-              <div className="max-w-md mx-auto">
-                <WaitlistForm 
-                  variant="inline" 
-                  showCounter={false}
-                />
-              </div>
-
-              {/* Alternative Contact */}
-              <div className="mt-12 pt-8 border-t border-brand-light">
-                <p className="text-neutral-500 mb-4">
-                  Need to get in touch directly?
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <CtaButton 
-                    variant="ghost" 
-                    href="mailto:hello@brandkernel.com"
-                  >
-                    hello@brandkernel.com
-                  </CtaButton>
-                  <CtaButton 
-                    variant="ghost" 
-                    href="tel:+1234567890"
-                  >
-                    +1 (234) 567-890
-                  </CtaButton>
+              <div className="flex items-center gap-2 mb-3 max-w-md mx-auto">
+                <div className="flex-1 relative">
+                  <input
+                    type="email"
+                    placeholder="name@email.com"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent text-base shadow-sm"
+                  />
                 </div>
+                <button className="bg-white text-brand-black p-3 rounded-lg hover:bg-neutral-50 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
               </div>
+              <p className="text-sm text-brand-black/80">247 people already joined</p>
             </div>
           </div>
         </section>

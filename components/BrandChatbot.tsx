@@ -164,16 +164,17 @@ export default function BrandChatbot() {
       initial={{ opacity: 0, scale: 0.95, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-sm mx-auto rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/20"
+      className="w-full h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/20 flex flex-col"
       style={{
         background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
         backdropFilter: 'blur(20px)',
-        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        minHeight: '500px'
       }}
     >
       <ChatHeader />
       
-      <div className="h-96 overflow-y-auto px-4 py-2 space-y-3">
+      <div className="flex-1 overflow-y-auto px-4 py-2 space-y-3">
         {messages.map((message) => (
           <ChatMessage
             key={message.id}

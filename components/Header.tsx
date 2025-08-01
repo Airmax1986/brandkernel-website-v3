@@ -41,11 +41,11 @@ export default function Header({
 
   // Navigation items
   const navItems = [
-    { name: 'Manifest', href: '/manifest' },
-    { name: 'Approach', href: '/approach' },
-    { name: 'How it works', href: '/how-it-works' },
-    { name: 'Features', href: '/features' },
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'Manifest', href: '#manifest' },
+    { name: 'Approach', href: '#approach' },
+    { name: 'How it works', href: '#how-it-works' },
+    { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
   ];
 
   const secondaryNavItems = [
@@ -79,8 +79,9 @@ export default function Header({
           'w-full z-50 transition-all duration-300',
           headerPosition,
           'top-0 left-0 right-0',
-          getHeaderBg()
+          'bg-transparent'
         )}
+        style={{ zIndex: 2 }}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -95,8 +96,8 @@ export default function Header({
               whileTap={{ scale: 0.95 }}
             >
               <a 
-                href="#home" 
-                style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                href="/" 
+                style={{ fontSize: '1.125rem', fontWeight: 'bold' }}
                 className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
                 aria-label="BrandKernel Home"
               >
@@ -110,7 +111,7 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                  style={{ fontSize: '1.125rem', fontWeight: 'bold' }}
                   className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
@@ -128,7 +129,7 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                  style={{ fontSize: '1.125rem', fontWeight: 'bold' }}
                   className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
