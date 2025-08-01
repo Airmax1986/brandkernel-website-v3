@@ -79,7 +79,7 @@ export default function Header({
           'w-full z-50 transition-all duration-300',
           headerPosition,
           'top-0 left-0 right-0',
-          'bg-transparent'
+          'bg-white'
         )}
         style={{ zIndex: 2 }}
         initial={{ y: -100, opacity: 0 }}
