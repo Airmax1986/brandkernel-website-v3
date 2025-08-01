@@ -13,21 +13,9 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: '1',
-    text: 'Hi! I\'m Felix, your Brand Consultant. I help businesses create powerful brands that connect with their audience. How can I help with your brand today?',
+    text: 'Hello! I\'m Felix, your Brand Consultant. I\'m here to help you build stronger brands, develop strategic positioning, and create meaningful connections with your audience. How can I assist you today?',
     isUser: false,
     timestamp: '2:30 PM'
-  },
-  {
-    id: '2',
-    text: 'Hi Felix! I need help with my brand strategy.',
-    isUser: true,
-    timestamp: '2:31 PM'
-  },
-  {
-    id: '3',
-    text: 'Perfect! Let\'s dive into your brand strategy. Tell me about your business - what industry are you in, and what makes you different from your competitors?',
-    isUser: false,
-    timestamp: '2:31 PM'
   }
 ];
 
@@ -54,21 +42,21 @@ function ChatHeader() {
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-brand bg-gradient-brand flex items-center justify-center shadow-brand">
-            <svg className="w-5 h-5 text-brand-black" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+          <div className="w-10 h-10 rounded-lg bg-brand-purple flex items-center justify-center shadow-sm">
+            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
           </div>
           <div>
             <h3 className="text-sm font-semibold text-brand-black">Felix</h3>
             <div className="flex items-center gap-1.5 text-xs">
               <div className="w-2 h-2 bg-brand-green rounded-full"></div>
-              <span className="text-neutral-600">Brand Consultant</span>
+              <span className="text-neutral-600">Online</span>
             </div>
           </div>
         </div>
-        <div className="text-xs text-neutral-400">
-          Online
+        <div className="text-xs text-neutral-400 font-medium">
+          BrandKernel
         </div>
       </div>
     </motion.div>

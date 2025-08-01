@@ -41,10 +41,16 @@ export default function Header({
 
   // Navigation items
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Solutions', href: '#solutions' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Manifest', href: '/manifest' },
+    { name: 'Approach', href: '/approach' },
+    { name: 'How it works', href: '/how-it-works' },
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
+  ];
+
+  const secondaryNavItems = [
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   // Header background styles based on variant and scroll
@@ -98,12 +104,12 @@ export default function Header({
             </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
+            <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2"
+                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2"
                   whileHover={{ y: -2 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -114,18 +120,31 @@ export default function Header({
               ))}
             </nav>
 
-            {/* Desktop CTA + Join Waitlist */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Desktop Secondary Nav + Sign Up */}
+            <div className="hidden md:flex items-center space-x-6">
+              {secondaryNavItems.map((item, index) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2"
+                  whileHover={{ y: -2 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.5 }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
               <motion.button
                 onClick={handleJoinWaitlist}
-                className="bg-gradient-brand text-brand-black font-semibold px-6 py-2.5 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
+                className="bg-brand-white text-brand-black font-semibold px-6 py-2.5 rounded-full border border-neutral-300 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                Join Waitlist
+                Sign up
               </motion.button>
             </div>
 

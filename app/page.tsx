@@ -35,26 +35,57 @@ export default function HomePage() {
 
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="relative pt-20 pb-section-padding bg-gradient-to-br from-brand-white via-brand-light to-brand-white">
-          <div className="container-ultra">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section id="home" className="relative min-h-screen bg-gradient-to-br from-brand-green/20 via-brand-white to-brand-purple/20">
+          <div className="container-ultra pt-32 pb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               
               {/* Left: Hero Content */}
-              <div className="text-center lg:text-left">
-                {/* Hero Heading with improved spacing */}
-                <h1 className="text-hero-xl text-brand-black h1-spacing">
-                  Transform Your Brand Into a 
-                  <span className="text-gradient-brand"> Powerful Story</span>
+              <div className="text-left max-w-2xl">
+                {/* Hero Heading */}
+                <h1 className="text-6xl lg:text-7xl font-bold text-brand-black leading-tight mb-8">
+                  Your Breakthrough<br />
+                  Starts With Clarity.
                 </h1>
                 
-                {/* Hero Description with more space from h1 */}
-                <p className="text-body-lg text-neutral-600 mb-12 leading-relaxed max-w-xl lg:max-w-none">
-                  We help businesses create memorable brands that connect with their audience, 
-                  drive growth, and stand out in today's competitive marketplace.
-                </p>
+                {/* Hero Description */}
+                <div className="text-lg text-brand-black mb-12 space-y-2">
+                  <p className="font-semibold">You're a brilliant entrepreneur lost in the noise.</p>
+                  <p>One dialogue away from the clarity that makes you unstoppable.</p>
+                  <p className="font-semibold">Welcome to your breakthrough.</p>
+                </div>
 
-                {/* CTA Buttons */}
-                <ClientCtaButtons />
+                {/* Profession Selection */}
+                <div className="mb-12">
+                  <p className="text-lg font-semibold text-brand-black mb-4">First, choose your profession</p>
+                  <div className="flex flex-wrap gap-3">
+                    <button className="bg-brand-purple text-white px-6 py-3 rounded-full font-medium hover:bg-brand-purple/90 transition-colors">
+                      Freelancer
+                    </button>
+                    <button className="bg-brand-purple text-white px-6 py-3 rounded-full font-medium hover:bg-brand-purple/90 transition-colors">
+                      Founder
+                    </button>
+                    <button className="bg-brand-purple text-white px-6 py-3 rounded-full font-medium hover:bg-brand-purple/90 transition-colors">
+                      Creator
+                    </button>
+                  </div>
+                </div>
+
+                {/* Waitlist Form */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex-1 relative">
+                    <input
+                      type="email"
+                      placeholder="name@email.com"
+                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    />
+                  </div>
+                  <button className="bg-brand-green text-brand-black p-3 rounded-lg hover:bg-brand-green/90 transition-colors">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+                <p className="text-sm text-neutral-600">247 people already joined</p>
 
                 {/* Social Proof */}
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-neutral-500">
