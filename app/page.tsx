@@ -48,8 +48,7 @@ export default function HomePage() {
                   paddingTop: '6rem',
                   paddingBottom: '3rem'
                 }} className="text-brand-black">
-                  Finally<br />
-                  The Conversation That Changes Everything.
+                  Finally The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
@@ -117,9 +116,9 @@ export default function HomePage() {
           <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative" style={{
             background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
           }}>
-            {/* Chat Window - 1.5x Bigger */}
-            <div className="absolute inset-0 flex items-center justify-center p-6" style={{ paddingTop: '4rem' }}>
-              <div className="w-full max-w-2xl h-full max-h-[900px]">
+            {/* Chat Window - Smaller */}
+            <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
+              <div className="w-full max-w-md h-full max-h-[400px]">
                 <BrandChatbot />
               </div>
             </div>
@@ -142,16 +141,16 @@ export default function HomePage() {
                 <p>The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
                 
                 <div className="grid md:grid-cols-3 gap-8 mt-12 mb-12">
-                  <div className="text-center">
-                    <h3 className="font-bold text-lg mb-2">For Founders</h3>
+                  <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 text-center">
+                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Founders</h3>
                     <p>Transform from invisible builder to industry voice</p>
                   </div>
-                  <div className="text-center">
-                    <h3 className="font-bold text-lg mb-2">For Freelancers</h3>
+                  <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 text-center">
+                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Freelancers</h3>
                     <p>Escape the commodity trap with crystal-clear positioning</p>
                   </div>
-                  <div className="text-center">
-                    <h3 className="font-bold text-lg mb-2">For Creators</h3>
+                  <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 text-center">
+                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Creators</h3>
                     <p>Turn followers into a real business with strategic clarity</p>
                   </div>
                 </div>
@@ -160,7 +159,7 @@ export default function HomePage() {
               </div>
 
               {/* Max Quote - Big */}
-              <div className="w-[50vw] mx-auto bg-white p-12 rounded-lg">
+              <div className="w-[80vw] mx-auto bg-white p-12 rounded-lg">
                 <blockquote style={{ 
                   fontSize: '6rem', 
                   lineHeight: '6rem',
@@ -181,7 +180,7 @@ export default function HomePage() {
         <section id="manifest" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
                 The Clarity Manifesto
               </h2>
               <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
@@ -214,7 +213,7 @@ export default function HomePage() {
         <section id="approach" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
                 Guided Discovery, Not Generic Answers
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -251,7 +250,7 @@ export default function HomePage() {
         <section id="how-it-works" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
                 From Lost to Laser-Focused
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -304,7 +303,7 @@ export default function HomePage() {
         <section id="features" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
                 Features That Transform
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -349,7 +348,7 @@ export default function HomePage() {
         <section id="pricing" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
                 Your Clarity Investment
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
