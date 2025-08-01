@@ -57,7 +57,8 @@ export default function HomePage() {
                   fontSize: '1rem', 
                   lineHeight: '1.5rem',
                   fontWeight: 'bold',
-                  paddingBottom: '100px'
+                  paddingTop: '3rem',
+                  paddingBottom: '3rem'
                 }} className="text-brand-black">
                   <p>You're a brilliant entrepreneur lost in the noise.</p>
                   <p>One dialogue away from the clarity that makes you unstoppable.</p>
@@ -72,15 +73,15 @@ export default function HomePage() {
                     fontWeight: 'bold'
                   }} className="text-brand-black mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <button style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <a href="/freelancer" style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                       Freelancer
-                    </button>
-                    <button style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    </a>
+                    <a href="/founder" style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                       Founder
-                    </button>
-                    <button style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    </a>
+                    <a href="/creator" style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                       Creator
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -234,8 +235,9 @@ export default function HomePage() {
               <div className="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
                 <a href="/about" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">About</a>
                 <a href="/blog" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Blog</a>
-                <a href="/privacy" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Privacy</a>
-                <a href="/terms" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Terms</a>
+                <a href="/imprint" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Imprint</a>
+                <a href="/privacy-policy" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Privacy Policy</a>
+                <a href="/contact" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Contact</a>
               </div>
 
               {/* Social Links */}

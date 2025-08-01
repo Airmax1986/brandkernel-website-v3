@@ -86,12 +86,11 @@ export default function Header({
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <div className="w-full px-6">
-          <div className="flex items-center justify-between" style={{ height: '3rem' }}>
+        <div className="w-full">
+          <div className="flex" style={{ height: '3rem' }}>
             
-            {/* Left Side - Logo + Main Navigation */}
-            <div className="flex items-center space-x-6">
-              {/* Logo */}
+            {/* Left 50% - Logo */}
+            <div className="w-[50vw] flex items-center justify-start px-6">
               <motion.div
                 className="flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
@@ -106,7 +105,12 @@ export default function Header({
                   BrandKernel
                 </a>
               </motion.div>
+            </div>
 
+            {/* Right 50% - Main Navigation + Secondary Nav + Sign Up */}
+            <div className="w-[50vw] flex items-center justify-between px-6" style={{
+              background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
+            }}>
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
                 {navItems.map((item, index) => (
@@ -124,36 +128,36 @@ export default function Header({
                   </motion.a>
                 ))}
               </nav>
-            </div>
 
-            {/* Right Side - Secondary Nav + Sign Up */}
-            <div className="hidden md:flex items-center space-x-3">
-              {secondaryNavItems.map((item, index) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
+              {/* Secondary Nav + Sign Up */}
+              <div className="hidden md:flex items-center space-x-3">
+                {secondaryNavItems.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
+                    className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                    whileHover={{ y: -1 }}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 + 0.5 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+                <motion.button
+                  onClick={handleJoinWaitlist}
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
-                  whileHover={{ y: -1 }}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 + 0.5 }}
+                  className="bg-white/20 backdrop-blur-sm text-brand-black px-3 py-1.5 rounded-full border border-white/30 hover:bg-white/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-lg hover:shadow-xl"
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 }}
                 >
-                  {item.name}
-                </motion.a>
-              ))}
-              <motion.button
-                onClick={handleJoinWaitlist}
-                style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                className="bg-brand-white text-brand-black px-3 py-1.5 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
-                whileHover={{ scale: 1.02, y: -1 }}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                Sign up
-              </motion.button>
+                  Sign up
+                </motion.button>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
