@@ -110,15 +110,11 @@ export default function Header({
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <a
                     key={item.name}
                     href={item.href}
                     style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                     className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
-                    whileHover={{ y: -1 }}
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 + 0.3 }}
                   >
                     {item.name}
                   </motion.a>
@@ -131,18 +127,14 @@ export default function Header({
               {/* Secondary Nav + Sign Up */}
               <div className="hidden md:flex items-center space-x-3">
                 {secondaryNavItems.map((item, index) => (
-                  <motion.a
+                  <a
                     key={item.name}
                     href={item.href}
                     style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                     className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
-                    whileHover={{ y: -1 }}
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 + 0.5 }}
                   >
                     {item.name}
-                  </motion.a>
+                  </a>
                 ))}
                 <motion.button
                   onClick={handleJoinWaitlist}

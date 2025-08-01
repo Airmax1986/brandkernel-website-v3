@@ -62,25 +62,6 @@ export default function HomePage() {
                   <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
                 </div>
 
-                {/* Hero Body Copy */}
-                <div style={{ 
-                  fontSize: '1rem', 
-                  lineHeight: '1.5rem',
-                  paddingBottom: '3rem'
-                }} className="text-brand-black">
-                  <p className="mb-4">You've tried everything.</p>
-                  <p className="mb-4">But you're still stuck. Still invisible. Still wondering why your brilliance isn't breaking through.</p>
-                  <p className="mb-4">Here's what nobody tells you: You're not missing tactics. You're missing clarity.</p>
-                  <p className="mb-4">The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
-                  
-                  <div className="mt-6 space-y-2">
-                    <p><strong>For Founders:</strong> Transform from invisible builder to industry voice</p>
-                    <p><strong>For Freelancers:</strong> Escape the commodity trap with crystal-clear positioning</p>
-                    <p><strong>For Creators:</strong> Turn followers into a real business with strategic clarity</p>
-                  </div>
-                  
-                  <p className="mt-6 font-bold">Your breakthrough is waiting.</p>
-                </div>
 
                 {/* Profession Selection */}
                 <div className="mb-8">
@@ -125,15 +106,6 @@ export default function HomePage() {
                   <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">400+ people already joined</p>
                 </div>
 
-                {/* Max Quote */}
-                <div className="mt-8 p-6 bg-gray-50 rounded-lg border-l-4 border-[#957FFF]">
-                  <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black italic mb-2">
-                    "After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation."
-                  </p>
-                  <p style={{ fontSize: '0.875rem' }} className="text-brand-black/70 font-medium">
-                    - Max, Founder
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -142,46 +114,101 @@ export default function HomePage() {
           <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative" style={{
             background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
           }}>
-            {/* Chat Window - Larger and responsive */}
-            <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
-              <div className="w-full max-w-lg h-full max-h-[600px]">
+            {/* Chat Window - 1.5x Bigger */}
+            <div className="absolute inset-0 flex items-center justify-center p-6" style={{ paddingTop: '4rem' }}>
+              <div className="w-full max-w-2xl h-full max-h-[900px]">
                 <BrandChatbot />
               </div>
             </div>
           </div>
         </section>
 
+        {/* Body Content Section */}
+        <section className="py-20 bg-white" style={{ marginTop: '100vh' }}>
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              
+              {/* Body Copy */}
+              <div style={{ 
+                fontSize: '1.125rem', 
+                lineHeight: '1.75rem'
+              }} className="text-brand-black space-y-6 mb-16">
+                <p>You've tried everything.</p>
+                <p>But you're still stuck. Still invisible. Still wondering why your brilliance isn't breaking through.</p>
+                <p>Here's what nobody tells you: You're not missing tactics. You're missing clarity.</p>
+                <p>The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
+                
+                <div className="grid md:grid-cols-3 gap-8 mt-12 mb-12">
+                  <div className="text-center">
+                    <h3 className="font-bold text-lg mb-2">For Founders</h3>
+                    <p>Transform from invisible builder to industry voice</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-bold text-lg mb-2">For Freelancers</h3>
+                    <p>Escape the commodity trap with crystal-clear positioning</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-bold text-lg mb-2">For Creators</h3>
+                    <p>Turn followers into a real business with strategic clarity</p>
+                  </div>
+                </div>
+                
+                <p className="font-bold text-xl">Your breakthrough is waiting.</p>
+              </div>
+
+              {/* Max Quote - Big */}
+              <div className="bg-gray-50 p-12 rounded-lg">
+                <blockquote style={{ 
+                  fontSize: '6rem', 
+                  lineHeight: '6.5rem',
+                  fontWeight: 'normal'
+                }} className="text-brand-black italic mb-8">
+                  "After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation."
+                </blockquote>
+                <p style={{ fontSize: '1.5rem' }} className="text-brand-black/70 font-medium">
+                  - Max, Founder
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* Manifest Section */}
-        <section id="manifest" className="py-20 bg-gray-50" style={{ marginTop: '100vh' }}>
+        <section id="manifest" className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
-                Manifest
+                The Clarity Manifesto
               </h2>
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
+                We believe every founder is one conversation away from changing everything.
+              </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
-                We believe that every brand has a unique story to tell. Our mission is to help you discover, 
-                refine, and share that story with the world in a way that resonates with your audience and drives growth.
+                Not one feature away. Not one investor away. Not one viral post away. One. Conversation. Away. The breakthrough you've been searching for isn't in another tactic. It's in the conversation you haven't had yet.
               </p>
               <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
-                Read Full Manifest
+                Read Full Manifesto
               </a>
             </div>
           </div>
         </section>
 
         {/* Approach Section */}
-        <section id="approach" className="py-20 bg-gray-50">
+        <section id="approach" className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
-                Approach
+                Guided Discovery, Not Generic Answers
               </h2>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
+                Courses give you someone else's framework. Templates force you into someone else's box. We start with a different question: Who the hell are you, really?
+              </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
-                We take a strategic, research-driven approach to branding. Every project begins with deep discovery 
-                to understand your business, audience, and market position before we craft your brand identity.
+                Through systematic dialogue, we uncover your authentic foundation, transform it into crystal-clear positioning, and build the bridge from revelation to reality.
               </p>
               <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
-                Learn About Our Approach
+                Learn Our Method
               </a>
             </div>
           </div>
@@ -192,32 +219,36 @@ export default function HomePage() {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
-                How it works
+                From Lost to Laser-Focused
               </h2>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
+                Your clarity breakthrough in 4 levels: Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization.
+              </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
-                Our proven 4-step process takes you from brand confusion to brand clarity. 
-                We guide you through discovery, strategy, design, and implementation phases.
+                In 3-4 hours of guided dialogue, you go from lost to laser-focused. From invisible to inevitable. From confused to clear.
               </p>
               <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
-                See Our Process
+                See the Journey
               </a>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-20 bg-gray-50">
+        <section id="features" className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
-                Features
+                Features That Transform
               </h2>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
+                Not another template tool. Not another AI chatbot. A strategic AI guide trained on thousands of breakthrough conversations.
+              </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
-                From logo design to complete brand systems, we offer comprehensive branding solutions 
-                that cover every aspect of your brand identity and communications.
+                Complete with your Brand Kernel Book, visual clarity maps, and activation blueprints. This is the conversation that changes everything.
               </p>
               <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
-                Explore Features
+                See All Features
               </a>
             </div>
           </div>
@@ -228,14 +259,16 @@ export default function HomePage() {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
-                Pricing
+                Your Clarity Investment
               </h2>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
+                €297 (Early founder pricing) - One investment. Lifetime clarity. Your identity doesn't expire.
+              </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
-                Transparent, value-based pricing that scales with your needs. 
-                From startup packages to enterprise solutions, we have options for every business size.
+                Complete 4-level journey, personal AI strategist, Brand Kernel Book, with 30-day breakthrough guarantee. The math is simple. The transformation is profound.
               </p>
               <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
-                View Pricing Plans
+                See Investment Details
               </a>
             </div>
           </div>
