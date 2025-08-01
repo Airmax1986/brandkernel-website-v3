@@ -90,7 +90,7 @@ export default function Header({
           <div className="flex" style={{ height: '3rem' }}>
             
             {/* Left 50% - Logo + Main Navigation */}
-            <div className="w-[50vw] bg-white flex items-center justify-between px-6">
+            <div className="w-[50vw] flex items-center justify-between px-6">
               {/* Logo */}
               <motion.div
                 className="flex-shrink-0"
@@ -127,7 +127,7 @@ export default function Header({
             </div>
 
             {/* Right 50% - Secondary Nav + Sign Up */}
-            <div className="w-[50vw] flex items-center justify-end px-6 bg-white">
+            <div className="w-[50vw] flex items-center justify-end px-6">
               {/* Secondary Nav + Sign Up */}
               <div className="hidden md:flex items-center space-x-3">
                 {secondaryNavItems.map((item, index) => (
