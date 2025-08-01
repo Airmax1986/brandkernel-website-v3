@@ -45,7 +45,7 @@ export default function HomePage() {
                   fontSize: '6rem', 
                   lineHeight: '6rem',
                   fontWeight: 'normal',
-                  paddingTop: '100px',
+                  paddingTop: '6rem',
                   paddingBottom: '3rem'
                 }} className="text-brand-black">
                   Finally<br />
@@ -160,15 +160,15 @@ export default function HomePage() {
               </div>
 
               {/* Max Quote - Big */}
-              <div className="w-1/2 mx-auto bg-white p-12 rounded-lg">
+              <div className="w-[50vw] mx-auto bg-white p-12 rounded-lg">
                 <blockquote style={{ 
-                  fontSize: '2rem', 
-                  lineHeight: '2.5rem',
+                  fontSize: '6rem', 
+                  lineHeight: '6rem',
                   fontWeight: 'normal'
                 }} className="text-[#957FFF] mb-8">
                   « After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation. »
                 </blockquote>
-                <p style={{ fontSize: '1.125rem' }} className="text-[#957FFF] font-medium">
+                <p style={{ fontSize: '1.5rem' }} className="text-[#957FFF] font-medium">
                   - Max, Founder
                 </p>
               </div>
@@ -375,17 +375,12 @@ export default function HomePage() {
                 <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">The ROI Reality</h3>
                   <div className="text-brand-black text-sm space-y-2 text-left">
-                    <p>Win one ideal client → <span className="font-bold text-green-600">10x return</span></p>
-                    <p>Raise your rates with confidence → <span className="font-bold text-green-600">100x return</span></p>
-                    <p>Build audience that converts → <span className="font-bold text-green-600">1000x return</span></p>
-                    <p>Find product-market fit faster → <span className="font-bold text-green-600">Priceless</span></p>
+                    <p>Win one ideal client → <span className="font-bold text-[#957FFF]">10x return</span></p>
+                    <p>Raise your rates with confidence → <span className="font-bold text-[#957FFF]">100x return</span></p>
+                    <p>Build audience that converts → <span className="font-bold text-[#957FFF]">1000x return</span></p>
+                    <p>Find product-market fit faster → <span className="font-bold text-[#957FFF]">Priceless</span></p>
                   </div>
                 </div>
-              </div>
-              
-              <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 mb-8 max-w-2xl mx-auto">
-                <h3 className="font-bold text-lg mb-3">30-Day Breakthrough Guarantee</h3>
-                <p className="text-brand-black text-sm">If you complete the journey and don't experience a genuine breakthrough in how you see yourself and your business, get a full refund. No questions. No hassle. No risk.</p>
               </div>
               
               <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
