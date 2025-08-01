@@ -1,0 +1,15 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #FFFFFF;
+  color: #000000;
+  min-height: 100vh;
+}
+
+.blog-post-card {
+    background-color: #FFF;
+    color: #000;
+}
