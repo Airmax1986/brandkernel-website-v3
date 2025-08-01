@@ -43,29 +43,29 @@ export default function HomePage() {
               {/* Left: Hero Content */}
               <div className="text-left max-w-2xl lg:max-w-xl z-10">
                 {/* Hero Heading */}
-                <h1 className="text-5xl lg:text-8xl font-bold text-brand-black leading-[0.9] mb-8 tracking-tight">
+                <h1 className="text-6xl lg:text-9xl font-black text-brand-black leading-[0.85] mb-12 tracking-tight">
                   Your Breakthrough<br />
                   Starts With Clarity.
                 </h1>
                 
                 {/* Hero Description */}
-                <div className="text-lg text-brand-black mb-12 space-y-2">
-                  <p className="font-semibold">You're a brilliant entrepreneur lost in the noise.</p>
-                  <p>One dialogue away from the clarity that makes you unstoppable.</p>
-                  <p className="font-semibold">Welcome to your breakthrough.</p>
+                <div className="text-lg text-brand-black mb-12 text-center space-y-1 max-w-md mx-auto lg:mx-0">
+                  <p className="font-bold">You're a brilliant entrepreneur lost in the noise.</p>
+                  <p className="font-normal">One dialogue away from the clarity that makes you unstoppable.</p>
+                  <p className="font-bold">Welcome to your breakthrough.</p>
                 </div>
 
                 {/* Profession Selection */}
-                <div className="mb-12">
-                  <p className="text-lg font-semibold text-brand-black mb-4">First, choose your profession</p>
-                  <div className="flex flex-wrap gap-3">
-                    <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <div className="mb-12 text-center">
+                  <p className="text-lg font-semibold text-brand-black mb-6">First, choose your profession</p>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <button className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
                       Freelancer
                     </button>
-                    <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
                       Founder
                     </button>
-                    <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
                       Creator
                     </button>
                   </div>
@@ -73,28 +73,27 @@ export default function HomePage() {
 
                 {/* Waitlist Form */}
                 <div className="mb-8">
-                  <p className="text-lg font-semibold text-brand-black mb-6">Join our Waitlist</p>
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center gap-2 mb-3 max-w-md">
                     <div className="flex-1 relative">
                       <input
                         type="email"
                         placeholder="name@email.com"
-                        className="w-full px-6 py-4 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-lg shadow-sm"
+                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
                       />
                     </div>
-                    <button className="bg-[#DAFF96] text-brand-black p-4 rounded-xl hover:bg-[#DAFF96]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
                     </button>
                   </div>
-                  <p className="text-sm text-neutral-600 font-medium">247 people already joined</p>
+                  <p className="text-sm text-neutral-600">247 people already joined</p>
                 </div>
 
               </div>
               
               {/* Right: Brand Chatbot - Absolutely positioned */}
-              <div className="absolute top-16 right-8 lg:right-16 hidden lg:block">
+              <div className="absolute top-20 right-8 lg:right-20 hidden lg:block z-20">
                 <BrandChatbot />
               </div>
             </div>

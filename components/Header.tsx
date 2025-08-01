@@ -109,11 +109,11 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2"
-                  whileHover={{ y: -2 }}
+                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                  whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
+                  transition={{ delay: index * 0.05 + 0.3 }}
                 >
                   {item.name}
                 </motion.a>
@@ -121,25 +121,25 @@ export default function Header({
             </nav>
 
             {/* Desktop Secondary Nav + Sign Up */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden md:flex items-center space-x-3">
               {secondaryNavItems.map((item, index) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2"
-                  whileHover={{ y: -2 }}
+                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                  whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.5 }}
+                  transition={{ delay: index * 0.05 + 0.5 }}
                 >
                   {item.name}
                 </motion.a>
               ))}
               <motion.button
                 onClick={handleJoinWaitlist}
-                className="bg-brand-white text-brand-black font-semibold px-6 py-2.5 rounded-full border border-neutral-300 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+                className="bg-brand-white text-brand-black font-medium px-5 py-2 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 text-sm shadow-sm"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
