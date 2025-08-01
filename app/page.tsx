@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Header from '@/components/Header';
 import SolutionsSection from '@/components/SolutionsSection';
-import WaitlistForm from '@/components/WaitlistForm';
 import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
 import BrandChatbot from '@/components/BrandChatbot';
@@ -46,6 +45,7 @@ export default function HomePage() {
                   fontSize: '6rem', 
                   lineHeight: '6rem',
                   fontWeight: 'normal',
+                  paddingTop: '100px',
                   paddingBottom: '100px'
                 }} className="text-brand-black">
                   Your Breakthrough<br />
@@ -85,28 +85,26 @@ export default function HomePage() {
                 </div>
 
                 {/* Waitlist Form */}
-                <div className="text-left">
+                <div className="flex items-center gap-4 max-w-2xl">
                   <p style={{ 
                     fontSize: '1rem', 
                     lineHeight: '1.5rem',
                     fontWeight: 'bold'
-                  }} className="text-brand-black mb-4">Join our Waitlist</p>
-                  <div className="flex items-center gap-2 max-w-md">
-                    <div className="flex-1 relative">
-                      <input
-                        type="email"
-                        placeholder="name@email.com"
-                        style={{ fontSize: '1rem' }}
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
-                      />
-                    </div>
-                    <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </button>
+                  }} className="text-brand-black whitespace-nowrap">Join our Waitlist</p>
+                  <div className="flex-1 relative">
+                    <input
+                      type="email"
+                      placeholder="name@email.com"
+                      style={{ fontSize: '1rem' }}
+                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
+                    />
                   </div>
-                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 mt-2">247 people already joined</p>
+                  <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">247 people already joined</p>
                 </div>
               </div>
             </div>
@@ -121,6 +119,96 @@ export default function HomePage() {
               <div className="w-full max-w-lg h-full max-h-[600px]">
                 <BrandChatbot />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Manifest Section */}
+        <section id="manifest" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+                Manifest
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+                We believe that every brand has a unique story to tell. Our mission is to help you discover, 
+                refine, and share that story with the world in a way that resonates with your audience and drives growth.
+              </p>
+              <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                Read Full Manifest
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Approach Section */}
+        <section id="approach" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+                Approach
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+                We take a strategic, research-driven approach to branding. Every project begins with deep discovery 
+                to understand your business, audience, and market position before we craft your brand identity.
+              </p>
+              <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                Learn About Our Approach
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+                How it works
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+                Our proven 4-step process takes you from brand confusion to brand clarity. 
+                We guide you through discovery, strategy, design, and implementation phases.
+              </p>
+              <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                See Our Process
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+                Features
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+                From logo design to complete brand systems, we offer comprehensive branding solutions 
+                that cover every aspect of your brand identity and communications.
+              </p>
+              <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                Explore Features
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
+                Pricing
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+                Transparent, value-based pricing that scales with your needs. 
+                From startup packages to enterprise solutions, we have options for every business size.
+              </p>
+              <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                View Pricing Plans
+              </a>
             </div>
           </div>
         </section>

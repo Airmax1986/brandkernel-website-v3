@@ -89,41 +89,44 @@ export default function Header({
         <div className="w-full px-6">
           <div className="flex items-center justify-between" style={{ height: '3rem' }}>
             
-            {/* Logo */}
-            <motion.div
-              className="flex-shrink-0"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <a 
-                href="/" 
-                style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
-                aria-label="BrandKernel Home"
+            {/* Left Side - Logo + Main Navigation */}
+            <div className="flex items-center space-x-6">
+              {/* Logo */}
+              <motion.div
+                className="flex-shrink-0"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                BrandKernel
-              </a>
-            </motion.div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
-              {navItems.map((item, index) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
+                <a 
+                  href="/" 
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
-                  whileHover={{ y: -1 }}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 + 0.3 }}
+                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
+                  aria-label="BrandKernel Home"
                 >
-                  {item.name}
-                </motion.a>
-              ))}
-            </nav>
+                  BrandKernel
+                </a>
+              </motion.div>
 
-            {/* Desktop Secondary Nav + Sign Up */}
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+                {navItems.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
+                    className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                    whileHover={{ y: -1 }}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 + 0.3 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+              </nav>
+            </div>
+
+            {/* Right Side - Secondary Nav + Sign Up */}
             <div className="hidden md:flex items-center space-x-3">
               {secondaryNavItems.map((item, index) => (
                 <motion.a
@@ -142,7 +145,7 @@ export default function Header({
               <motion.button
                 onClick={handleJoinWaitlist}
                 style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                className="bg-brand-white text-brand-black px-5 py-2 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
+                className="bg-brand-white text-brand-black px-3 py-1.5 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, x: 20 }}
