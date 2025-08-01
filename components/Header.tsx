@@ -85,8 +85,8 @@ export default function Header({
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <div className="container-ultra">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="w-full px-6">
+          <div className="flex items-center justify-between" style={{ height: '3rem' }}>
             
             {/* Logo */}
             <motion.div
@@ -96,7 +96,8 @@ export default function Header({
             >
               <a 
                 href="#home" 
-                className="text-2xl font-bold text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
+                style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
                 aria-label="BrandKernel Home"
               >
                 BrandKernel
@@ -109,7 +110,8 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                  style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -126,7 +128,8 @@ export default function Header({
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                  style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
                   whileHover={{ y: -1 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -137,7 +140,8 @@ export default function Header({
               ))}
               <motion.button
                 onClick={handleJoinWaitlist}
-                className="bg-brand-white text-brand-black font-medium px-5 py-2 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 text-sm shadow-sm"
+                style={{ fontSize: '1.8rem', fontWeight: 'bold' }}
+                className="bg-brand-white text-brand-black px-5 py-2 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, x: 20 }}
