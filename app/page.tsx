@@ -48,8 +48,8 @@ export default function HomePage() {
                   paddingTop: '100px',
                   paddingBottom: '3rem'
                 }} className="text-brand-black">
-                  Finally. The Conversation<br />
-                  That Changes Everything.
+                  Finally<br />
+                  The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
