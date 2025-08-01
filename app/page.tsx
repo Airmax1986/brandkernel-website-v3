@@ -48,7 +48,7 @@ export default function HomePage() {
                   paddingTop: '6rem',
                   paddingBottom: '3rem'
                 }} className="text-brand-black">
-                  Finally The Conversation That Changes Everything.
+                  Finally. The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
@@ -116,9 +116,9 @@ export default function HomePage() {
           <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative" style={{
             background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
           }}>
-            {/* Chat Window - Smaller */}
+            {/* Chat Window - Medium */}
             <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
-              <div className="w-full max-w-md h-full max-h-[400px]">
+              <div className="w-full max-w-lg h-full max-h-[500px]">
                 <BrandChatbot />
               </div>
             </div>
@@ -159,10 +159,10 @@ export default function HomePage() {
               </div>
 
               {/* Max Quote - Big */}
-              <div className="w-[80vw] mx-auto bg-white p-12 rounded-lg">
+              <div className="w-[90vw] mx-auto bg-white p-16 rounded-lg text-center">
                 <blockquote style={{ 
                   fontSize: '6rem', 
-                  lineHeight: '6rem',
+                  lineHeight: '7rem',
                   fontWeight: 'normal'
                 }} className="text-[#957FFF] mb-8">
                   « After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation. »
@@ -187,7 +187,7 @@ export default function HomePage() {
                 We believe every founder is one conversation away from changing everything.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
-                Not one feature away. Not one investor away. Not one viral post away. One. Conversation. Away. The breakthrough you've been searching for isn't in another tactic. It's in the conversation you haven't had yet.
+                Not one feature away. Not one investor away. Not one viral post away. One. Conversation. Away. The breakthrough you've been searching for isn't in another tactic, template, or framework. It's in the strategic dialogue that uncovers who you really are, why you're building this, and how to make the world finally pay attention. We reject the template trap and the copy-paste culture that makes everyone sound the same. Instead, we believe in deep work, uncomfortable questions, and the transformative power of discovering your authentic truth.
               </p>
               
               {/* Key Points */}
@@ -217,10 +217,10 @@ export default function HomePage() {
                 Guided Discovery, Not Generic Answers
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
-                Courses give you someone else's framework. Templates force you into someone else's box. We start with a different question: Who the hell are you, really?
+                Courses give you someone else's framework. Templates force you into someone else's box. Coaches tell you what worked for someone else. AI tools regurgitate what everyone else is saying. We start with a different question: Who the hell are you, really?
               </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
-                Through systematic dialogue, we uncover your authentic foundation, transform it into crystal-clear positioning, and build the bridge from revelation to reality.
+                Through systematic dialogue and strategic archaeology, we dig past the surface story you tell at networking events, past the LinkedIn bio you've tweaked 47 times, down to the bedrock truth of why you're building this. We uncover your authentic foundation, transform it into crystal-clear positioning through careful alchemy, and build the bridge from revelation to reality with concrete activation blueprints. This isn't therapy—it's strategic discovery that leads to breakthrough positioning.
               </p>
               
               {/* Method Steps */}
@@ -254,10 +254,10 @@ export default function HomePage() {
                 From Lost to Laser-Focused
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
-                Your clarity breakthrough in 4 levels: Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization.
+                Your clarity breakthrough in 4 progressive levels: Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
-                In 3-4 hours of guided dialogue, you go from lost to laser-focused. From invisible to inevitable. From confused to clear.
+                In 3-4 hours of guided dialogue, you go from lost to laser-focused. From invisible to inevitable. From confused to clear. Each level builds on the last, creating compound insights that lead to breakthrough moments. We start with the questions you've been avoiding, map your unique position in the market, unlock your authentic voice, and transform insight into actionable strategy. This isn't a course you take—it's a conversation that changes everything about how you see yourself and your business.
               </p>
               
               {/* 4 Levels */}
@@ -307,10 +307,10 @@ export default function HomePage() {
                 Features That Transform
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
-                Not another template tool. Not another AI chatbot. A strategic AI guide trained on thousands of breakthrough conversations.
+                Not another template tool. Not another AI chatbot. Not another generic framework. A strategic AI guide trained on thousands of breakthrough conversations and decades of brand wisdom.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
-                Complete with your Brand Kernel Book, visual clarity maps, and activation blueprints. This is the conversation that changes everything.
+                Our AI Brand Consultant doesn't just ask questions—it listens for what you're not saying, connects dots you didn't see, and guides you to your own truth. Complete with your comprehensive Brand Kernel Book that captures every insight, visual clarity maps that help you see your breakthrough, and detailed activation blueprints that turn clarity into concrete action. The experience adapts to your communication style, celebrates your breakthrough moments, and provides reflection spaces for deep integration. This is what 20 years of brand consulting, distilled into one transformative dialogue, looks like.
               </p>
               
               {/* Key Features */}
@@ -352,10 +352,10 @@ export default function HomePage() {
                 Your Clarity Investment
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
-                €297 (Early founder pricing) - One investment. Lifetime clarity. Your identity doesn't expire.
+                €297 (Early founder pricing, soon to be €497) - One investment. Lifetime clarity. Your identity doesn't expire, and neither does your access.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
-                Complete 4-level journey, personal AI strategist, Brand Kernel Book, with 30-day breakthrough guarantee. The math is simple. The transformation is profound.
+                What confusion costs you monthly: 40+ hours building the wrong things, countless missed opportunities because you can't articulate your value, competitors pulling ahead with clearer positioning, and immeasurable creative energy drained by uncertainty. What clarity creates immediately: knowing exactly what to build next, articulating your value in one powerful sentence, attracting the right opportunities automatically, and feeling confident in every founder conversation. Complete 4-level guided journey, your personal AI brand strategist, comprehensive Brand Kernel Book, all visual clarity maps, complete activation blueprints, and lifetime access to your strategic foundation. The math is simple. The transformation is profound.
               </p>
               
               {/* Value Proposition */}
