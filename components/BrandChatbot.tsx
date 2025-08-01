@@ -38,7 +38,7 @@ function ChatHeader() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative p-4 rounded-t-brand-lg bg-brand-light border-b border-brand-light/50"
+      className="relative p-4 bg-white/10 backdrop-blur-sm border-b border-white/10"
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -73,10 +73,10 @@ function ChatMessage({ message, isUser, timestamp }: { message: string; isUser: 
     >
       <div className="max-w-[80%] flex flex-col">
         <div
-          className={`px-4 py-3 rounded-brand-lg shadow-brand ${
+          className={`px-4 py-3 rounded-2xl shadow-lg ${
             isUser 
-              ? 'bg-brand-purple text-brand-white' 
-              : 'bg-brand-white text-brand-black border-1 border-brand-light'
+              ? 'bg-brand-purple/90 text-white backdrop-blur-sm' 
+              : 'bg-white/20 text-brand-black backdrop-blur-sm border border-white/10'
           }`}
         >
           <p className="text-sm leading-relaxed">{message}</p>
@@ -170,14 +170,19 @@ export default function BrandChatbot() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95, x: 20 }}
-      animate={{ opacity: 1, scale: 1, x: 0 }}
+      initial={{ opacity: 0, scale: 0.95, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-md bg-brand-white rounded-brand-lg shadow-brand-lg border-1 border-brand-light overflow-hidden"
+      className="w-full max-w-sm mx-auto rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/20"
+      style={{
+        background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
+        backdropFilter: 'blur(20px)',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+      }}
     >
       <ChatHeader />
       
-      <div className="h-80 overflow-y-auto px-4 py-2 bg-gradient-to-b from-brand-white to-brand-light/30">
+      <div className="h-96 overflow-y-auto px-4 py-2 space-y-3">
         {messages.map((message) => (
           <ChatMessage
             key={message.id}

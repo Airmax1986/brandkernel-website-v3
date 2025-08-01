@@ -35,14 +35,15 @@ export default function HomePage() {
 
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="relative min-h-screen bg-gradient-to-br from-brand-green/20 via-brand-white to-brand-purple/20">
-          <div className="container-ultra pt-32 pb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              
+        <section id="home" className="relative min-h-screen" style={{
+          background: 'linear-gradient(135deg, #DAFF96 0%, #ffffff 50%, #957FFF 100%)'
+        }}>
+          <div className="container-ultra pt-20 pb-20">
+            <div className="relative min-h-screen flex items-center">
               {/* Left: Hero Content */}
-              <div className="text-left max-w-2xl">
+              <div className="text-left max-w-2xl lg:max-w-xl z-10">
                 {/* Hero Heading */}
-                <h1 className="text-6xl lg:text-7xl font-bold text-brand-black leading-tight mb-8">
+                <h1 className="text-5xl lg:text-8xl font-bold text-brand-black leading-[0.9] mb-8 tracking-tight">
                   Your Breakthrough<br />
                   Starts With Clarity.
                 </h1>
@@ -58,68 +59,42 @@ export default function HomePage() {
                 <div className="mb-12">
                   <p className="text-lg font-semibold text-brand-black mb-4">First, choose your profession</p>
                   <div className="flex flex-wrap gap-3">
-                    <button className="bg-brand-purple text-white px-6 py-3 rounded-full font-medium hover:bg-brand-purple/90 transition-colors">
+                    <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                       Freelancer
                     </button>
-                    <button className="bg-brand-purple text-white px-6 py-3 rounded-full font-medium hover:bg-brand-purple/90 transition-colors">
+                    <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                       Founder
                     </button>
-                    <button className="bg-brand-purple text-white px-6 py-3 rounded-full font-medium hover:bg-brand-purple/90 transition-colors">
+                    <button className="bg-[#957FFF] text-white px-8 py-3 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                       Creator
                     </button>
                   </div>
                 </div>
 
                 {/* Waitlist Form */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex-1 relative">
-                    <input
-                      type="email"
-                      placeholder="name@email.com"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent"
-                    />
-                  </div>
-                  <button className="bg-brand-green text-brand-black p-3 rounded-lg hover:bg-brand-green/90 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
-                <p className="text-sm text-neutral-600">247 people already joined</p>
-
-                {/* Social Proof */}
-                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-neutral-500">
-                  <div className="flex items-center gap-2">
-                    <div className="flex -space-x-2">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div 
-                          key={i}
-                          className="w-8 h-8 rounded-full bg-gradient-brand border-2 border-brand-white flex items-center justify-center text-xs font-semibold text-brand-black"
-                        >
-                          {String.fromCharCode(64 + i)}
-                        </div>
-                      ))}
+                <div className="mb-8">
+                  <p className="text-lg font-semibold text-brand-black mb-6">Join our Waitlist</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex-1 relative">
+                      <input
+                        type="email"
+                        placeholder="name@email.com"
+                        className="w-full px-6 py-4 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-lg shadow-sm"
+                      />
                     </div>
-                    <span className="text-sm font-medium">247+ people already joined</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg
-                        key={star}
-                        className="w-4 h-4 text-brand-green fill-current"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    <button className="bg-[#DAFF96] text-brand-black p-4 rounded-xl hover:bg-[#DAFF96]/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
-                    ))}
-                    <span className="text-sm font-medium ml-2">Trusted by startups</span>
+                    </button>
                   </div>
+                  <p className="text-sm text-neutral-600 font-medium">247 people already joined</p>
                 </div>
-              </div>
 
-              {/* Right: Brand Chatbot */}
-              <div className="flex justify-center lg:justify-end">
+              </div>
+              
+              {/* Right: Brand Chatbot - Absolutely positioned */}
+              <div className="absolute top-16 right-8 lg:right-16 hidden lg:block">
                 <BrandChatbot />
               </div>
             </div>
