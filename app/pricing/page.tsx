@@ -20,7 +20,7 @@ export default function PricingPage() {
         <div className="space-y-16">
           
           {/* The Math of Staying Lost */}
-          <section className="bg-red-50 p-8 rounded-lg">
+          <section className="bg-gray-50 p-8 rounded-lg">
             <h2 style={{ 
               fontSize: '2.5rem', 
               lineHeight: '3rem',
@@ -31,7 +31,7 @@ export default function PricingPage() {
             
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="font-bold text-xl text-red-600 mb-4">What confusion costs monthly:</h3>
+                <h3 className="font-bold text-xl text-brand-black mb-4">What confusion costs monthly:</h3>
                 <ul className="space-y-3 text-brand-black">
                   <li>• 40+ hours building the wrong things</li>
                   <li>• 10+ opportunities missed because you can't articulate value</li>
@@ -42,7 +42,7 @@ export default function PricingPage() {
               </div>
               
               <div>
-                <h3 className="font-bold text-xl text-green-600 mb-4">What clarity creates immediately:</h3>
+                <h3 className="font-bold text-xl text-brand-black mb-4">What clarity creates immediately:</h3>
                 <ul className="space-y-3 text-brand-black">
                   <li>• Know exactly what to build next</li>
                   <li>• Articulate your value in one sentence</li>
@@ -166,21 +166,21 @@ export default function PricingPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span>Win one ideal client</span>
-                    <span className="font-bold text-green-600">→ 10x return</span>
+                    <span className="font-bold text-[#957FFF]">→ 10x return</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Raise your rates with confidence</span>
-                    <span className="font-bold text-green-600">→ 100x return</span>
+                    <span className="font-bold text-[#957FFF]">→ 100x return</span>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span>Build an audience that converts</span>
-                    <span className="font-bold text-green-600">→ 1000x return</span>
+                    <span className="font-bold text-[#957FFF]">→ 1000x return</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Find product-market fit faster</span>
-                    <span className="font-bold text-green-600">→ Incalculable return</span>
+                    <span className="font-bold text-[#957FFF]">→ Incalculable return</span>
                   </div>
                 </div>
               </div>
@@ -281,8 +281,8 @@ export default function PricingPage() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">
-              <div className="bg-red-50 p-8 rounded-lg">
-                <h3 className="font-bold text-xl text-red-600 mb-4">Path 1: Keep Searching</h3>
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <h3 className="font-bold text-xl text-brand-black mb-4">Path 1: Keep Searching</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>Another course that doesn't fit</li>
                   <li>Another template that feels fake</li>
@@ -291,8 +291,8 @@ export default function PricingPage() {
                 </ul>
               </div>
               
-              <div className="bg-green-50 p-8 rounded-lg">
-                <h3 className="font-bold text-xl text-green-600 mb-4">Path 2: Find Your Clarity</h3>
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <h3 className="font-bold text-xl text-brand-black mb-4">Path 2: Find Your Clarity</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>One conversation that changes everything</li>
                   <li>Your truth, systematically uncovered</li>

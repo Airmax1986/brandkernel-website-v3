@@ -37,7 +37,7 @@ export default function HomePage() {
         <section id="home" className="min-h-screen flex flex-col lg:flex-row absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
           {/* Left Side - White Background */}
           <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative">
-            <div className="flex-1 flex flex-col justify-center items-center px-6" style={{ paddingTop: '3rem' }}>
+            <div className="flex-1 flex flex-col justify-between items-center px-6" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
@@ -54,8 +54,8 @@ export default function HomePage() {
                 
                 {/* Hero Subheadline */}
                 <div style={{ 
-                  fontSize: '1.25rem', 
-                  lineHeight: '1.75rem',
+                  fontSize: '1rem', 
+                  lineHeight: '1.5rem',
                   fontWeight: 'bold',
                   paddingBottom: '2rem'
                 }} className="text-brand-black">
@@ -83,8 +83,12 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Waitlist Form */}
-                <div className="flex items-center gap-4 max-w-2xl">
+
+              </div>
+
+              {/* Waitlist Form - Bottom of Hero */}
+              <div className="w-full max-w-2xl">
+                <div className="flex items-center gap-4">
                   <p style={{ 
                     fontSize: '1rem', 
                     lineHeight: '1.5rem',
@@ -105,7 +109,6 @@ export default function HomePage() {
                   </button>
                   <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">400+ people already joined</p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -124,7 +127,7 @@ export default function HomePage() {
         </section>
 
         {/* Body Content Section */}
-        <section className="py-20 bg-white" style={{ marginTop: '100vh' }}>
+        <section className="py-20 bg-white" style={{ marginTop: 'calc(100vh + 3rem)' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -157,15 +160,15 @@ export default function HomePage() {
               </div>
 
               {/* Max Quote - Big */}
-              <div className="bg-gray-50 p-12 rounded-lg">
+              <div className="w-1/2 mx-auto bg-white p-12 rounded-lg">
                 <blockquote style={{ 
-                  fontSize: '6rem', 
-                  lineHeight: '6.5rem',
+                  fontSize: '2rem', 
+                  lineHeight: '2.5rem',
                   fontWeight: 'normal'
-                }} className="text-brand-black italic mb-8">
-                  "After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation."
+                }} className="text-[#957FFF] mb-8">
+                  « After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation. »
                 </blockquote>
-                <p style={{ fontSize: '1.5rem' }} className="text-brand-black/70 font-medium">
+                <p style={{ fontSize: '1.125rem' }} className="text-[#957FFF] font-medium">
                   - Max, Founder
                 </p>
               </div>
@@ -175,18 +178,31 @@ export default function HomePage() {
         </section>
 
         {/* Manifest Section */}
-        <section id="manifest" className="py-20 bg-gray-50">
+        <section id="manifest" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
                 The Clarity Manifesto
               </h2>
               <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
                 We believe every founder is one conversation away from changing everything.
               </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
                 Not one feature away. Not one investor away. Not one viral post away. One. Conversation. Away. The breakthrough you've been searching for isn't in another tactic. It's in the conversation you haven't had yet.
               </p>
+              
+              {/* Key Points */}
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">The Truth About Breakthrough</h3>
+                  <p className="text-brand-black">Your breakthrough isn't hiding in another course, template, or AI tool. It's buried inside you, waiting for the right questions to set it free.</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">What We Stand For</h3>
+                  <p className="text-brand-black">Deep over surface. Identity before strategy. Guided discovery over generic frameworks. Transformation over information.</p>
+                </div>
+              </div>
+              
               <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 Read Full Manifesto
               </a>
@@ -195,18 +211,35 @@ export default function HomePage() {
         </section>
 
         {/* Approach Section */}
-        <section id="approach" className="py-20 bg-white">
+        <section id="approach" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
                 Guided Discovery, Not Generic Answers
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 Courses give you someone else's framework. Templates force you into someone else's box. We start with a different question: Who the hell are you, really?
               </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
                 Through systematic dialogue, we uncover your authentic foundation, transform it into crystal-clear positioning, and build the bridge from revelation to reality.
               </p>
+              
+              {/* Method Steps */}
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Phase 1: Archaeology of You</h3>
+                  <p className="text-brand-black text-sm">We dig deep. Past the surface story to the bedrock truth of why you're building this.</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Phase 2: Alchemy of Positioning</h3>
+                  <p className="text-brand-black text-sm">Raw truth becomes crystal-clear positioning that feels like finally exhaling.</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Phase 3: Architecture of Activation</h3>
+                  <p className="text-brand-black text-sm">Clarity becomes action with your complete Brand Kernel and activation blueprints.</p>
+                </div>
+              </div>
+              
               <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 Learn Our Method
               </a>
@@ -215,18 +248,51 @@ export default function HomePage() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="py-20 bg-gray-50">
+        <section id="how-it-works" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
                 From Lost to Laser-Focused
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 Your clarity breakthrough in 4 levels: Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization.
               </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
                 In 3-4 hours of guided dialogue, you go from lost to laser-focused. From invisible to inevitable. From confused to clear.
               </p>
+              
+              {/* 4 Levels */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
+                  <div className="bg-[#DAFF96] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-brand-black font-bold">1</span>
+                  </div>
+                  <h3 className="font-bold text-sm mb-2">Foundation Discovery</h3>
+                  <p className="text-brand-black text-xs">45-60 minutes</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
+                  <div className="bg-[#957FFF] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white font-bold">2</span>
+                  </div>
+                  <h3 className="font-bold text-sm mb-2">Position Clarification</h3>
+                  <p className="text-brand-black text-xs">30-45 minutes</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
+                  <div className="bg-[#DAFF96] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-brand-black font-bold">3</span>
+                  </div>
+                  <h3 className="font-bold text-sm mb-2">Voice Activation</h3>
+                  <p className="text-brand-black text-xs">30-45 minutes</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
+                  <div className="bg-[#957FFF] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white font-bold">4</span>
+                  </div>
+                  <h3 className="font-bold text-sm mb-2">Strategy Crystallization</h3>
+                  <p className="text-brand-black text-xs">30-45 minutes</p>
+                </div>
+              </div>
+              
               <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 See the Journey
               </a>
@@ -235,18 +301,43 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-20 bg-white">
+        <section id="features" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
                 Features That Transform
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 Not another template tool. Not another AI chatbot. A strategic AI guide trained on thousands of breakthrough conversations.
               </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
                 Complete with your Brand Kernel Book, visual clarity maps, and activation blueprints. This is the conversation that changes everything.
               </p>
+              
+              {/* Key Features */}
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Strategic AI Guide</h3>
+                  <p className="text-brand-black mb-3">Not a chatbot. A trained brand strategist that asks the questions that unlock breakthrough, listens for what you're not saying, and guides you to your own truth.</p>
+                  <p className="text-sm text-brand-black/70">Because the best answers come from the right questions.</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Your Brand Kernel Book</h3>
+                  <p className="text-brand-black mb-3">Your living strategic document that captures every breakthrough insight, your crystallized positioning, your authentic voice, and your action framework.</p>
+                  <p className="text-sm text-brand-black/70">Because clarity deserves documentation.</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Activation Blueprints</h3>
+                  <p className="text-brand-black mb-3">Turn clarity into action with content strategy frameworks, network building plans, message templates, and growth roadmaps.</p>
+                  <p className="text-sm text-brand-black/70">Because insight without action is just expensive therapy.</p>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">Visual Clarity Maps</h3>
+                  <p className="text-brand-black mb-3">See your breakthrough in positioning matrices, voice spectrums, audience alignment charts, and competition landscapes.</p>
+                  <p className="text-sm text-brand-black/70">Because sometimes you need to see it to believe it.</p>
+                </div>
+              </div>
+              
               <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 See All Features
               </a>
@@ -255,18 +346,48 @@ export default function HomePage() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 bg-gray-50">
+        <section id="pricing" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-8">
                 Your Clarity Investment
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 €297 (Early founder pricing) - One investment. Lifetime clarity. Your identity doesn't expire.
               </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-8">
+              <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
                 Complete 4-level journey, personal AI strategist, Brand Kernel Book, with 30-day breakthrough guarantee. The math is simple. The transformation is profound.
               </p>
+              
+              {/* Value Proposition */}
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">What You Get</h3>
+                  <ul className="text-brand-black text-sm space-y-2 text-left">
+                    <li>✓ Complete 4-level guided journey</li>
+                    <li>✓ Your personal AI brand strategist</li>
+                    <li>✓ Full Brand Kernel Book</li>
+                    <li>✓ All visual clarity maps</li>
+                    <li>✓ Complete activation blueprints</li>
+                    <li>✓ Lifetime access to your foundation</li>
+                  </ul>
+                </div>
+                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                  <h3 className="font-bold text-lg mb-3">The ROI Reality</h3>
+                  <div className="text-brand-black text-sm space-y-2 text-left">
+                    <p>Win one ideal client → <span className="font-bold text-green-600">10x return</span></p>
+                    <p>Raise your rates with confidence → <span className="font-bold text-green-600">100x return</span></p>
+                    <p>Build audience that converts → <span className="font-bold text-green-600">1000x return</span></p>
+                    <p>Find product-market fit faster → <span className="font-bold text-green-600">Priceless</span></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+                <h3 className="font-bold text-lg mb-3">30-Day Breakthrough Guarantee</h3>
+                <p className="text-brand-black text-sm">If you complete the journey and don't experience a genuine breakthrough in how you see yourself and your business, get a full refund. No questions. No hassle. No risk.</p>
+              </div>
+              
               <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 See Investment Details
               </a>
