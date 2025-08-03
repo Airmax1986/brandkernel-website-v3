@@ -13,35 +13,35 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: '1',
-    text: 'Hi! I\'m Felix, your Brand Consultant. I help businesses create powerful brands that connect with their audience. How can I help with your brand today?',
+    text: 'Hi! I\'m Felix, your AI Brand Consultant. Most branding starts with the wrong questions. Let\'s try three that actually matter.',
     isUser: false,
     timestamp: '2:30 PM'
   },
   {
     id: '2',
-    text: 'Hi Felix! I need help with my brand strategy.',
+    text: 'I\'m ready to explore the deeper questions!',
     isUser: true,
     timestamp: '2:31 PM'
   },
   {
     id: '3',
-    text: 'Perfect! Let\'s dive into your brand strategy. Tell me about your business - what industry are you in, and what makes you different from your competitors?',
+    text: 'Tell me about a moment in the last few months where you thought: "Damn, I\'m really good at this" - what was that project or situation?',
     isUser: false,
     timestamp: '2:31 PM'
   }
 ];
 
 const felixResponses = [
-  "That's an excellent brand question! Let me share some strategic insights about positioning your unique value proposition in the market...",
-  "From a brand positioning perspective, I'd recommend focusing on what genuinely differentiates you from competitors in your space...",
-  "Great question! Brand consistency is absolutely key to building trust. Here's what I'd suggest for your brand guidelines...",
-  "That's where strong brand storytelling comes in. Your brand story should connect emotionally with your target audience...",
-  "Excellent point about brand differentiation! Consider these strategic approaches to stand out in your market...",
-  "Perfect timing for brand optimization! Here's my professional take on strengthening your brand foundation...",
-  "Brand perception is crucial for long-term success. I'd recommend analyzing your target audience's current perceptions...",
-  "That's a smart branding consideration. Let's explore your brand architecture and how all elements work together...",
-  "From my consulting experience, successful brands always focus on authentic connection with their audience...",
-  "Let's talk about your brand's visual identity and how it supports your strategic positioning in the market..."
+  "What would you think about yourself and your offering if you assumed for a moment that your personal way of working and thinking already contains everything you need for a distinctive brand?",
+  "If your absolute dream client - someone who working with would feel like a gift - had to describe you to a friend, what do you think they would say? Not your deliverables, but WHO you are to them.",
+  "That sounds fascinating. What do you think made the difference in that moment?",
+  "If you could have that same feeling in every project - what would need to be different?",
+  "I hear something special in that. Can you say that in a different way?",
+  "What would happen if more people knew THAT about you?",
+  "How does it feel to hear that?",
+  "What part of what you just said surprises you?",
+  "That's a powerful insight. Let's dig deeper into what makes that approach uniquely yours...",
+  "I'm sensing there's something even more fundamental here. What would you say is the real transformation you create for people?"
 ];
 
 // Chat Header Component

@@ -13,23 +13,23 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: '1',
-    text: 'Hello! I\'m Felix, your Brand Consultant. I\'m here to help you build stronger brands, develop strategic positioning, and create meaningful connections with your audience. How can I assist you today?',
+    text: 'Hi! I\'m Felix, your AI Brand Consultant. Most branding starts with the wrong questions. Let\'s try three that actually matter.',
     isUser: false,
     timestamp: '2:30 PM'
   }
 ];
 
 const felixResponses = [
-  "That's an excellent brand question! Let me share some strategic insights...",
-  "From a brand positioning perspective, I'd recommend focusing on your unique value proposition...",
-  "Great question! Brand consistency is key. Here's what I'd suggest...",
-  "That's where strong brand storytelling comes in. Your brand story should...",
-  "Excellent point about brand differentiation! Consider these strategic approaches...",
-  "Perfect timing for brand optimization! Here's my professional take...",
-  "Brand perception is crucial. I'd recommend analyzing your target audience's...",
-  "That's a smart branding consideration. Let's explore your brand architecture...",
-  "From my consulting experience, successful brands always...",
-  "Let's talk about your brand's visual identity and how it supports your strategy..."
+  "Tell me about a moment in the last few months where you thought: 'Damn, I'm really good at this' - what was that project or situation?",
+  "What would you think about yourself and your offering if you assumed for a moment that your personal way of working and thinking already contains everything you need for a distinctive brand?",
+  "If your absolute dream client - someone who working with would feel like a gift - had to describe you to a friend, what do you think they would say? Not your deliverables, but WHO you are to them.",
+  "That sounds fascinating. What do you think made the difference in that moment?",
+  "If you could have that same feeling in every project - what would need to be different?",
+  "I hear something special in that. Can you say that in a different way?",
+  "What would happen if more people knew THAT about you?",
+  "How does it feel to hear that?",
+  "What part of what you just said surprises you?",
+  "That's a powerful insight. Let's dig deeper into what makes that approach uniquely yours..."
 ];
 
 function ChatHeader() {
