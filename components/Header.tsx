@@ -92,20 +92,16 @@ export default function Header({
             {/* Left 50% - Logo + Main Navigation */}
             <div className="w-[50vw] flex items-center justify-between px-6">
               {/* Logo */}
-              <motion.div
-                className="flex-shrink-0"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <div className="flex-shrink-0">
                 <a 
                   href="/" 
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
-                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-1"
+                  className="text-brand-black hover:text-brand-purple hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2 border border-transparent hover:border-gray-200"
                   aria-label="BrandKernel Home"
                 >
                   BrandKernel
                 </a>
-              </motion.div>
+              </div>
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
@@ -140,7 +136,7 @@ export default function Header({
                   onClick={handleJoinWaitlist}
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
                   className="bg-brand-white text-brand-black px-3 py-1.5 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 shadow-sm"
-                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
