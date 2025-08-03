@@ -160,15 +160,11 @@ export default function HomePage() {
               </div>
 
               {/* Max Quote - Big */}
-              <div className="w-[90vw] mx-auto bg-white p-16 rounded-lg text-center">
-                <blockquote style={{ 
-                  fontSize: '6rem', 
-                  lineHeight: '7rem',
-                  fontWeight: 'normal'
-                }} className="text-[#957FFF] mb-8">
+              <div className="w-full max-w-6xl mx-auto bg-white p-8 lg:p-16 rounded-lg text-center">
+                <blockquote className="text-[#957FFF] mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight lg:leading-tight">
                   « After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation. »
                 </blockquote>
-                <p style={{ fontSize: '1.5rem' }} className="text-[#957FFF] font-medium">
+                <p className="text-lg lg:text-xl xl:text-2xl text-[#957FFF] font-medium">
                   - Max, Founder
                 </p>
               </div>
