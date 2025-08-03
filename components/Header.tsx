@@ -122,7 +122,7 @@ export default function Header({
               </nav>
             </div>
 
-            {/* Right 50% - Secondary Nav + Sign Up */}
+            {/* Right 50% - Secondary Nav + Sign Up + Mobile Menu */}
             <div className="w-[50vw] flex items-center justify-end px-6">
               {/* Secondary Nav + Sign Up */}
               <div className="hidden md:flex items-center space-x-3">
@@ -149,11 +149,10 @@ export default function Header({
                   Sign up
                 </motion.button>
               </div>
-            </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button
+              {/* Mobile Menu Button */}
+              <div className="md:hidden">
+                <button
                 type="button"
                 className="text-brand-black hover:text-brand-purple focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md p-2 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -195,7 +194,8 @@ export default function Header({
                     transition={{ duration: 0.3 }}
                   />
                 </motion.div>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -219,13 +219,13 @@ export default function OptimizedBrandChat() {
       initial={{ opacity: 0, scale: 0.95, x: 20 }}
       animate={{ opacity: 1, scale: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-md mx-auto bg-white/90 backdrop-blur-sm rounded-brand-lg shadow-brand-lg 
+      className="w-full max-w-sm mx-auto bg-white/90 backdrop-blur-sm rounded-brand-lg shadow-brand-lg 
                  border border-brand-green/20 overflow-hidden
-                 sm:max-w-lg md:max-w-md lg:max-w-lg xl:max-w-md"
+                 sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg"
     >
       <ChatHeader />
       
-      <div className="h-80 sm:h-96 md:h-80 lg:h-96 overflow-y-auto px-4 py-4 
+      <div className="h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 overflow-y-auto px-4 py-4 
                       bg-gradient-to-b from-white/50 to-brand-light/30 scrollbar-thin">
         {messages.map((message) => (
           <ChatMessage
