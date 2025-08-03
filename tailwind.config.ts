@@ -286,6 +286,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     // Add custom utilities
     function({ addUtilities }: any) {
       addUtilities({
