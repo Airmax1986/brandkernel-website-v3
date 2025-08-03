@@ -34,9 +34,9 @@ export default function HomePage() {
 
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="min-h-screen flex flex-col lg:flex-row absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
-          {/* Left Side - White Background */}
-          <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative">
+        <section id="home" className="min-h-fit lg:min-h-screen flex flex-col lg:flex-row absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
+          {/* Mobile: Chat comes first, Desktop: Text content on left */}
+          <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative min-h-fit lg:min-h-screen">
             <div className="flex-1 flex flex-col justify-between items-center px-6" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-2xl">
@@ -112,8 +112,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Side - Gradient Background */}
-          <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative" style={{
+          {/* Mobile: Chat comes first, Desktop: Chat on right */}
+          <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative min-h-fit lg:min-h-screen" style={{
             background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
           }}>
             {/* Chat Window - Medium */}
