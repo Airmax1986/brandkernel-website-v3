@@ -6,7 +6,7 @@ import OptimizedBrandChat from "./OptimizedBrandChat";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center min-h-screen py-16 sm:py-24 lg:py-32">
+    <section className="flex items-start lg:items-center justify-center min-h-fit lg:min-h-screen py-16 sm:py-24 lg:py-32">
       <GridContainer>
         {/* Mobile-First Layout */}
         <div className="col-span-full">
