@@ -4,6 +4,7 @@ import SolutionsSection from '@/components/SolutionsSection';
 import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
 import BrandChatbot from '@/components/BrandChatbot';
+import { formatWaitlistCount } from '@/lib/waitlist-counter';
 
 export const metadata: Metadata = {
   title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
@@ -106,7 +107,7 @@ export default function HomePage() {
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </button>
-                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">400+ people already joined</p>
+                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">{formatWaitlistCount()}</p>
                 </div>
               </div>
             </div>
