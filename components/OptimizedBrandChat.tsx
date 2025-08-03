@@ -19,15 +19,9 @@ const initialMessages: Message[] = [
   },
   {
     id: '2',
-    text: 'I\'m ready to explore the deeper questions!',
-    isUser: true,
-    timestamp: '2:31 PM'
-  },
-  {
-    id: '3',
     text: 'Tell me about a moment in the last few months where you thought: "Damn, I\'m really good at this" - what was that project or situation?',
     isUser: false,
-    timestamp: '2:31 PM'
+    timestamp: '2:30 PM'
   }
 ];
 

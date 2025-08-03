@@ -16,6 +16,12 @@ const initialMessages: Message[] = [
     text: 'Hi! I\'m Felix, your AI Brand Consultant. Most branding starts with the wrong questions. Let\'s try three that actually matter.',
     isUser: false,
     timestamp: '2:30 PM'
+  },
+  {
+    id: '2',
+    text: 'Tell me about a moment in the last few months where you thought: "Damn, I\'m really good at this" - what was that project or situation?',
+    isUser: false,
+    timestamp: '2:30 PM'
   }
 ];
 
