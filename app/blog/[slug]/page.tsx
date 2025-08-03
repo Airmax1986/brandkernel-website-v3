@@ -24,18 +24,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
     <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50">
       <article className="container mx-auto px-6 py-8 md:px-12 md:py-12 max-w-4xl">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-          {post.heroImage && (
-            <div className="relative w-full h-64 md:h-96">
-              <Image
-                src={post.heroImage}
-                alt={post.title}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/20"></div>
-            </div>
-          )}
           
           <div className="p-8 md:p-12">
             <header className="mb-8">

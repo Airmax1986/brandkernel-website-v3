@@ -7,7 +7,6 @@ export interface Post {
   summary?: string;
   description?: string;
   headerImage?: string;
-  heroImage?: string;
   content?: string;
   tags?: string[];
   author?: {
