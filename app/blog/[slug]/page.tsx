@@ -63,7 +63,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
               </div>
             </header>
 
-            <MarkdownContent content={post.content} />
+            <MarkdownContent content={post.content || 'No content available.'} />
           </div>
         </div>
       </article>

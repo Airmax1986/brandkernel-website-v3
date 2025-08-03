@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Syntax highlighting styles */
+@import 'highlight.js/styles/github.css';
+
 body {
   background-color: #FFFFFF;
   color: #000000;

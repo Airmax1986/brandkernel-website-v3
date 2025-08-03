@@ -1,17 +1,21 @@
-'use client';
-
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import 'highlight.js/styles/github.css';
 
 interface MarkdownContentProps {
   content: string;
 }
 
 export default function MarkdownContent({ content }: MarkdownContentProps) {
+  if (!content) {
+    return (
+      <div className="text-gray-500 italic py-8">
+        No content available for this post.
+      </div>
+    );
+  }
   return (
-    <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-a:text-brand-purple prose-a:hover:text-brand-purple/80 prose-code:text-brand-purple prose-pre:bg-gray-50 prose-blockquote:border-brand-green prose-blockquote:text-gray-600">
+    <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-a:text-purple-600 prose-a:hover:text-purple-700 prose-code:text-purple-600 prose-pre:bg-gray-50 prose-blockquote:border-green-400 prose-blockquote:text-gray-600">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight]}
@@ -52,7 +56,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             </li>
           ),
           blockquote: ({ children }) => (
-            <blockquote className="border-l-4 border-brand-green pl-4 py-2 my-4 bg-gray-50 italic text-gray-600">
+            <blockquote className="border-l-4 border-green-400 pl-4 py-2 my-4 bg-gray-50 italic text-gray-600">
               {children}
             </blockquote>
           ),
@@ -60,7 +64,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             const isInline = !className;
             if (isInline) {
               return (
-                <code className="bg-gray-100 text-brand-purple px-1 py-0.5 rounded text-sm font-mono">
+                <code className="bg-gray-100 text-purple-600 px-1 py-0.5 rounded text-sm font-mono">
                   {children}
                 </code>
               );
@@ -79,7 +83,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           a: ({ href, children }) => (
             <a 
               href={href} 
-              className="text-brand-purple hover:text-brand-purple/80 underline transition-colors"
+              className="text-purple-600 hover:text-purple-700 underline transition-colors"
               target="_blank" 
               rel="noopener noreferrer"
             >
