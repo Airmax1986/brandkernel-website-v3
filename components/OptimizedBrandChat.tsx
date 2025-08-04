@@ -112,60 +112,25 @@ interface ChatInputProps {
 }
 
 function ChatInput({ onSendMessage }: ChatInputProps) {
-  const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (message.trim() && !isLoading) {
-      setIsLoading(true);
-      onSendMessage(message.trim());
-      setMessage('');
-      // Reset loading state after Felix responds
-      setTimeout(() => setIsLoading(false), 1200);
-    }
-  };
-
-  const isDisabled = !message.trim() || isLoading;
-
   return (
     <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-brand-green/20 rounded-b-brand-lg">
-      <form onSubmit={handleSubmit} className="relative">
+      <div className="relative">
         <input
           type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Ask Felix about your brand..."
-          disabled={isLoading}
-          className="w-full px-4 py-3 pr-14 rounded-brand bg-brand-light/50 border border-brand-green/30 
-                     focus:outline-none focus:ring-2 focus:ring-brand-purple/50 focus:border-brand-purple 
-                     transition-all duration-200 text-sm text-brand-black placeholder:text-neutral-500
-                     disabled:opacity-50 disabled:cursor-not-allowed"
+          value=""
+          readOnly
+          placeholder="This is a demo - input is disabled"
+          className="w-full px-4 py-3 pr-14 rounded-brand bg-neutral-100 border border-neutral-300 
+                     text-sm text-neutral-500 placeholder:text-neutral-400
+                     cursor-not-allowed opacity-60"
         />
-        <motion.button
-          type="submit"
-          disabled={isDisabled}
-          whileHover={{ scale: isDisabled ? 1 : 1.05 }}
-          whileTap={{ scale: isDisabled ? 1 : 0.95 }}
-          className={`absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-brand 
-                     flex items-center justify-center transition-all duration-200 ${
-            isDisabled 
-              ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed' 
-              : 'bg-gradient-brand hover:shadow-brand text-white shadow-brand-sm'
-          }`}
-        >
-          {isLoading ? (
-            <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
-              <path className="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
-            </svg>
-          ) : (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-            </svg>
-          )}
-        </motion.button>
-      </form>
+        <div className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-brand 
+                       flex items-center justify-center bg-neutral-200 text-neutral-400 cursor-not-allowed">
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }
