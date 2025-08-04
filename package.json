@@ -20,6 +20,7 @@
     "@upstash/redis": "1.31.5",
     "contentful": "10.12.2",
     "contentful-management": "11.27.1",
+    "critters": "^0.0.23",
     "framer-motion": "11.2.10",
     "next": "14.2.3",
     "react": "18.3.1",
