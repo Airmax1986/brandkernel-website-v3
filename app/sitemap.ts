@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { createClient } from '@/lib/contentful/contentful'
+import { getAllPosts } from '@/lib/contentful/contentful'
 
 // Base URL for the website
 const baseUrl = 'https://www.brandkernel.io'
@@ -101,20 +101,18 @@ const staticPages = [
 // Function to get blog posts from Contentful
 async function getBlogPosts() {
   try {
-    const client = createClient()
-    if (!client) {
-      console.log('Contentful client not available, skipping blog posts in sitemap')
+    console.log('Fetching blog posts for sitemap...')
+    const posts = await getAllPosts()
+    
+    if (!posts || posts.length === 0) {
+      console.log('No blog posts found for sitemap')
       return []
     }
 
-    const entries = await client.getEntries({
-      content_type: 'blogPost'
-    })
-
-    return entries.items.map((item: any) => ({
-      slug: item.fields.slug,
-      lastModified: item.sys.updatedAt,
-      publishedAt: item.sys.createdAt,
+    console.log(`Found ${posts.length} blog posts for sitemap`)
+    return posts.map((post: any) => ({
+      slug: post.slug,
+      lastModified: post.date || new Date().toISOString(),
     }))
   } catch (error) {
     console.log('Error fetching blog posts for sitemap:', error)
