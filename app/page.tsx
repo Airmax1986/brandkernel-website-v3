@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import SolutionsSection from '@/components/SolutionsSection';
 import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
-import BrandChatbot from '@/components/BrandChatbot';
+import DynamicBrandChatbot from '@/components/DynamicBrandChatbot';
 import { formatWaitlistCount } from '@/lib/waitlist-counter';
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function HomePage() {
           }}>
             <Header variant="transparent" fixed={true} />
             <div className="w-full max-w-sm h-full max-h-[600px] p-6 pt-20">
-              <BrandChatbot />
+              <DynamicBrandChatbot />
             </div>
           </section>
           
@@ -162,7 +162,7 @@ export default function HomePage() {
             {/* Chat Window - Medium */}
             <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
               <div className="w-full max-w-lg h-full max-h-[500px]">
-                <BrandChatbot />
+                <DynamicBrandChatbot />
               </div>
             </div>
           </div>

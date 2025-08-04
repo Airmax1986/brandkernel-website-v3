@@ -1,4 +1,37 @@
 import CtaButton from "@/components/CtaButton";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'The Clarity Manifesto: Why Every Founder is One Conversation Away | BrandKernel',
+  description: 'Read BrandKernel\'s manifesto on why 997 out of 1,000 startups fail due to lack of clarity. Stop building in the dark. Start with the conversation that changes everything.',
+  openGraph: {
+    title: 'The Clarity Manifesto: Why Every Founder is One Conversation Away | BrandKernel',
+    description: 'Read BrandKernel\'s manifesto on why 997 out of 1,000 startups fail due to lack of clarity. Stop building in the dark. Start with the conversation that changes everything.',
+    type: 'website',
+    url: 'https://brandkernel.io/manifest',
+    siteName: 'BrandKernel',
+    images: [
+      {
+        url: '/og-manifest.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'BrandKernel Clarity Manifesto - The Conversation That Changes Everything',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Clarity Manifesto: Why Every Founder is One Conversation Away | BrandKernel',
+    description: 'Read BrandKernel\'s manifesto on why 997 out of 1,000 startups fail due to lack of clarity. Stop building in the dark. Start with the conversation that changes everything.',
+    images: ['/og-manifest.jpg'],
+  },
+  keywords: 'startup manifesto, founder clarity, brand strategy philosophy, startup failure reasons, brand-first approach',
+  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://brandkernel.io/manifest',
+  }
+};
 
 export default function ManifestPage() {
   return (
@@ -7,11 +40,7 @@ export default function ManifestPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 font-normal leading-tight">
             The Clarity Manifesto
           </h1>
         </div>

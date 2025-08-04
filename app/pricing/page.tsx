@@ -1,4 +1,37 @@
 import CtaButton from "@/components/CtaButton";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'BrandKernel Pricing: €297 One-Time Investment for Lifetime Brand Clarity',
+  description: 'Transform your brand positioning for €297 (early founder pricing). One investment, lifetime clarity. 30-day breakthrough guarantee. Join 400+ founders on the waitlist.',
+  openGraph: {
+    title: 'BrandKernel Pricing: €297 One-Time Investment for Lifetime Brand Clarity',
+    description: 'Transform your brand positioning for €297 (early founder pricing). One investment, lifetime clarity. 30-day breakthrough guarantee. Join 400+ founders on the waitlist.',
+    type: 'website',
+    url: 'https://brandkernel.io/pricing',
+    siteName: 'BrandKernel',
+    images: [
+      {
+        url: '/og-pricing.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'BrandKernel Pricing - One-Time Investment for Brand Clarity',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BrandKernel Pricing: €297 One-Time Investment for Lifetime Brand Clarity',
+    description: 'Transform your brand positioning for €297 (early founder pricing). One investment, lifetime clarity. 30-day breakthrough guarantee. Join 400+ founders on the waitlist.',
+    images: ['/og-pricing.jpg'],
+  },
+  keywords: 'brand strategy pricing, founder brand consultant, startup positioning cost, brand clarity investment, AI brand strategist price',
+  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://brandkernel.io/pricing',
+  }
+};
 
 export default function PricingPage() {
   return (
@@ -7,11 +40,7 @@ export default function PricingPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 font-normal leading-tight">
             Your Clarity Investment
           </h1>
         </div>

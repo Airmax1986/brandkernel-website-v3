@@ -2,8 +2,25 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  title: 'Founder - BrandKernel',
-  description: 'Brand solutions tailored specifically for founders. Coming soon.',
+  title: 'Brand Strategy for Founders | Build Authority & Clear Positioning',
+  description: 'Transform from invisible builder to industry voice. BrandKernel helps founders develop compelling company brands and personal authority through strategic clarity.',
+  keywords: 'founder branding, startup brand strategy, personal authority, company positioning, founder positioning, startup marketing',
+  authors: [{ name: 'BrandKernel Team' }],
+  openGraph: {
+    title: 'Brand Strategy for Founders - Build Authority & Clear Positioning',
+    description: 'Transform from invisible builder to industry voice with BrandKernel\'s founder-focused brand strategy.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brand Strategy for Founders - Build Authority & Clear Positioning',
+    description: 'Transform from invisible builder to industry voice with BrandKernel\'s founder-focused brand strategy.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function FounderPage() {
@@ -13,12 +30,8 @@ export default function FounderPage() {
       
       <main className="min-h-screen flex items-center justify-center" style={{ paddingTop: '3rem' }}>
         <div className="text-center max-w-2xl px-6">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
-            Founder
+          <h1 className="text-brand-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4">
+            Brand Strategy for Founders
           </h1>
           
           <p style={{ 

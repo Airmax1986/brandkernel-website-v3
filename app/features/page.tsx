@@ -1,4 +1,37 @@
 import CtaButton from "@/components/CtaButton";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Brand Strategy Features That Transform Founders | BrandKernel',
+  description: 'Discover BrandKernel\'s breakthrough AI features: The Clarity Engine, 4-Level System, Visual Maps & Activation Blueprints. Transform confusion into crystal-clear positioning in hours, not months.',
+  openGraph: {
+    title: 'AI Brand Strategy Features That Transform Founders | BrandKernel',
+    description: 'Discover BrandKernel\'s breakthrough AI features: The Clarity Engine, 4-Level System, Visual Maps & Activation Blueprints. Transform confusion into crystal-clear positioning in hours, not months.',
+    type: 'website',
+    url: 'https://brandkernel.io/features',
+    siteName: 'BrandKernel',
+    images: [
+      {
+        url: '/og-features.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'BrandKernel AI Brand Strategy Features',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Brand Strategy Features That Transform Founders | BrandKernel',
+    description: 'Discover BrandKernel\'s breakthrough AI features: The Clarity Engine, 4-Level System, Visual Maps & Activation Blueprints. Transform confusion into crystal-clear positioning in hours, not months.',
+    images: ['/og-features.jpg'],
+  },
+  keywords: 'AI brand strategy, founder positioning, brand clarity tools, startup branding, brand identity system, strategic positioning',
+  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://brandkernel.io/features',
+  }
+};
 
 export default function FeaturesPage() {
   return (
@@ -7,11 +40,7 @@ export default function FeaturesPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 font-normal leading-tight">
             Features That Transform, Not Just Inform
           </h1>
         </div>

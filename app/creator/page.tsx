@@ -2,8 +2,25 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  title: 'Creator - BrandKernel',
-  description: 'Brand solutions tailored specifically for creators. Coming soon.',
+  title: 'Brand Strategy for Creators | Turn Followers into Real Business',
+  description: 'Build authentic, engaging personal brands that convert. BrandKernel helps creators develop strategic clarity and turn followers into sustainable business.',
+  keywords: 'creator branding, content creator brand, personal brand creator, creator business strategy, influencer branding',
+  authors: [{ name: 'BrandKernel Team' }],
+  openGraph: {
+    title: 'Brand Strategy for Creators - Turn Followers into Real Business',
+    description: 'Build authentic, engaging personal brands that convert with BrandKernel\'s creator-focused strategy.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brand Strategy for Creators - Turn Followers into Real Business',
+    description: 'Build authentic, engaging personal brands that convert with BrandKernel\'s creator-focused strategy.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function CreatorPage() {
@@ -13,12 +30,8 @@ export default function CreatorPage() {
       
       <main className="min-h-screen flex items-center justify-center" style={{ paddingTop: '3rem' }}>
         <div className="text-center max-w-2xl px-6">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
-            Creator
+          <h1 className="text-brand-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4">
+            Brand Strategy for Creators
           </h1>
           
           <p style={{ 

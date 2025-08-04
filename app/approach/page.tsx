@@ -1,3 +1,27 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Approach - Guided Discovery Method | BrandKernel",
+  description: "Discover BrandKernel's unique approach to brand strategy. Unlike generic templates, we use guided discovery to uncover your authentic positioning through strategic dialogue.",
+  keywords: "brand approach, guided discovery, authentic branding, strategic positioning, brand methodology, unique brand strategy",
+  authors: [{ name: "BrandKernel Team" }],
+  openGraph: {
+    title: "Our Approach - Guided Discovery, Not Generic Answers",
+    description: "Learn how BrandKernel's guided discovery method helps founders uncover their authentic brand positioning through strategic dialogue.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Approach - Guided Discovery, Not Generic Answers",
+    description: "Learn how BrandKernel's guided discovery method helps founders uncover their authentic brand positioning through strategic dialogue.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function ApproachPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
@@ -5,12 +29,8 @@ export default function ApproachPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
-            Our Approach: Guided Discovery, Not Generic Answers
+          <h1 className="text-brand-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight mb-8 px-4 sm:px-6 md:px-8">
+            Guided Discovery, Not Generic Answers
           </h1>
         </div>
 

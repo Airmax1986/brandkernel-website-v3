@@ -1,3 +1,37 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'How BrandKernel Works: 4-Level Journey From Lost to Laser-Focused',
+  description: 'Discover how BrandKernel\'s 4-level system transforms founders from confusion to clarity. Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization in 3-4 hours total.',
+  openGraph: {
+    title: 'How BrandKernel Works: 4-Level Journey From Lost to Laser-Focused',
+    description: 'Discover how BrandKernel\'s 4-level system transforms founders from confusion to clarity. Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization in 3-4 hours total.',
+    type: 'website',
+    url: 'https://brandkernel.io/how-it-works',
+    siteName: 'BrandKernel',
+    images: [
+      {
+        url: '/og-how-it-works.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'How BrandKernel Works - 4-Level Brand Clarity Journey',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How BrandKernel Works: 4-Level Journey From Lost to Laser-Focused',
+    description: 'Discover how BrandKernel\'s 4-level system transforms founders from confusion to clarity. Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization in 3-4 hours total.',
+    images: ['/og-how-it-works.jpg'],
+  },
+  keywords: 'brand strategy process, founder brand journey, brand clarity method, startup positioning system, brand development steps',
+  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://brandkernel.io/how-it-works',
+  }
+};
+
 export default function HowItWorksPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
@@ -5,20 +39,12 @@ export default function HowItWorksPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-brand-black mb-8 font-normal leading-tight">
             From Lost to Laser-Focused in One Guided Journey
           </h1>
-          <h2 style={{ 
-            fontSize: '2rem', 
-            lineHeight: '2.5rem',
-            fontWeight: 'bold'
-          }} className="text-brand-black">
+          <p className="text-xl md:text-2xl text-brand-black font-bold">
             Your Clarity Breakthrough in 4 Levels
-          </h2>
+          </p>
         </div>
 
         {/* Content */}

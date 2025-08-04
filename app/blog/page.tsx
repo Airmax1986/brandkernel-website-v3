@@ -3,6 +3,39 @@
 import { getAllPostsGraphQL } from "@/lib/contentful/contentful-graphql";
 import BlogPost from "@/components/BlogPost";
 import { Post as PostType } from "@/lib/types"; // Import the type definition
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
+  description: 'Discover actionable brand strategy insights, positioning tips, and clarity frameworks for founders. Learn from real founder journeys and brand transformation stories.',
+  openGraph: {
+    title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
+    description: 'Discover actionable brand strategy insights, positioning tips, and clarity frameworks for founders. Learn from real founder journeys and brand transformation stories.',
+    type: 'website',
+    url: 'https://brandkernel.io/blog',
+    siteName: 'BrandKernel',
+    images: [
+      {
+        url: '/og-blog.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'BrandKernel Blog - Brand Strategy Insights for Founders',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
+    description: 'Discover actionable brand strategy insights, positioning tips, and clarity frameworks for founders. Learn from real founder journeys and brand transformation stories.',
+    images: ['/og-blog.jpg'],
+  },
+  keywords: 'brand strategy blog, founder insights, startup positioning, brand clarity tips, brand strategy articles',
+  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://brandkernel.io/blog',
+  }
+};
 
 export default async function Blog() {
   let posts: PostType[] = [];
@@ -30,18 +63,26 @@ export default async function Blog() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-gray-800 bg-white/70 rounded-lg p-4 inline-block shadow-lg">Our Blog</h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {posts.length > 0 ? (
-          posts.map((post) => (
-            <BlogPost key={post.slug} post={post} />
-          ))
-        ) : (
-          <div className="col-span-full text-center py-12">
-            <p className="text-xl text-neutral-600">Blog posts coming soon!</p>
-          </div>
-        )}
+    <div className="min-h-screen bg-white text-brand-black py-32">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-4 font-normal leading-tight">Brand Strategy Insights</h1>
+          <p className="text-xl text-brand-black max-w-3xl mx-auto">
+            Actionable insights, positioning frameworks, and clarity breakthroughs for founders ready to transform their brand.
+          </p>
+        </div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {posts.length > 0 ? (
+            posts.map((post) => (
+              <BlogPost key={post.slug} post={post} />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-12">
+              <p className="text-xl text-brand-black">Blog posts coming soon!</p>
+              <p className="text-lg text-gray-600 mt-4">We're preparing insightful content about brand strategy, founder positioning, and clarity breakthroughs.</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

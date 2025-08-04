@@ -2,8 +2,25 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  title: 'Freelancer - BrandKernel',
-  description: 'Brand solutions tailored specifically for freelancers. Coming soon.',
+  title: 'Brand Strategy for Freelancers | Escape the Commodity Trap',
+  description: 'Transform from another freelancer to the obvious choice. BrandKernel helps freelancers develop crystal-clear positioning and attract premium clients.',
+  keywords: 'freelancer branding, freelancer positioning, premium freelancing, freelancer marketing, personal brand freelancer',
+  authors: [{ name: 'BrandKernel Team' }],
+  openGraph: {
+    title: 'Brand Strategy for Freelancers - Escape the Commodity Trap',
+    description: 'Transform from another freelancer to the obvious choice with BrandKernel\'s positioning strategy.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brand Strategy for Freelancers - Escape the Commodity Trap',
+    description: 'Transform from another freelancer to the obvious choice with BrandKernel\'s positioning strategy.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function FreelancerPage() {
@@ -13,12 +30,8 @@ export default function FreelancerPage() {
       
       <main className="min-h-screen flex items-center justify-center" style={{ paddingTop: '3rem' }}>
         <div className="text-center max-w-2xl px-6">
-          <h1 style={{ 
-            fontSize: '6rem', 
-            lineHeight: '6rem',
-            fontWeight: 'normal'
-          }} className="text-brand-black mb-8">
-            Freelancer
+          <h1 className="text-brand-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4">
+            Brand Strategy for Freelancers
           </h1>
           
           <p style={{ 
