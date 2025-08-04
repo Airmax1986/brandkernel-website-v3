@@ -207,7 +207,7 @@ export default function HomePage() {
                   « After 20 years of brand consulting, I discovered the secret: The best brands aren't built. They're uncovered through the right conversation. BrandKernel is that conversation. »
                 </blockquote>
                 <p className="text-lg lg:text-xl xl:text-2xl text-[#957FFF] font-medium">
-                  - Max, Founder
+                  - <a href="https://www.linkedin.com/in/maximilian-appelt/" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#8a73f5] transition-colors duration-200">Max, Founder</a>
                 </p>
               </div>
 
@@ -390,9 +390,13 @@ export default function HomePage() {
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Your Clarity Investment
               </h2>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
-                €297 (Early founder pricing, soon to be €497) - One investment. Lifetime clarity. Your identity doesn't expire, and neither does your access.
-              </p>
+              <div className="text-brand-black mb-6">
+                <p className="text-lg leading-relaxed">
+                  <span className="text-3xl font-bold text-[#957FFF]">$297</span>
+                  <br />
+                  <span className="text-base">(Early founder pricing, soon to be $497) - One investment. Lifetime clarity. Your identity doesn't expire, and neither does your access.</span>
+                </p>
+              </div>
               <p style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-brand-black mb-12">
                 What confusion costs you monthly: 40+ hours building the wrong things, countless missed opportunities because you can't articulate your value, competitors pulling ahead with clearer positioning, and immeasurable creative energy drained by uncertainty. What clarity creates immediately: knowing exactly what to build next, articulating your value in one powerful sentence, attracting the right opportunities automatically, and feeling confident in every founder conversation. Complete 4-level guided journey, your personal AI brand strategist, comprehensive Brand Kernel Book, all visual clarity maps, complete activation blueprints, and lifetime access to your strategic foundation. The math is simple. The transformation is profound.
               </p>

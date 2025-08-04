@@ -275,6 +275,7 @@ const config: Config = {
       maxWidth: {
         'ultra': '1920px',        // Max width for ultra-wide
         'content': 'calc(1920px - 3rem)', // 1920px - 2 * 1.5rem margins
+        '2xl': '48rem',           // Increased from 42rem (672px) to 48rem (768px)
       },
 
       // ==========================================================================

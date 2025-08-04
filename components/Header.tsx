@@ -242,6 +242,25 @@ export default function Header({
                     </motion.a>
                   ))}
 
+                  {/* Divider */}
+                  <div className="border-t border-brand-light my-2"></div>
+
+                  {/* Mobile Secondary Navigation Links */}
+                  {secondaryNavItems.map((item, index) => (
+                    <motion.a
+                      key={item.name}
+                      href={item.href}
+                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: (navItems.length + index) * 0.1 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {item.name}
+                    </motion.a>
+                  ))}
+
                   {/* Mobile Join Waitlist Button */}
                   <motion.button
                     onClick={() => {
