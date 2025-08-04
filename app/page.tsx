@@ -30,71 +30,133 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-brand-white">
       
-      {/* Header */}
-      <Header variant="transparent" fixed={true} />
-
       {/* Hero Section with Chatbot */}
       <main>
-        <section id="home" className="min-h-fit lg:min-h-screen flex flex-col lg:flex-row absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
-          {/* Mobile: Chat comes first, Desktop: Text content on left */}
-          <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative min-h-fit lg:min-h-screen">
-            <div className="flex-1 flex flex-col justify-between items-center px-2 sm:px-4 md:px-6" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        {/* Mobile Layout: Chat first, then content below */}
+        <div className="lg:hidden relative">
+          {/* Mobile Chat Section with Gradient Background */}
+          <section className="min-h-screen flex items-center justify-center relative" style={{
+            background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
+          }}>
+            <Header variant="transparent" fixed={true} />
+            <div className="w-full max-w-sm h-full max-h-[600px] p-6 pt-20">
+              <BrandChatbot />
+            </div>
+          </section>
+          
+          {/* Mobile Content Section - Below Chat */}
+          <section className="bg-white py-12 px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              {/* Hero Heading */}
+              <h1 className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8">
+                Finally. The Conversation That Changes Everything.
+              </h1>
+              
+              {/* Hero Subheadline */}
+              <div className="text-brand-black text-base font-bold leading-relaxed pb-8">
+                <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
+              </div>
+
+              {/* Profession Selection */}
+              <div className="mb-8">
+                <p className="text-brand-black text-base font-bold leading-relaxed mb-6">First, choose your profession</p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm">
+                    Freelancer
+                  </a>
+                  <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm">
+                    Founder
+                  </a>
+                  <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm">
+                    Creator
+                  </a>
+                </div>
+              </div>
+
+              {/* Waitlist Form */}
+              <div className="w-full">
+                <div className="flex flex-col items-center gap-4">
+                  <p className="text-brand-black text-base font-bold">Join our Waitlist</p>
+                  <div className="w-full max-w-md">
+                    <input
+                      type="email"
+                      placeholder="name@email.com"
+                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
+                    />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                    <p className="text-brand-black/80 text-base">{formatWaitlistCount()}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Desktop Layout: Side by side */}
+        <section id="home" className="hidden lg:flex min-h-screen absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
+          <Header variant="transparent" fixed={true} />
+          {/* Desktop: Text content on left */}
+          <div className="w-[50vw] bg-white flex flex-col relative min-h-screen">
+            <div className="flex-1 flex flex-col justify-between items-center px-6" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
               {/* Text Block - Center of left side */}
-              <div className="text-center max-w-2xl w-full">
+              <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
-                <h1 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal leading-tight pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-12 px-4 sm:px-6 md:px-8">
+                <h1 className="text-brand-black text-6xl xl:text-7xl 2xl:text-8xl font-normal leading-tight pt-24 pb-12 px-8">
                   Finally. The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
-                <div className="text-brand-black text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-relaxed pb-6 sm:pb-8 px-4 sm:px-6 md:px-8">
+                <div className="text-brand-black text-xl font-bold leading-relaxed pb-8 px-8">
                   <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
                 </div>
 
-
                 {/* Profession Selection */}
-                <div className="mb-8 px-4 sm:px-6 md:px-8">
-                  <p className="text-brand-black text-sm sm:text-base md:text-lg font-bold leading-relaxed mb-6">First, choose your profession</p>
+                <div className="mb-8 px-8">
+                  <p className="text-brand-black text-lg font-bold leading-relaxed mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <a href="/freelancer" className="bg-[#957FFF] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm sm:text-base">
+                    <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-base">
                       Freelancer
                     </a>
-                    <a href="/founder" className="bg-[#957FFF] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm sm:text-base">
+                    <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-base">
                       Founder
                     </a>
-                    <a href="/creator" className="bg-[#957FFF] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm sm:text-base">
+                    <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-base">
                       Creator
                     </a>
                   </div>
                 </div>
-
-
               </div>
 
               {/* Waitlist Form - Bottom of Hero */}
-              <div className="w-full max-w-2xl px-4 sm:px-6 md:px-8">
-                <div className="flex flex-col sm:flex-row items-center gap-4">
-                  <p className="text-brand-black text-sm sm:text-base font-bold whitespace-nowrap">Join our Waitlist</p>
-                  <div className="flex-1 w-full sm:w-auto relative">
+              <div className="w-full max-w-2xl px-8">
+                <div className="flex items-center gap-4">
+                  <p className="text-brand-black text-base font-bold whitespace-nowrap">Join our Waitlist</p>
+                  <div className="flex-1 relative">
                     <input
                       type="email"
                       placeholder="name@email.com"
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-sm sm:text-base shadow-sm"
+                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
                     />
                   </div>
-                  <button className="bg-[#DAFF96] text-brand-black p-2 sm:p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </button>
-                  <p className="text-brand-black/80 text-sm sm:text-base whitespace-nowrap">{formatWaitlistCount()}</p>
+                  <p className="text-brand-black/80 text-base whitespace-nowrap">{formatWaitlistCount()}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Mobile: Chat comes first, Desktop: Chat on right */}
-          <div className="w-full lg:w-[50vw] order-1 lg:order-2 relative min-h-fit lg:min-h-screen" style={{
+          {/* Desktop: Chat on right */}
+          <div className="w-[50vw] relative min-h-screen" style={{
             background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 100%)'
           }}>
             {/* Chat Window - Medium */}
@@ -107,7 +169,7 @@ export default function HomePage() {
         </section>
 
         {/* Body Content Section */}
-        <section className="py-20 bg-white" style={{ marginTop: 'calc(100vh + 3rem)' }}>
+        <section className="py-20 bg-white lg:mt-[calc(100vh+3rem)]">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               
