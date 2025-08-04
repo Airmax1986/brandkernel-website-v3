@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const baseUrl = 'https://www.brandkernel.io';
   const postUrl = `${baseUrl}/blog/${params.slug}`;
-  const imageUrl = post.heroImage || post.headerImage;
+  const imageUrl = post.headerImage;
   const publishedDate = new Date(post.date).toISOString();
   const description = post.summary || post.description || `Read "${post.title}" on BrandKernel - Your empathetic AI brand consultant for authentic brand positioning.`;
 
@@ -99,7 +99,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
   const baseUrl = 'https://www.brandkernel.io';
   const postUrl = `${baseUrl}/blog/${params.slug}`;
-  const imageUrl = post.heroImage || post.headerImage;
+  const imageUrl = post.headerImage;
   const publishedDate = new Date(post.date).toISOString();
 
   // Structured Data (JSON-LD) for SEO
