@@ -38,46 +38,31 @@ export default function HomePage() {
         <section id="home" className="min-h-fit lg:min-h-screen flex flex-col lg:flex-row absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
           {/* Mobile: Chat comes first, Desktop: Text content on left */}
           <div className="w-full lg:w-[50vw] bg-white flex flex-col order-2 lg:order-1 relative min-h-fit lg:min-h-screen">
-            <div className="flex-1 flex flex-col justify-between items-center px-6" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+            <div className="flex-1 flex flex-col justify-between items-center px-2 sm:px-4 md:px-6" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
               {/* Text Block - Center of left side */}
-              <div className="text-center max-w-2xl">
+              <div className="text-center max-w-2xl w-full">
                 {/* Hero Heading */}
-                <h1 style={{ 
-                  fontSize: '6rem', 
-                  lineHeight: '6rem',
-                  fontWeight: 'normal',
-                  paddingTop: '6rem',
-                  paddingBottom: '3rem'
-                }} className="text-brand-black">
+                <h1 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal leading-tight pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-12 px-4 sm:px-6 md:px-8">
                   Finally. The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
-                <div style={{ 
-                  fontSize: '1rem', 
-                  lineHeight: '1.5rem',
-                  fontWeight: 'bold',
-                  paddingBottom: '2rem'
-                }} className="text-brand-black">
+                <div className="text-brand-black text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-relaxed pb-6 sm:pb-8 px-4 sm:px-6 md:px-8">
                   <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
                 </div>
 
 
                 {/* Profession Selection */}
-                <div className="mb-8">
-                  <p style={{ 
-                    fontSize: '1rem', 
-                    lineHeight: '1.5rem',
-                    fontWeight: 'bold'
-                  }} className="text-brand-black mb-6">First, choose your profession</p>
+                <div className="mb-8 px-4 sm:px-6 md:px-8">
+                  <p className="text-brand-black text-sm sm:text-base md:text-lg font-bold leading-relaxed mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <a href="/freelancer" style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                    <a href="/freelancer" className="bg-[#957FFF] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm sm:text-base">
                       Freelancer
                     </a>
-                    <a href="/founder" style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                    <a href="/founder" className="bg-[#957FFF] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm sm:text-base">
                       Founder
                     </a>
-                    <a href="/creator" style={{ fontSize: '1rem' }} className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+                    <a href="/creator" className="bg-[#957FFF] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm sm:text-base">
                       Creator
                     </a>
                   </div>
@@ -87,27 +72,22 @@ export default function HomePage() {
               </div>
 
               {/* Waitlist Form - Bottom of Hero */}
-              <div className="w-full max-w-2xl">
-                <div className="flex items-center gap-4">
-                  <p style={{ 
-                    fontSize: '1rem', 
-                    lineHeight: '1.5rem',
-                    fontWeight: 'bold'
-                  }} className="text-brand-black whitespace-nowrap">Join our Waitlist</p>
-                  <div className="flex-1 relative">
+              <div className="w-full max-w-2xl px-4 sm:px-6 md:px-8">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <p className="text-brand-black text-sm sm:text-base font-bold whitespace-nowrap">Join our Waitlist</p>
+                  <div className="flex-1 w-full sm:w-auto relative">
                     <input
                       type="email"
                       placeholder="name@email.com"
-                      style={{ fontSize: '1rem' }}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-sm sm:text-base shadow-sm"
                     />
                   </div>
-                  <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <button className="bg-[#DAFF96] text-brand-black p-2 sm:p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </button>
-                  <p style={{ fontSize: '1rem' }} className="text-brand-black/80 whitespace-nowrap">{formatWaitlistCount()}</p>
+                  <p className="text-brand-black/80 text-sm sm:text-base whitespace-nowrap">{formatWaitlistCount()}</p>
                 </div>
               </div>
             </div>
@@ -177,7 +157,7 @@ export default function HomePage() {
         <section id="manifest" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 The Clarity Manifesto
               </h2>
               <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
@@ -210,7 +190,7 @@ export default function HomePage() {
         <section id="approach" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Guided Discovery, Not Generic Answers
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -247,7 +227,7 @@ export default function HomePage() {
         <section id="how-it-works" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 From Lost to Laser-Focused
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -300,7 +280,7 @@ export default function HomePage() {
         <section id="features" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Features That Transform
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -345,7 +325,7 @@ export default function HomePage() {
         <section id="pricing" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 style={{ fontSize: '6rem', lineHeight: '6rem', fontWeight: 'normal' }} className="text-brand-black mb-12">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Your Clarity Investment
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
