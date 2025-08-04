@@ -11,32 +11,86 @@ interface Message {
   timestamp: string;
 }
 
-const initialMessages: Message[] = [
+const conversationFlow = [
   {
     id: '1',
     text: 'Hi! I\'m Felix, your AI Brand Consultant. Most branding starts with the wrong questions. Let\'s try three that actually matter.',
     isUser: false,
-    timestamp: '2:30 PM'
+    timestamp: '2:30 PM',
+    delay: 0
   },
   {
     id: '2',
     text: 'Tell me about a moment in the last few months where you thought: "Damn, I\'m really good at this" - what was that project or situation?',
     isUser: false,
-    timestamp: '2:30 PM'
+    timestamp: '2:30 PM',
+    delay: 2000
+  },
+  {
+    id: '3',
+    text: 'Last month I helped a struggling startup completely pivot their messaging. They went from confusing jargon to crystal clear value prop. Landed 3 new clients within 2 weeks.',
+    isUser: true,
+    timestamp: '2:31 PM',
+    delay: 7000
+  },
+  {
+    id: '4',
+    text: 'That sounds fascinating. What do you think made the difference in that moment?',
+    isUser: false,
+    timestamp: '2:31 PM',
+    delay: 12000
+  },
+  {
+    id: '5',
+    text: 'I stopped trying to sound "professional" and started talking like a human. I asked them: what would you tell your best friend about this product over coffee?',
+    isUser: true,
+    timestamp: '2:32 PM',
+    delay: 17000
+  },
+  {
+    id: '6',
+    text: 'I hear something special in that. Can you say that in a different way?',
+    isUser: false,
+    timestamp: '2:32 PM',
+    delay: 22000
+  },
+  {
+    id: '7',
+    text: 'I guess... I have this ability to cut through corporate BS and find the real story. I see what makes people tick and translate that into words that actually connect.',
+    isUser: true,
+    timestamp: '2:33 PM',
+    delay: 27000
+  },
+  {
+    id: '8',
+    text: 'What would happen if more people knew THAT about you?',
+    isUser: false,
+    timestamp: '2:33 PM',
+    delay: 32000
+  },
+  {
+    id: '9',
+    text: 'Wow... I\'d probably stop competing on price and start attracting clients who actually value strategic thinking. This is exactly what I need to figure out.',
+    isUser: true,
+    timestamp: '2:34 PM',
+    delay: 37000
+  },
+  {
+    id: '10',
+    text: 'That\'s a powerful insight. This is exactly how breakthrough happens - one conversation that changes everything. Ready to dive deeper?',
+    isUser: false,
+    timestamp: '2:34 PM',
+    delay: 42000
   }
 ];
 
+// Responses for after the animation completes
 const felixResponses = [
-  "Tell me about a moment in the last few months where you thought: 'Damn, I'm really good at this' - what was that project or situation?",
-  "What would you think about yourself and your offering if you assumed for a moment that your personal way of working and thinking already contains everything you need for a distinctive brand?",
-  "If your absolute dream client - someone who working with would feel like a gift - had to describe you to a friend, what do you think they would say? Not your deliverables, but WHO you are to them.",
-  "That sounds fascinating. What do you think made the difference in that moment?",
-  "If you could have that same feeling in every project - what would need to be different?",
-  "I hear something special in that. Can you say that in a different way?",
-  "What would happen if more people knew THAT about you?",
-  "How does it feel to hear that?",
   "What part of what you just said surprises you?",
-  "That's a powerful insight. Let's dig deeper into what makes that approach uniquely yours..."
+  "I hear something special in that. Can you say that in a different way?",
+  "That's a powerful insight. Let's dig deeper into what makes that approach uniquely yours...",
+  "How does it feel to hear that?",
+  "What would happen if more people knew THAT about you?"
 ];
 
 const ChatHeader = memo(() => {
@@ -198,8 +252,10 @@ const ChatInput = memo(({ onSendMessage }: { onSendMessage: (message: string) =>
 ChatInput.displayName = 'ChatInput';
 
 export default function BrandChatbot() {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const timeoutRefs = useRef<NodeJS.Timeout[]>([]);
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -209,7 +265,42 @@ export default function BrandChatbot() {
     scrollToBottom();
   }, [messages, scrollToBottom]);
 
+  // Start the animated conversation flow
+  useEffect(() => {
+    // Clear any existing timeouts
+    timeoutRefs.current.forEach(timeout => clearTimeout(timeout));
+    timeoutRefs.current = [];
+
+    // Schedule each message
+    conversationFlow.forEach((messageData) => {
+      const timeout = setTimeout(() => {
+        const message: Message = {
+          id: messageData.id,
+          text: messageData.text,
+          isUser: messageData.isUser,
+          timestamp: messageData.timestamp
+        };
+        
+        setMessages(prev => [...prev, message]);
+        
+        // Mark animation as complete after the last message
+        if (messageData.id === conversationFlow[conversationFlow.length - 1].id) {
+          setTimeout(() => setIsAnimationComplete(true), 2000);
+        }
+      }, messageData.delay);
+      
+      timeoutRefs.current.push(timeout);
+    });
+
+    // Cleanup function
+    return () => {
+      timeoutRefs.current.forEach(timeout => clearTimeout(timeout));
+    };
+  }, []);
+
   const handleSendMessage = useCallback((text: string) => {
+    if (!isAnimationComplete) return; // Prevent sending during animation
+    
     const now = new Date();
     const timestamp = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     
@@ -231,7 +322,7 @@ export default function BrandChatbot() {
       };
       setMessages(prev => [...prev, felixResponse]);
     }, 1000);
-  }, []);
+  }, [isAnimationComplete]);
 
   const containerStyle = useMemo(() => ({
     background: 'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1))',
@@ -280,7 +371,25 @@ export default function BrandChatbot() {
         <div ref={messagesEndRef} />
       </div>
       
-      <ChatInput onSendMessage={handleSendMessage} />
+      {isAnimationComplete ? (
+        <ChatInput onSendMessage={handleSendMessage} />
+      ) : (
+        <div className="p-4 bg-white/10 backdrop-blur-sm">
+          <div className="relative">
+            <input
+              type="text"
+              disabled
+              placeholder="Felix is demonstrating the conversation flow..."
+              className="w-full px-4 py-3 pr-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-brand-black placeholder-neutral-400 cursor-not-allowed opacity-60"
+            />
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-brand flex items-center justify-center bg-neutral-200 text-neutral-400">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 }
