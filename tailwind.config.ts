@@ -235,39 +235,58 @@ const config: Config = {
         },
         organicGradient: {
           '0%': { 
-            background: 'linear-gradient(135deg, #FFFFFF 0%, #DAFF96 20%, #957FFF 45%, #EEEEF0 70%, #000000 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '0% 0%'
+            background: `
+              radial-gradient(ellipse 80% 50% at 20% 30%, #DAFF96 0%, transparent 50%),
+              radial-gradient(ellipse 60% 80% at 80% 70%, #957FFF 0%, transparent 50%),
+              radial-gradient(ellipse 100% 60% at 40% 80%, #EEEEF0 0%, transparent 50%),
+              linear-gradient(135deg, #FFFFFF 0%, #000000 100%)
+            `,
+            backgroundSize: '100% 100%'
           },
-          '16.7%': { 
-            background: 'linear-gradient(180deg, #DAFF96 0%, #957FFF 25%, #EEEEF0 50%, #000000 75%, #FFFFFF 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '25% 25%'
+          '20%': { 
+            background: `
+              radial-gradient(ellipse 90% 60% at 30% 20%, #957FFF 0%, transparent 50%),
+              radial-gradient(ellipse 70% 90% at 70% 80%, #EEEEF0 0%, transparent 50%),
+              radial-gradient(ellipse 80% 70% at 60% 60%, #DAFF96 0%, transparent 50%),
+              linear-gradient(180deg, #FFFFFF 0%, #000000 100%)
+            `,
+            backgroundSize: '100% 100%'
           },
-          '33.3%': { 
-            background: 'linear-gradient(225deg, #957FFF 0%, #EEEEF0 20%, #000000 40%, #FFFFFF 65%, #DAFF96 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '50% 50%'
+          '40%': { 
+            background: `
+              radial-gradient(ellipse 70% 80% at 80% 40%, #EEEEF0 0%, transparent 50%),
+              radial-gradient(ellipse 90% 50% at 20% 60%, #DAFF96 0%, transparent 50%),
+              radial-gradient(ellipse 60% 90% at 50% 20%, #957FFF 0%, transparent 50%),
+              linear-gradient(225deg, #FFFFFF 0%, #000000 100%)
+            `,
+            backgroundSize: '100% 100%'
           },
-          '50%': { 
-            background: 'linear-gradient(270deg, #EEEEF0 0%, #000000 25%, #FFFFFF 45%, #DAFF96 70%, #957FFF 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '75% 75%'
+          '60%': { 
+            background: `
+              radial-gradient(ellipse 80% 70% at 70% 80%, #DAFF96 0%, transparent 50%),
+              radial-gradient(ellipse 60% 80% at 30% 30%, #957FFF 0%, transparent 50%),
+              radial-gradient(ellipse 90% 60% at 80% 50%, #EEEEF0 0%, transparent 50%),
+              linear-gradient(270deg, #FFFFFF 0%, #000000 100%)
+            `,
+            backgroundSize: '100% 100%'
           },
-          '66.7%': { 
-            background: 'linear-gradient(315deg, #000000 0%, #FFFFFF 20%, #DAFF96 45%, #957FFF 70%, #EEEEF0 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '100% 100%'
-          },
-          '83.3%': { 
-            background: 'linear-gradient(360deg, #FFFFFF 0%, #DAFF96 25%, #957FFF 50%, #EEEEF0 75%, #000000 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '75% 50%'
+          '80%': { 
+            background: `
+              radial-gradient(ellipse 60% 90% at 50% 70%, #957FFF 0%, transparent 50%),
+              radial-gradient(ellipse 80% 60% at 80% 30%, #EEEEF0 0%, transparent 50%),
+              radial-gradient(ellipse 70% 80% at 20% 50%, #DAFF96 0%, transparent 50%),
+              linear-gradient(315deg, #FFFFFF 0%, #000000 100%)
+            `,
+            backgroundSize: '100% 100%'
           },
           '100%': { 
-            background: 'linear-gradient(135deg, #FFFFFF 0%, #DAFF96 20%, #957FFF 45%, #EEEEF0 70%, #000000 100%)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '0% 0%'
+            background: `
+              radial-gradient(ellipse 80% 50% at 20% 30%, #DAFF96 0%, transparent 50%),
+              radial-gradient(ellipse 60% 80% at 80% 70%, #957FFF 0%, transparent 50%),
+              radial-gradient(ellipse 100% 60% at 40% 80%, #EEEEF0 0%, transparent 50%),
+              linear-gradient(135deg, #FFFFFF 0%, #000000 100%)
+            `,
+            backgroundSize: '100% 100%'
           },
         },
       },
