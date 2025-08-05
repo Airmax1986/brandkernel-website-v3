@@ -192,49 +192,44 @@ const config: Config = {
         },
         gradientBrandAnimate: {
           '0%': { 
-            background: 'linear-gradient(45deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '0% 50%'
+            background: 'radial-gradient(ellipse at 30% 40%, #DAFF96 0%, #957FFF 25%, #EEEEF0 50%, #DAFF96 75%, #957FFF 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '0% 0%'
           },
-          '12.5%': { 
-            background: 'linear-gradient(90deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '25% 25%'
+          '14.3%': { 
+            background: 'radial-gradient(ellipse at 50% 30%, #957FFF 0%, #EEEEF0 25%, #DAFF96 50%, #957FFF 75%, #EEEEF0 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '20% 10%'
           },
-          '25%': { 
-            background: 'linear-gradient(135deg, #957FFF 0%, #EEEEF0 35%, #DAFF96 70%, #957FFF 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '50% 0%'
+          '28.6%': { 
+            background: 'radial-gradient(ellipse at 70% 40%, #EEEEF0 0%, #DAFF96 25%, #957FFF 50%, #EEEEF0 75%, #DAFF96 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '40% 20%'
           },
-          '37.5%': { 
-            background: 'linear-gradient(180deg, #957FFF 0%, #EEEEF0 35%, #DAFF96 70%, #957FFF 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '75% 25%'
+          '42.9%': { 
+            background: 'radial-gradient(ellipse at 80% 60%, #DAFF96 0%, #957FFF 25%, #EEEEF0 50%, #DAFF96 75%, #957FFF 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '60% 40%'
           },
-          '50%': { 
-            background: 'linear-gradient(225deg, #EEEEF0 0%, #DAFF96 35%, #957FFF 70%, #EEEEF0 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '100% 50%'
+          '57.1%': { 
+            background: 'radial-gradient(ellipse at 70% 80%, #957FFF 0%, #EEEEF0 25%, #DAFF96 50%, #957FFF 75%, #EEEEF0 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '80% 60%'
           },
-          '62.5%': { 
-            background: 'linear-gradient(270deg, #EEEEF0 0%, #DAFF96 35%, #957FFF 70%, #EEEEF0 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '75% 75%'
+          '71.4%': { 
+            background: 'radial-gradient(ellipse at 50% 90%, #EEEEF0 0%, #DAFF96 25%, #957FFF 50%, #EEEEF0 75%, #DAFF96 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '60% 80%'
           },
-          '75%': { 
-            background: 'linear-gradient(315deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '50% 100%'
-          },
-          '87.5%': { 
-            background: 'linear-gradient(360deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '25% 75%'
+          '85.7%': { 
+            background: 'radial-gradient(ellipse at 30% 80%, #DAFF96 0%, #957FFF 25%, #EEEEF0 50%, #DAFF96 75%, #957FFF 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '40% 90%'
           },
           '100%': { 
-            background: 'linear-gradient(405deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '0% 50%'
+            background: 'radial-gradient(ellipse at 30% 40%, #DAFF96 0%, #957FFF 25%, #EEEEF0 50%, #DAFF96 75%, #957FFF 100%)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '0% 0%'
           },
         },
       },
