@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <GoogleAnalytics />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -45,7 +46,6 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <GoogleAnalytics />
         <Header />
         <main>{children}</main>
       </body>
