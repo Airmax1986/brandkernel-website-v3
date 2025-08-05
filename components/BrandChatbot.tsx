@@ -255,10 +255,13 @@ export default function BrandChatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const timeoutRefs = useRef<NodeJS.Timeout[]>([]);
 
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messagesContainerRef.current && messagesEndRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   }, []);
 
   useEffect(() => {
@@ -366,7 +369,7 @@ export default function BrandChatbot() {
     >
       <ChatHeader />
       
-      <div className="flex-1 overflow-y-auto px-4 py-2 space-y-3">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto px-4 py-2 space-y-3">
         {renderedMessages}
         <div ref={messagesEndRef} />
       </div>
