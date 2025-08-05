@@ -364,12 +364,12 @@ export default function BrandChatbot() {
   return (
     <motion.div
       {...animationProps}
-      className="w-full h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/30 flex flex-col"
+      className="w-full h-full max-h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/30 flex flex-col"
       style={containerStyle}
     >
       <ChatHeader />
       
-      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto px-4 py-2 space-y-3">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto px-4 py-2 space-y-3 min-h-0">
         {renderedMessages}
         <div ref={messagesEndRef} />
       </div>
