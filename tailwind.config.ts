@@ -239,7 +239,7 @@ const config: Config = {
               radial-gradient(ellipse 120% 80% at 15% 20%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 100% 100% at 25% 40%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 140% 70% at 35% 60%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(135deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
@@ -248,7 +248,7 @@ const config: Config = {
               radial-gradient(ellipse 130% 90% at 25% 30%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 110% 110% at 35% 50%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 150% 80% at 45% 70%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(150deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(150deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
@@ -257,7 +257,7 @@ const config: Config = {
               radial-gradient(ellipse 140% 100% at 40% 45%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 120% 120% at 50% 65%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 160% 90% at 60% 85%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(180deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
@@ -266,7 +266,7 @@ const config: Config = {
               radial-gradient(ellipse 150% 110% at 60% 60%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 130% 130% at 70% 80%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 170% 100% at 80% 95%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(225deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(225deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
@@ -275,7 +275,7 @@ const config: Config = {
               radial-gradient(ellipse 140% 100% at 75% 75%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 120% 120% at 85% 90%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 160% 90% at 90% 80%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(270deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(270deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
@@ -284,7 +284,7 @@ const config: Config = {
               radial-gradient(ellipse 130% 90% at 85% 65%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 110% 110% at 75% 50%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 150% 80% at 65% 35%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(315deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(315deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
@@ -293,7 +293,7 @@ const config: Config = {
               radial-gradient(ellipse 120% 80% at 15% 20%, #DAFF96 0%, transparent 60%),
               radial-gradient(ellipse 100% 100% at 25% 40%, #957FFF 0%, transparent 60%),
               radial-gradient(ellipse 140% 70% at 35% 60%, #EEEEF0 0%, transparent 60%),
-              linear-gradient(135deg, #FFFFFF 0%, #000000 100%)
+              linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%)
             `,
             backgroundSize: '100% 100%'
           },
