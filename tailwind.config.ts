@@ -150,7 +150,7 @@ const config: Config = {
         'bounce-gentle': 'bounceGentle 2s infinite',
         'pulse-brand': 'pulseBrand 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'gradient-shift': 'gradientShift 3s ease-in-out infinite',
-        'gradient-brand-animate': 'gradientBrandAnimate 8s ease-in-out infinite',
+        'gradient-brand-animate': 'gradientBrandAnimate 15s linear infinite',
       },
 
       keyframes: {
@@ -192,29 +192,34 @@ const config: Config = {
         },
         gradientBrandAnimate: {
           '0%': { 
-            background: 'linear-gradient(45deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '0% 50%'
+            background: 'linear-gradient(0deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '0% 0%'
           },
-          '25%': { 
-            background: 'linear-gradient(135deg, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '100% 50%'
+          '20%': { 
+            background: 'linear-gradient(72deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '25% 25%'
           },
-          '50%': { 
-            background: 'linear-gradient(225deg, #EEEEF0, #DAFF96, #957FFF, #EEEEF0)',
-            backgroundSize: '400% 400%',
+          '40%': { 
+            background: 'linear-gradient(144deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '50% 50%'
+          },
+          '60%': { 
+            background: 'linear-gradient(216deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '75% 75%'
+          },
+          '80%': { 
+            background: 'linear-gradient(288deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
+            backgroundSize: '300% 300%',
             backgroundPosition: '100% 100%'
           },
-          '75%': { 
-            background: 'linear-gradient(315deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '0% 100%'
-          },
           '100%': { 
-            background: 'linear-gradient(45deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96)',
-            backgroundSize: '400% 400%',
-            backgroundPosition: '0% 50%'
+            background: 'linear-gradient(360deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
+            backgroundSize: '300% 300%',
+            backgroundPosition: '0% 0%'
           },
         },
       },
