@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -30,7 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <GoogleAnalytics />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DH4KGB266D"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-DH4KGB266D');
+            `,
+          }}
+        />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
