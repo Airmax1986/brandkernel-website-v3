@@ -35,7 +35,7 @@ export default function HomePage() {
         {/* Mobile Layout: Chat first, then content below */}
         <div className="lg:hidden relative">
           {/* Mobile Chat Section with Gradient Background */}
-          <section className="min-h-screen flex items-center justify-center relative animate-gradient-brand-animate">
+          <section className="min-h-screen flex items-center justify-center relative animate-organic-gradient">
             <Header variant="transparent" fixed={true} />
             <div className="w-full max-w-sm h-[600px] p-6 pt-20">
               <DynamicBrandChatbot />
@@ -154,7 +154,7 @@ export default function HomePage() {
           </div>
 
           {/* Desktop: Chat on right */}
-          <div className="w-[50vw] relative min-h-screen animate-gradient-brand-animate">
+          <div className="w-[50vw] relative min-h-screen animate-organic-gradient">
             {/* Chat Window - Medium */}
             <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
               <div className="w-full max-w-lg h-full max-h-[500px]">
