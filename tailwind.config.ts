@@ -150,7 +150,7 @@ const config: Config = {
         'bounce-gentle': 'bounceGentle 2s infinite',
         'pulse-brand': 'pulseBrand 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'gradient-shift': 'gradientShift 3s ease-in-out infinite',
-        'gradient-brand-animate': 'gradientBrandAnimate 15s linear infinite',
+        'gradient-brand-animate': 'gradientBrandAnimate 25s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite',
       },
 
       keyframes: {
@@ -192,34 +192,49 @@ const config: Config = {
         },
         gradientBrandAnimate: {
           '0%': { 
-            background: 'linear-gradient(0deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '0% 0%'
+            background: 'linear-gradient(45deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '0% 50%'
           },
-          '20%': { 
-            background: 'linear-gradient(72deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '300% 300%',
+          '12.5%': { 
+            background: 'linear-gradient(90deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
+            backgroundSize: '400% 400%',
             backgroundPosition: '25% 25%'
           },
-          '40%': { 
-            background: 'linear-gradient(144deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '50% 50%'
+          '25%': { 
+            background: 'linear-gradient(135deg, #957FFF 0%, #EEEEF0 35%, #DAFF96 70%, #957FFF 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '50% 0%'
           },
-          '60%': { 
-            background: 'linear-gradient(216deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '300% 300%',
+          '37.5%': { 
+            background: 'linear-gradient(180deg, #957FFF 0%, #EEEEF0 35%, #DAFF96 70%, #957FFF 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '75% 25%'
+          },
+          '50%': { 
+            background: 'linear-gradient(225deg, #EEEEF0 0%, #DAFF96 35%, #957FFF 70%, #EEEEF0 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '100% 50%'
+          },
+          '62.5%': { 
+            background: 'linear-gradient(270deg, #EEEEF0 0%, #DAFF96 35%, #957FFF 70%, #EEEEF0 100%)',
+            backgroundSize: '400% 400%',
             backgroundPosition: '75% 75%'
           },
-          '80%': { 
-            background: 'linear-gradient(288deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '100% 100%'
+          '75%': { 
+            background: 'linear-gradient(315deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '50% 100%'
+          },
+          '87.5%': { 
+            background: 'linear-gradient(360deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '25% 75%'
           },
           '100%': { 
-            background: 'linear-gradient(360deg, #DAFF96, #957FFF, #EEEEF0, #DAFF96, #957FFF)',
-            backgroundSize: '300% 300%',
-            backgroundPosition: '0% 0%'
+            background: 'linear-gradient(405deg, #DAFF96 0%, #957FFF 35%, #EEEEF0 70%, #DAFF96 100%)',
+            backgroundSize: '400% 400%',
+            backgroundPosition: '0% 50%'
           },
         },
       },
