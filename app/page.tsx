@@ -158,7 +158,7 @@ export default function HomePage() {
             className="w-[50vw] relative min-h-screen animate-organic-gradient"
             style={{
               borderRadius: '15px',
-              boxShadow: 'inset 0 0 0 1rem white'
+              border: '1rem solid white'
             }}
           >
             {/* Chat Window - Medium */}
