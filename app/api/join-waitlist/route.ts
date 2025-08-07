@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { addToWaitlist, isEmailInWaitlist, getWaitlistStats, initializeDatabase } from '@/lib/database';
 
 // Types for the API
 interface WaitlistRequest {
@@ -20,9 +21,8 @@ interface WaitlistResponse {
   error?: string;
 }
 
-// In-memory storage (replace with database in production)
-let waitlistEmails: Set<string> = new Set();
-let signupCount = 247; // Starting count
+// Initialize database on module load
+initializeDatabase();
 
 // Email validation
 function isValidEmail(email: string): boolean {
@@ -145,22 +145,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if email already exists
-    if (waitlistEmails.has(email)) {
+    // Check if email already exists and add to waitlist
+    const dbResult = await addToWaitlist(email, body.source || 'website');
+    
+    if (!dbResult.success) {
       return NextResponse.json(
         { 
           success: false, 
-          error: 'Email already registered',
+          error: dbResult.error || 'Email already registered',
           message: 'This email is already on our waitlist'
         } as WaitlistResponse,
         { status: 409 }
       );
     }
 
-    // Add email to waitlist
-    waitlistEmails.add(email);
-    signupCount++;
-    const position = signupCount;
+    const { position, totalSignups } = dbResult;
 
     // Send welcome email if requested
     let emailSent = false;
@@ -181,7 +180,7 @@ export async function POST(request: NextRequest) {
         data: {
           email,
           position,
-          totalSignups: signupCount,
+          totalSignups,
           emailSent
         }
       } as WaitlistResponse,
@@ -205,13 +204,12 @@ export async function POST(request: NextRequest) {
 // GET endpoint to retrieve waitlist stats (optional)
 export async function GET() {
   try {
+    const stats = await getWaitlistStats();
+    
     return NextResponse.json(
       {
         success: true,
-        data: {
-          totalSignups: signupCount,
-          timestamp: new Date().toISOString()
-        }
+        data: stats
       },
       { status: 200 }
     );

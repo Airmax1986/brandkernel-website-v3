@@ -4,7 +4,7 @@ import SolutionsSection from '@/components/SolutionsSection';
 import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
 import DynamicBrandChatbot from '@/components/DynamicBrandChatbot';
-import { formatWaitlistCount } from '@/lib/waitlist-counter';
+import HeroWaitlistForm from '@/components/HeroWaitlistForm';
 
 export const metadata: Metadata = {
   title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
@@ -72,26 +72,7 @@ export default function HomePage() {
               </div>
 
               {/* Waitlist Form */}
-              <div className="w-full">
-                <div className="flex flex-col items-center gap-4">
-                  <p className="text-brand-black text-base font-bold">Join our Waitlist</p>
-                  <div className="w-full max-w-md">
-                    <input
-                      type="email"
-                      placeholder="name@email.com"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
-                    />
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </button>
-                    <p className="text-brand-black/80 text-base">{formatWaitlistCount()}</p>
-                  </div>
-                </div>
-              </div>
+              <HeroWaitlistForm variant="mobile" />
             </div>
           </section>
         </div>
@@ -132,24 +113,7 @@ export default function HomePage() {
               </div>
 
               {/* Waitlist Form - Bottom of Hero */}
-              <div className="w-full max-w-2xl px-8">
-                <div className="flex items-center gap-4">
-                  <p className="text-brand-black text-base font-bold whitespace-nowrap">Join our Waitlist</p>
-                  <div className="flex-1 relative">
-                    <input
-                      type="email"
-                      placeholder="name@email.com"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm"
-                    />
-                  </div>
-                  <button className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </button>
-                  <p className="text-brand-black/80 text-base whitespace-nowrap">{formatWaitlistCount()}</p>
-                </div>
-              </div>
+              <HeroWaitlistForm variant="desktop" />
             </div>
           </div>
 
