@@ -152,7 +152,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
                 <button
                   onClick={handleSubmit}
                   disabled={isLoading || !email.trim()}
-                  className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all  transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -213,7 +213,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
               <button
                 type="submit"
                 disabled={isLoading || !email.trim()}
-                className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all  transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

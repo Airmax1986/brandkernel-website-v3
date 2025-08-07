@@ -231,7 +231,7 @@ export default function Header({
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
+                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -250,7 +250,7 @@ export default function Header({
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-medium py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
+                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}

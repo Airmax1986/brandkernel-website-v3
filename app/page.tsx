@@ -59,13 +59,13 @@ export default function HomePage() {
               <div className="mb-8">
                 <p className="text-brand-black text-base font-bold leading-relaxed mb-6">First, choose your profession</p>
                 <div className="flex flex-wrap justify-center gap-3">
-                  <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm">
+                  <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
                     Freelancer
                   </a>
-                  <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm">
+                  <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
                     Founder
                   </a>
-                  <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-sm">
+                  <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
                     Creator
                   </a>
                 </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
           <Header variant="transparent" fixed={true} />
           {/* Desktop: Text content on left */}
           <div className="w-[50vw] bg-white flex flex-col relative min-h-screen">
-            <div className="flex-1 flex flex-col justify-between items-center px-6" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+            <div className="flex-1 flex flex-col justify-between items-center px-10" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
@@ -99,13 +99,13 @@ export default function HomePage() {
                 <div className="mb-8 px-8">
                   <p className="text-brand-black text-lg font-bold leading-relaxed mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-base">
+                    <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
                       Freelancer
                     </a>
-                    <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-base">
+                    <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
                       Founder
                     </a>
-                    <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block text-base">
+                    <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
                       Creator
                     </a>
                   </div>
@@ -119,7 +119,7 @@ export default function HomePage() {
 
           {/* Desktop: Chat on right */}
           <div 
-            className="w-[50vw] relative min-h-screen animate-organic-gradient"
+            className="w-[50vw] relative min-h-screen animate-organic-gradient overflow-hidden"
             style={{
               borderRadius: '15px',
               border: '1rem solid white'
@@ -136,7 +136,7 @@ export default function HomePage() {
 
         {/* Body Content Section */}
         <section className="py-20 bg-white lg:mt-[calc(100vh+3rem)]">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-10">
             <div className="max-w-4xl mx-auto text-center">
               
               {/* Body Copy */}
@@ -183,7 +183,7 @@ export default function HomePage() {
 
         {/* Manifest Section */}
         <section id="manifest" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 The Clarity Manifesto
@@ -207,7 +207,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 Read Full Manifesto
               </a>
             </div>
@@ -216,7 +216,7 @@ export default function HomePage() {
 
         {/* Approach Section */}
         <section id="approach" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Guided Discovery, Not Generic Answers
@@ -244,7 +244,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 Learn Our Method
               </a>
             </div>
@@ -253,7 +253,7 @@ export default function HomePage() {
 
         {/* How It Works Section */}
         <section id="how-it-works" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 From Lost to Laser-Focused
@@ -297,7 +297,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 See the Journey
               </a>
             </div>
@@ -306,7 +306,7 @@ export default function HomePage() {
 
         {/* Features Section */}
         <section id="features" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Features That Transform
@@ -342,7 +342,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 See All Features
               </a>
             </div>
@@ -351,7 +351,7 @@ export default function HomePage() {
 
         {/* Pricing Section */}
         <section id="pricing" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
                 Your Clarity Investment
@@ -391,7 +391,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 See Investment Details
               </a>
             </div>

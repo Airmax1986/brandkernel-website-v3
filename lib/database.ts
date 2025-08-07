@@ -30,6 +30,7 @@ function getRedis(): Redis | null {
 
 // Fallback in-memory storage when Redis is not available
 let fallbackStorage: Set<string> = new Set();
+let fallbackFinalList: Set<string> = new Set();
 let fallbackCounter = 71; // Starting count to match display counter
 
 // Database operations for waitlist
@@ -91,6 +92,7 @@ export async function addToWaitlist(
       // Store the entry
       await redisClient.set(`waitlist:email:${normalizedEmail}`, JSON.stringify(entry));
       await redisClient.sadd('waitlist:emails', normalizedEmail);
+      await redisClient.sadd('final_email_list', normalizedEmail);
       await redisClient.set(`waitlist:position:${position}`, normalizedEmail);
       
       // Update last signup timestamp
@@ -121,6 +123,7 @@ export async function addToWaitlist(
   }
   
   fallbackStorage.add(normalizedEmail);
+  fallbackFinalList.add(normalizedEmail);
   fallbackCounter++;
   const position = fallbackCounter;
   
@@ -234,4 +237,24 @@ export async function initializeDatabase(): Promise<void> {
   } else {
     console.log('Redis not available - using fallback storage with counter starting at 71');
   }
+}
+
+/**
+ * Get all emails from the final email list
+ */
+export async function getFinalEmailList(): Promise<string[]> {
+  const redisClient = getRedis();
+  
+  if (redisClient) {
+    try {
+      const emails = await redisClient.smembers('final_email_list');
+      return emails || [];
+    } catch (error) {
+      console.error('Redis error in getFinalEmailList:', error);
+      // Fall back to in-memory storage
+    }
+  }
+  
+  // Fallback to in-memory storage
+  return Array.from(fallbackFinalList);
 }
