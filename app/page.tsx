@@ -131,12 +131,12 @@ export default function HomePage() {
                 borderRadius: '1.5rem'
               }}
             >
-            {/* Chat Window - Medium */}
+            </div>
+            {/* Chat Window - Medium - OUTSIDE gradient animation */}
             <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
               <div className="w-full max-w-lg h-full max-h-[500px]">
                 <DynamicBrandChatbot />
               </div>
-            </div>
             </div>
           </div>
         </section>
