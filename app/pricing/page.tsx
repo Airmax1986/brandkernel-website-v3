@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-10">
         
         {/* Header */}
         <div className="text-center mb-16">

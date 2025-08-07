@@ -94,7 +94,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       />
       
       <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50">
-        <article className="container mx-auto px-6 py-8 md:px-12 md:py-12 max-w-4xl">
+        <article className="container mx-auto px-10 py-8 md:px-12 md:py-12 max-w-4xl">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             
             {/* Hero Image */}

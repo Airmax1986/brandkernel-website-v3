@@ -29,7 +29,7 @@ export default function FounderPage() {
       <Header variant="transparent" fixed={true} />
       
       <main className="min-h-screen flex items-center justify-center" style={{ paddingTop: '3rem' }}>
-        <div className="text-center max-w-2xl px-6">
+        <div className="text-center max-w-2xl px-10">
           <h1 className="text-brand-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4">
             Brand Strategy for Founders
           </h1>
@@ -62,7 +62,7 @@ export default function FounderPage() {
             fontSize: '1rem', 
             lineHeight: '1.5rem', 
             fontWeight: 'bold' 
-          }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+          }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
             Back to Home
           </a>
         </div>

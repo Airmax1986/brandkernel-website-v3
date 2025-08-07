@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function ManifestPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-10">
         
         {/* Header */}
         <div className="text-center mb-16">
@@ -160,7 +160,7 @@ export default function ManifestPage() {
                 fontSize: '1rem', 
                 lineHeight: '1.5rem', 
                 fontWeight: 'bold' 
-              }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 Join the Waitlist →
               </a>
             </div>

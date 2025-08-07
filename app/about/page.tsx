@@ -26,11 +26,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-10">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4 sm:px-6 md:px-8">
+          <h1 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4 sm:px-10 md:px-10">
             The Founder Behind the Breakthrough
           </h1>
         </div>
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 fontSize: '1rem', 
                 lineHeight: '1.5rem', 
                 fontWeight: 'bold' 
-              }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
+              }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
                 Join the Waitlist →
               </a>
             </div>

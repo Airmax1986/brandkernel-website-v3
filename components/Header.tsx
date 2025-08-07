@@ -90,7 +90,7 @@ export default function Header({
           <div className="flex" style={{ height: '3rem' }}>
             
             {/* Left 50% - Logo + Main Navigation */}
-            <div className="w-[50vw] flex items-center justify-between px-6">
+            <div className="w-[50vw] flex items-center justify-between px-10">
               {/* Logo */}
               <div className="flex-shrink-0">
                 <a 
@@ -119,7 +119,7 @@ export default function Header({
             </div>
 
             {/* Right 50% - Secondary Nav + Sign Up + Mobile Menu */}
-            <div className="w-[50vw] flex items-center justify-end px-6">
+            <div className="w-[50vw] flex items-center justify-end px-10">
               {/* Secondary Nav + Sign Up */}
               <div className="hidden md:flex items-center space-x-3">
                 {secondaryNavItems.map((item, index) => (
@@ -267,7 +267,7 @@ export default function Header({
                       handleJoinWaitlist();
                       setIsMobileMenuOpen(false);
                     }}
-                    className="bg-gradient-brand text-brand-black font-semibold px-6 py-3 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 w-full text-center"
+                    className="bg-gradient-brand text-brand-black font-semibold px-10 py-3 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 w-full text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}

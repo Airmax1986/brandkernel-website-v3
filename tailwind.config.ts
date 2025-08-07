@@ -14,7 +14,7 @@ const config: Config = {
       // ==========================================================================
       spacing: {
         // Brand-specific spacing for consistent layouts
-        'page-margin': '1.5rem',      // 24px - Seitenrand
+        'page-margin': '2.5rem',      // 40px - Seitenrand
         'page-gutter': '1.5rem',      // 24px - Gutter zwischen Elementen
         'section-padding': '3rem',    // 48px - Section Padding
         'card-padding': '2rem',       // 32px - Card interne Abstände
@@ -475,8 +475,8 @@ const config: Config = {
           'max-width': '1920px',
           'margin-left': 'auto',
           'margin-right': 'auto',
-          'padding-left': '1.5rem',
-          'padding-right': '1.5rem',
+          'padding-left': '2.5rem',
+          'padding-right': '2.5rem',
         },
 
         // Typography spacing utilities

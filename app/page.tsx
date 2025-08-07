@@ -59,13 +59,13 @@ export default function HomePage() {
               <div className="mb-8">
                 <p className="text-brand-black text-base font-bold leading-relaxed mb-6">First, choose your profession</p>
                 <div className="flex flex-wrap justify-center gap-3">
-                  <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
+                  <a href="/freelancer" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
                     Freelancer
                   </a>
-                  <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
+                  <a href="/founder" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
                     Founder
                   </a>
-                  <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
+                  <a href="/creator" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
                     Creator
                   </a>
                 </div>
@@ -86,26 +86,26 @@ export default function HomePage() {
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
-                <h1 className="text-brand-black text-6xl xl:text-7xl 2xl:text-8xl font-normal leading-tight pt-24 pb-12 px-8">
+                <h1 className="text-brand-black text-6xl xl:text-7xl 2xl:text-8xl font-normal leading-tight pt-24 pb-12 px-10">
                   Finally. The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
-                <div className="text-brand-black text-xl font-bold leading-relaxed pb-8 px-8">
+                <div className="text-brand-black text-xl font-bold leading-relaxed pb-8 px-10">
                   <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
                 </div>
 
                 {/* Profession Selection */}
-                <div className="mb-8 px-8">
+                <div className="mb-8 px-10">
                   <p className="text-brand-black text-lg font-bold leading-relaxed mb-6">First, choose your profession</p>
                   <div className="flex flex-wrap justify-center gap-3">
-                    <a href="/freelancer" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
+                    <a href="/freelancer" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
                       Freelancer
                     </a>
-                    <a href="/founder" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
+                    <a href="/founder" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
                       Founder
                     </a>
-                    <a href="/creator" className="bg-[#957FFF] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
+                    <a href="/creator" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
                       Creator
                     </a>
                   </div>
@@ -121,14 +121,14 @@ export default function HomePage() {
           <div 
             className="w-[50vw] relative min-h-screen overflow-hidden"
             style={{
-              borderRadius: '15px',
+              borderRadius: '2.5rem',
               border: '1rem solid white'
             }}
           >
             <div 
               className="absolute inset-0 animate-organic-gradient"
               style={{
-                borderRadius: '5px'
+                borderRadius: '1.5rem'
               }}
             >
             {/* Chat Window - Medium */}
@@ -192,7 +192,7 @@ export default function HomePage() {
         <section id="manifest" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
                 The Clarity Manifesto
               </h2>
               <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
@@ -214,7 +214,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
+              <a href="/manifest" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 Read Full Manifesto
               </a>
             </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
         <section id="approach" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
                 Guided Discovery, Not Generic Answers
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -251,7 +251,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
+              <a href="/approach" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 Learn Our Method
               </a>
             </div>
@@ -262,7 +262,7 @@ export default function HomePage() {
         <section id="how-it-works" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
                 From Lost to Laser-Focused
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -304,7 +304,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
+              <a href="/how-it-works" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 See the Journey
               </a>
             </div>
@@ -315,7 +315,7 @@ export default function HomePage() {
         <section id="features" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
                 Features That Transform
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
@@ -349,7 +349,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
+              <a href="/features" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 See All Features
               </a>
             </div>
@@ -360,7 +360,7 @@ export default function HomePage() {
         <section id="pricing" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-6 md:px-8">
+              <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
                 Your Clarity Investment
               </h2>
               <div className="text-brand-black mb-6">
@@ -398,7 +398,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-8 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
+              <a href="/pricing" style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }} className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block">
                 See Investment Details
               </a>
             </div>
@@ -408,7 +408,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-brand-black text-brand-white py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center">
               

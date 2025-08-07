@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-10">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 font-normal leading-tight">
             Get in Touch
@@ -52,7 +52,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-brand-black mb-2">Join the Waitlist</h3>
                 <p className="text-brand-black mb-4">Ready to transform your brand clarity?</p>
-                <a href="/waitlist" className="bg-[#957FFF] text-white px-6 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all inline-block font-bold">
+                <a href="/waitlist" className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all inline-block font-bold">
                   Join Waitlist →
                 </a>
               </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
         <div className="text-center mt-16 bg-gradient-to-r from-[#DAFF96] to-[#957FFF] p-8 rounded-lg text-white">
           <h2 className="text-2xl font-bold mb-4">Ready for Your Breakthrough?</h2>
           <p className="mb-6">Join 400+ founders who are waiting for the conversation that changes everything.</p>
-          <a href="/waitlist" className="bg-white text-[#957FFF] px-8 py-3 rounded-full hover:bg-gray-100 transition-all inline-block font-bold">
+          <a href="/waitlist" className="bg-white text-[#957FFF] px-10 py-3 rounded-full hover:bg-gray-100 transition-all inline-block font-bold">
             Join the Waitlist →
           </a>
         </div>

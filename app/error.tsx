@@ -25,13 +25,13 @@ export default function Error({
         </p>
         <button
           onClick={reset}
-          className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors mr-4"
+          className="inline-block bg-red-600 text-white px-10 py-3 rounded-lg hover:bg-red-700 transition-colors mr-4"
         >
           Try Again
         </button>
         <a 
           href="/"
-          className="inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+          className="inline-block bg-gray-600 text-white px-10 py-3 rounded-lg hover:bg-gray-700 transition-colors"
         >
           Go Home
         </a>
