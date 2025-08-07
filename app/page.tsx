@@ -86,12 +86,12 @@ export default function HomePage() {
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
-                <h1 className="text-brand-black text-6xl xl:text-7xl 2xl:text-8xl font-normal leading-tight pt-24 pb-12 px-10">
+                <h1 className="text-brand-black text-6xl xl:text-7xl 2xl:text-8xl font-light leading-tight pt-24 pb-12 px-10">
                   Finally. The Conversation That Changes Everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
-                <div className="text-brand-black text-xl font-bold leading-relaxed pb-8 px-10">
+                <div className="text-brand-black text-xl font-normal leading-relaxed pb-8 px-10">
                   <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
                 </div>
 
