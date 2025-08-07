@@ -6,6 +6,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import MarkdownContent from "@/components/MarkdownContent";
 import { Metadata } from "next";
+import { createBlogPostMetadata } from "@/lib/metadata";
 
 // This function now receives the correctly formatted data.
 export async function generateStaticParams() {
@@ -24,69 +25,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
-  const baseUrl = 'https://www.brandkernel.io';
-  const postUrl = `${baseUrl}/blog/${params.slug}`;
-  const imageUrl = post.headerImage;
-  const publishedDate = new Date(post.date).toISOString();
   const description = post.summary || post.description || `Read "${post.title}" on BrandKernel - Your empathetic AI brand consultant for authentic brand positioning.`;
+  const imageUrl = post.headerImage ? (post.headerImage.startsWith('//') ? `https:${post.headerImage}` : post.headerImage) : undefined;
 
-  return {
-    title: `${post.title} - BrandKernel`,
+  return createBlogPostMetadata({
+    title: post.title,
     description: description,
-    keywords: post.tags?.join(', ') || 'branding, brand strategy, AI consultant, positioning, authentic branding',
-    authors: [{ name: post.author?.name || 'BrandKernel Team' }],
-    creator: post.author?.name || 'BrandKernel Team',
-    publisher: 'BrandKernel',
-    category: 'Business',
-    alternates: {
-      canonical: postUrl,
-    },
-    openGraph: {
-      title: post.title,
-      description: description,
-      url: postUrl,
-      siteName: 'BrandKernel',
-      locale: 'en_US',
-      type: 'article',
-      publishedTime: publishedDate,
-      authors: [post.author?.name || 'BrandKernel Team'],
-      tags: post.tags || ['branding', 'brand strategy'],
-      images: imageUrl ? [
-        {
-          url: imageUrl.startsWith('//') ? `https:${imageUrl}` : imageUrl,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        }
-      ] : [
-        {
-          url: `${baseUrl}/og-default.jpg`,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        }
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: description,
-      creator: '@brandkernel',
-      site: '@brandkernel',
-      images: imageUrl ? [imageUrl.startsWith('//') ? `https:${imageUrl}` : imageUrl] : [`${baseUrl}/og-default.jpg`],
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-  };
+    slug: params.slug,
+    image: imageUrl,
+    publishedTime: new Date(post.date).toISOString(),
+    modifiedTime: new Date(post.date).toISOString(),
+    authors: [post.author?.name || 'BrandKernel Team'],
+    tags: post.tags || ['branding', 'brand strategy', 'AI consultant', 'positioning', 'authentic branding']
+  });
 }
 
 // This component definition is correct and will now work.

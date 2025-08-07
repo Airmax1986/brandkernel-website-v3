@@ -76,6 +76,17 @@ const nextConfig = {
         destination: '/blog/:slug*',
         permanent: true, // 301 redirect
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'brandkernel.io',
+          },
+        ],
+        destination: 'https://www.brandkernel.io/:path*',
+        permanent: true,
+      },
     ]
   },
 };

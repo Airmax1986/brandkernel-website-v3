@@ -1,0 +1,33 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "brandkernel.io"
+        }
+      ],
+      "destination": "https://www.brandkernel.io/$1",
+      "permanent": true
+    },
+    {
+      "source": "/posts/:path*",
+      "destination": "/blog/:path*", 
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": false,
+  "cleanUrls": true
+}

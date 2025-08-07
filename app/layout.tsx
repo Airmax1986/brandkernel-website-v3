@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { createMetadata } from "@/lib/metadata";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -11,10 +12,7 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
-export const metadata: Metadata = {
-  title: "BrandKernel - Stand out with positioning that feels like you",
-  description: "Your empathetic AI brand consultant guides you through a deep, personal brand discovery.",
-};
+export const metadata: Metadata = createMetadata({});
 
 export const viewport: Viewport = {
   width: 'device-width',

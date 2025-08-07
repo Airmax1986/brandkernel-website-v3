@@ -3,39 +3,16 @@
 import { getAllPostsGraphQL } from "@/lib/contentful/contentful-graphql";
 import BlogPost from "@/components/BlogPost";
 import { Post as PostType } from "@/lib/types"; // Import the type definition
-import { Metadata } from 'next';
+import { createMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
   description: 'Discover actionable brand strategy insights, positioning tips, and clarity frameworks for founders. Learn from real founder journeys and brand transformation stories.',
-  openGraph: {
-    title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
-    description: 'Discover actionable brand strategy insights, positioning tips, and clarity frameworks for founders. Learn from real founder journeys and brand transformation stories.',
-    type: 'website',
-    url: 'https://brandkernel.io/blog',
-    siteName: 'BrandKernel',
-    images: [
-      {
-        url: '/og-blog.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'BrandKernel Blog - Brand Strategy Insights for Founders',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
-    description: 'Discover actionable brand strategy insights, positioning tips, and clarity frameworks for founders. Learn from real founder journeys and brand transformation stories.',
-    images: ['/og-blog.jpg'],
-  },
-  keywords: 'brand strategy blog, founder insights, startup positioning, brand clarity tips, brand strategy articles',
-  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
-  robots: 'index, follow',
-  alternates: {
-    canonical: 'https://brandkernel.io/blog',
-  }
-};
+  path: '/blog',
+  image: 'https://www.brandkernel.io/og-blog.jpg',
+  tags: ['brand strategy blog', 'founder insights', 'startup positioning', 'brand clarity tips', 'brand strategy articles'],
+  authors: ['Maximilian Appelt']
+});
 
 export default async function Blog() {
   let posts: PostType[] = [];
