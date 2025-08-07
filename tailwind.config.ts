@@ -151,7 +151,7 @@ const config: Config = {
         'pulse-brand': 'pulseBrand 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'gradient-shift': 'gradientShift 3s ease-in-out infinite',
         'gradient-brand-animate': 'gradientBrandAnimate 25s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite',
-        'organic-gradient': 'organicGradient 60s linear infinite',
+        'organic-gradient': 'organicGradientSmooth 20s ease-in-out infinite',
       },
 
       keyframes: {
@@ -232,6 +232,53 @@ const config: Config = {
             backgroundSize: '300% 300%',
             backgroundPosition: '0% 0%'
           },
+        },
+        organicGradientSmooth: {
+          '0%': { 
+            background: `
+              radial-gradient(circle 800px at 20% 30%, #B8FF4D 0%, transparent 70%),
+              radial-gradient(circle 600px at 70% 20%, #7D5FFF 0%, transparent 70%),
+              radial-gradient(circle 900px at 40% 80%, #D4D4D6 0%, transparent 70%),
+              #FFFFFF
+            `,
+            transform: 'scale(1)'
+          },
+          '25%': { 
+            background: `
+              radial-gradient(circle 700px at 60% 40%, #B8FF4D 0%, transparent 70%),
+              radial-gradient(circle 800px at 30% 60%, #7D5FFF 0%, transparent 70%),
+              radial-gradient(circle 750px at 80% 30%, #D4D4D6 0%, transparent 70%),
+              #FFFFFF
+            `,
+            transform: 'scale(1.05)'
+          },
+          '50%': { 
+            background: `
+              radial-gradient(circle 900px at 80% 70%, #B8FF4D 0%, transparent 70%),
+              radial-gradient(circle 650px at 20% 80%, #7D5FFF 0%, transparent 70%),
+              radial-gradient(circle 800px at 50% 20%, #D4D4D6 0%, transparent 70%),
+              #FFFFFF
+            `,
+            transform: 'scale(1)'
+          },
+          '75%': { 
+            background: `
+              radial-gradient(circle 750px at 40% 60%, #B8FF4D 0%, transparent 70%),
+              radial-gradient(circle 900px at 80% 40%, #7D5FFF 0%, transparent 70%),
+              radial-gradient(circle 700px at 20% 50%, #D4D4D6 0%, transparent 70%),
+              #FFFFFF
+            `,
+            transform: 'scale(1.05)'
+          },
+          '100%': { 
+            background: `
+              radial-gradient(circle 800px at 20% 30%, #B8FF4D 0%, transparent 70%),
+              radial-gradient(circle 600px at 70% 20%, #7D5FFF 0%, transparent 70%),
+              radial-gradient(circle 900px at 40% 80%, #D4D4D6 0%, transparent 70%),
+              #FFFFFF
+            `,
+            transform: 'scale(1)'
+          }
         },
         organicGradient: {
           '0%': { 
