@@ -178,9 +178,10 @@ export default function OptimizedBrandChat() {
       initial={{ opacity: 0, scale: 0.95, x: 20 }}
       animate={{ opacity: 1, scale: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-sm mx-auto bg-white/90 backdrop-blur-sm rounded-brand-lg shadow-brand-lg 
-                 border border-brand-green/20 overflow-hidden
+      className="w-full max-w-sm mx-auto bg-white/90 backdrop-blur-sm shadow-brand-lg 
+                 border-2 border-white overflow-hidden
                  sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg"
+      style={{ borderRadius: '15px' }}
     >
       <ChatHeader />
       
