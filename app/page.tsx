@@ -119,17 +119,24 @@ export default function HomePage() {
 
           {/* Desktop: Chat on right */}
           <div 
-            className="w-[50vw] relative min-h-screen animate-organic-gradient overflow-hidden"
+            className="w-[50vw] relative min-h-screen overflow-hidden"
             style={{
               borderRadius: '15px',
               border: '1rem solid white'
             }}
           >
+            <div 
+              className="absolute inset-0 animate-organic-gradient"
+              style={{
+                borderRadius: '5px'
+              }}
+            >
             {/* Chat Window - Medium */}
             <div className="absolute inset-0 flex items-center justify-center p-8" style={{ paddingTop: '5rem' }}>
               <div className="w-full max-w-lg h-full max-h-[500px]">
                 <DynamicBrandChatbot />
               </div>
+            </div>
             </div>
           </div>
         </section>

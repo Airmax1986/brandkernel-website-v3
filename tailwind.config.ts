@@ -25,7 +25,7 @@ const config: Config = {
       // ==========================================================================
       fontSize: {
         // Brand-specific text sizes
-        'nav': ['1.3rem', { lineHeight: '1.5', fontWeight: '500' }],          // 20.8px - Navigation
+        'nav': ['1.3rem', { lineHeight: '1.5', fontWeight: '400' }],          // 20.8px - Navigation
         'header': ['1rem', { lineHeight: '1.5', fontWeight: '600' }],         // 16px
         'hero': ['2rem', { lineHeight: '1.1', fontWeight: '700' }],           // 32px - Tighter line-height for h1
         'hero-lg': ['2.5rem', { lineHeight: '1.1', fontWeight: '700' }],      // 40px

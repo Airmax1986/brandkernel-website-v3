@@ -364,7 +364,7 @@ export default function BrandChatbot() {
   return (
     <motion.div
       {...animationProps}
-      className="w-full h-full max-h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/30 flex flex-col"
+      className="w-full h-full max-h-full rounded-2xl overflow-hidden  backdrop-blur-md border border-white/30 flex flex-col"
       style={containerStyle}
     >
       <ChatHeader />

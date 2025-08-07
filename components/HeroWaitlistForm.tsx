@@ -137,7 +137,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
                     value={email}
                     onChange={handleEmailChange}
                     placeholder="name@email.com"
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base  ${
                       validationError ? 'border-red-400' : 'border-neutral-300'
                     }`}
                     disabled={isLoading}
@@ -201,7 +201,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
                   value={email}
                   onChange={handleEmailChange}
                   placeholder="name@email.com"
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base shadow-sm ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base  ${
                     validationError ? 'border-red-400' : 'border-neutral-300'
                   }`}
                   disabled={isLoading}

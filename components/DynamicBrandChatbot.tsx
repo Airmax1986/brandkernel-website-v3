@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 
 const BrandChatbot = dynamic(() => import('./BrandChatbot'), {
   loading: () => (
-    <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/30 flex flex-col min-h-[500px] animate-pulse"
+    <div className="w-full h-full rounded-2xl overflow-hidden  backdrop-blur-md border border-white/30 flex flex-col min-h-[500px] animate-pulse"
          style={{
            background: 'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1))',
            backdropFilter: 'blur(20px)',
@@ -37,7 +37,7 @@ const BrandChatbot = dynamic(() => import('./BrandChatbot'), {
 export default function DynamicBrandChatbot() {
   return (
     <Suspense fallback={
-      <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md border border-white/30 flex flex-col min-h-[500px] animate-pulse"
+      <div className="w-full h-full rounded-2xl overflow-hidden  backdrop-blur-md border border-white/30 flex flex-col min-h-[500px] animate-pulse"
            style={{
              background: 'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1))',
              backdropFilter: 'blur(20px)',
