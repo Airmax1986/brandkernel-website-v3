@@ -87,7 +87,7 @@ export default function Header({
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <div className="w-full">
-          <div className="flex" style={{ height: '3rem' }}>
+          <div className="flex" style={{ height: '5rem', paddingTop: '2.5rem' }}>
             
             {/* Left 50% - Logo + Main Navigation */}
             <div className="w-[50vw] flex items-center justify-between px-10">
