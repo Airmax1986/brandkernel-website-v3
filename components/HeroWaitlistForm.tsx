@@ -87,7 +87,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
 
       if (response.ok && data.success) {
         setIsSuccess(true);
-        setMessage(`🎉 Welcome! You're #${data.data?.position || 'XX'} on our waitlist.`);
+        setMessage(`🎉 Welcome! You're on our waitlist.`);
         setEmail(''); // Clear email on success
         
         // Track success

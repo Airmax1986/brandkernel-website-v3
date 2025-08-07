@@ -30,7 +30,7 @@ function getRedis(): Redis | null {
 
 // Fallback in-memory storage when Redis is not available
 let fallbackStorage: Set<string> = new Set();
-let fallbackCounter = 247; // Starting count
+let fallbackCounter = 71; // Starting count to match display counter
 
 // Database operations for waitlist
 export interface WaitlistEntry {
@@ -70,9 +70,15 @@ export async function addToWaitlist(
         };
       }
       
-      // Get current counter and increment it
-      const currentCount = await redisClient.incr('waitlist:counter') || 1;
-      const position = currentCount;
+      // Initialize counter if it doesn't exist
+      let currentCount = await redisClient.get('waitlist:counter');
+      if (currentCount === null) {
+        await redisClient.set('waitlist:counter', 71);
+        currentCount = 71;
+      }
+      
+      // Increment counter
+      const position = await redisClient.incr('waitlist:counter');
       
       // Create waitlist entry
       const entry: WaitlistEntry = {
@@ -95,7 +101,7 @@ export async function addToWaitlist(
       return {
         success: true,
         position,
-        totalSignups: currentCount
+        totalSignups: position
       };
       
     } catch (error) {
@@ -123,7 +129,7 @@ export async function addToWaitlist(
   return {
     success: true,
     position,
-    totalSignups: fallbackStorage.size + 246 // Add base count
+    totalSignups: position // Use consistent counter
   };
 }
 
@@ -172,7 +178,7 @@ export async function getWaitlistStats(): Promise<WaitlistStats> {
   
   // Fallback to in-memory storage
   return {
-    totalSignups: fallbackStorage.size + 246, // Add base count
+    totalSignups: Math.max(fallbackCounter, fallbackStorage.size), // Use consistent counter
     timestamp: new Date().toISOString()
   };
 }
@@ -219,11 +225,13 @@ export async function initializeDatabase(): Promise<void> {
     try {
       const currentCounter = await redisClient.get('waitlist:counter');
       if (currentCounter === null || currentCounter === undefined) {
-        await redisClient.set('waitlist:counter', 247);
-        console.log('Redis: Initialized waitlist counter to 247');
+        await redisClient.set('waitlist:counter', 71);
+        console.log('Redis: Initialized waitlist counter to 71');
       }
     } catch (error) {
       console.error('Redis error in initializeDatabase:', error);
     }
+  } else {
+    console.log('Redis not available - using fallback storage with counter starting at 71');
   }
 }
