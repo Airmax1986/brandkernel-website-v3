@@ -71,10 +71,21 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Redirect singular to plural paths
       {
-        source: '/posts/:slug*',
-        destination: '/blog/:slug*',
-        permanent: true, // 301 redirect
+        source: '/founder',
+        destination: '/founders',
+        permanent: true,
+      },
+      {
+        source: '/freelancer', 
+        destination: '/freelancers',
+        permanent: true,
+      },
+      {
+        source: '/creator',
+        destination: '/creators', 
+        permanent: true,
       },
       {
         source: '/:path*',

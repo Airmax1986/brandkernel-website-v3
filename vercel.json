@@ -10,11 +10,6 @@
       ],
       "destination": "https://www.brandkernel.io/$1",
       "permanent": true
-    },
-    {
-      "source": "/posts/:path*",
-      "destination": "/blog/:path*", 
-      "permanent": true
     }
   ],
   "headers": [
