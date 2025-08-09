@@ -52,28 +52,13 @@ const staticPages = [
     changeFrequency: 'monthly' as const,
   },
   {
-    url: '/founder',
-    priority: 0.7,
-    changeFrequency: 'monthly' as const,
-  },
-  {
     url: '/founders',
     priority: 0.6,
     changeFrequency: 'monthly' as const,
   },
   {
-    url: '/freelancer',
-    priority: 0.7,
-    changeFrequency: 'monthly' as const,
-  },
-  {
     url: '/freelancers',
     priority: 0.6,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/creator',
-    priority: 0.7,
     changeFrequency: 'monthly' as const,
   },
   {
