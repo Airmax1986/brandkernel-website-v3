@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | BrandKernel Data Protection & Privacy',
     description: 'Learn how BrandKernel collects, uses, and protects your data. Our privacy policy explains data handling practices for our AI brand strategy platform.',
     type: 'website',
-    url: 'https://brandkernel.io/privacy-policy',
+    url: 'https://www.brandkernel.io/privacy-policy',
     siteName: 'BrandKernel',
   },
   twitter: {
@@ -15,9 +15,10 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | BrandKernel Data Protection & Privacy',
     description: 'Learn how BrandKernel collects, uses, and protects your data. Our privacy policy explains data handling practices for our AI brand strategy platform.',
   },
+  keywords: 'Brand Kernel privacy policy, data protection, GDPR compliance, AI brand strategy privacy, data security, user privacy',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/privacy-policy',
+    canonical: 'https://www.brandkernel.io/privacy-policy',
   }
 };
 

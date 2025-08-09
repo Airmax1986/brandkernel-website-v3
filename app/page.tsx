@@ -7,22 +7,22 @@ import DynamicBrandChatbot from '@/components/DynamicBrandChatbot';
 import HeroWaitlistForm from '@/components/HeroWaitlistForm';
 
 export const metadata: Metadata = {
-  title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
-  description: 'You\'re a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.',
-  keywords: 'brand clarity, founder positioning, strategic dialogue, brand strategy, personal branding, startup clarity',
-  authors: [{ name: 'Max, Founder' }],
+  title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
+  description: 'Uncover your brand identity & strategy guided by your AI Brand Consultant. Personal branding for freelancers, founders & creators. Join 250+ →',
+  keywords: 'AI brand strategy, brand identity, personal branding, freelancers, founders, creators, brand consultant, brand strategy platform',
+  authors: [{ name: 'BrandKernel Team' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
-    title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
-    description: 'You\'re a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable.',
+    title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
+    description: 'Uncover your brand identity & strategy guided by your AI Brand Consultant. Personal branding for freelancers, founders & creators. Join 250+ →',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BrandKernel - Finally. The Conversation That Changes Everything.',
-    description: 'You\'re a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable.',
+    title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
+    description: 'Uncover your brand identity & strategy guided by your AI Brand Consultant. Personal branding for freelancers, founders & creators. Join 250+ →',
   }
 };
 

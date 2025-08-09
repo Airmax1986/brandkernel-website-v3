@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'The Clarity Manifesto: Why Every Founder is One Conversation Away | BrandKernel',
     description: 'Read BrandKernel\'s manifesto on why 997 out of 1,000 startups fail due to lack of clarity. Stop building in the dark. Start with the conversation that changes everything.',
     type: 'website',
-    url: 'https://brandkernel.io/manifest',
+    url: 'https://www.brandkernel.io/manifest',
     siteName: 'BrandKernel',
     images: [
       {
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     images: ['/og-manifest.jpg'],
   },
   keywords: 'startup manifesto, founder clarity, brand strategy philosophy, startup failure reasons, brand-first approach',
-  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  authors: [{ name: 'Maximilian Appelt', url: 'https://www.brandkernel.io' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/manifest',
+    canonical: 'https://www.brandkernel.io/manifest',
   }
 };
 

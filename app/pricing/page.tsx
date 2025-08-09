@@ -2,13 +2,13 @@ import CtaButton from "@/components/CtaButton";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BrandKernel Pricing: €297 One-Time Investment for Lifetime Brand Clarity',
-  description: 'Transform your brand positioning for €297 (early founder pricing). One investment, lifetime clarity. 30-day breakthrough guarantee. Join 400+ founders on the waitlist.',
+  title: 'Brand Kernel Pricing - $297 Special Offer for Early Adopters',
+  description: 'Transform your brand positioning for $297 (special early adopter pricing). Limited time offer for founders, freelancers & creators. Join 250+ on waitlist →',
   openGraph: {
-    title: 'BrandKernel Pricing: €297 One-Time Investment for Lifetime Brand Clarity',
-    description: 'Transform your brand positioning for €297 (early founder pricing). One investment, lifetime clarity. 30-day breakthrough guarantee. Join 400+ founders on the waitlist.',
+    title: 'Brand Kernel Pricing - $297 Special Offer for Early Adopters',
+    description: 'Transform your brand positioning for $297 (special early adopter pricing). Limited time offer for founders, freelancers & creators. Join 250+ on waitlist →',
     type: 'website',
-    url: 'https://brandkernel.io/pricing',
+    url: 'https://www.brandkernel.io/pricing',
     siteName: 'BrandKernel',
     images: [
       {
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BrandKernel Pricing: €297 One-Time Investment for Lifetime Brand Clarity',
-    description: 'Transform your brand positioning for €297 (early founder pricing). One investment, lifetime clarity. 30-day breakthrough guarantee. Join 400+ founders on the waitlist.',
+    title: 'Brand Kernel Pricing - $297 Special Offer for Early Adopters',
+    description: 'Transform your brand positioning for $297 (special early adopter pricing). Limited time offer for founders, freelancers & creators. Join 250+ on waitlist →',
     images: ['/og-pricing.jpg'],
   },
   keywords: 'brand strategy pricing, founder brand consultant, startup positioning cost, brand clarity investment, AI brand strategist price',
-  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  authors: [{ name: 'Maximilian Appelt', url: 'https://www.brandkernel.io' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/pricing',
+    canonical: 'https://www.brandkernel.io/pricing',
   }
 };
 
@@ -108,10 +108,10 @@ export default function PricingPage() {
                   lineHeight: '4.5rem',
                   fontWeight: 'bold'
                 }} className="mb-2">
-                  €297
+                  $297
                 </p>
                 <p className="text-lg">(Early founder pricing)</p>
-                <p className="text-sm opacity-90 mt-2">Soon to be €497</p>
+                <p className="text-sm opacity-90 mt-2">Soon to be $497</p>
               </div>
               
               <p style={{ 
@@ -144,9 +144,9 @@ export default function PricingPage() {
             <div className="mt-8 text-center">
               <h4 className="font-bold text-lg text-brand-black mb-4">Compare to:</h4>
               <div className="grid md:grid-cols-4 gap-4 text-sm text-gray-600">
-                <div>Brand consultant: €10,000-50,000</div>
-                <div>Executive coach: €500/hour minimum</div>
-                <div>Positioning workshop: €5,000+</div>
+                <div>Brand consultant: $10,000-50,000</div>
+                <div>Executive coach: $500/hour minimum</div>
+                <div>Positioning workshop: $5,000+</div>
                 <div>Staying lost: Priceless opportunities missed daily</div>
               </div>
             </div>
@@ -266,7 +266,7 @@ export default function PricingPage() {
               </h3>
               
               <ul className="space-y-3 text-left inline-block">
-                <li>✓ Lock in €297 pricing (save €200)</li>
+                <li>✓ Lock in $297 pricing (save $200)</li>
                 <li>✓ First access when we launch</li>
                 <li>✓ Founding member status</li>
                 <li>✓ Direct input on development</li>
@@ -295,7 +295,7 @@ export default function PricingPage() {
                 <li>• Network strategies</li>
                 <li>• New tools monthly</li>
               </ul>
-              <p className="text-center text-gray-600">Estimated: €29/month (optional after your journey)</p>
+              <p className="text-center text-gray-600">Estimated: $29/month (optional after your journey)</p>
             </div>
           </section>
 

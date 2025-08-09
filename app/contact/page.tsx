@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: 'Contact BrandKernel | Get in Touch About Brand Strategy',
     description: 'Get in touch with the BrandKernel team. Questions about our AI brand strategist? Ready to join the waitlist? We\'re here to help founders find their clarity.',
     type: 'website',
-    url: 'https://brandkernel.io/contact',
+    url: 'https://www.brandkernel.io/contact',
     siteName: 'BrandKernel',
     images: [
       {
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     images: ['/og-contact.jpg'],
   },
   keywords: 'contact BrandKernel, brand strategy support, founder help, AI brand consultant contact',
-  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  authors: [{ name: 'Maximilian Appelt', url: 'https://www.brandkernel.io' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/contact',
+    canonical: 'https://www.brandkernel.io/contact',
   }
 };
 

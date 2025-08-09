@@ -2,13 +2,13 @@ import CtaButton from "@/components/CtaButton";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Brand Strategy Features That Transform Founders | BrandKernel',
+  title: 'AI Brand Strategy Features - Transform Your Brand Identity ● Brand Kernel',
   description: 'Discover BrandKernel\'s breakthrough AI features: The Clarity Engine, 4-Level System, Visual Maps & Activation Blueprints. Transform confusion into crystal-clear positioning in hours, not months.',
   openGraph: {
     title: 'AI Brand Strategy Features That Transform Founders | BrandKernel',
     description: 'Discover BrandKernel\'s breakthrough AI features: The Clarity Engine, 4-Level System, Visual Maps & Activation Blueprints. Transform confusion into crystal-clear positioning in hours, not months.',
     type: 'website',
-    url: 'https://brandkernel.io/features',
+    url: 'https://www.brandkernel.io/features',
     siteName: 'BrandKernel',
     images: [
       {
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     images: ['/og-features.jpg'],
   },
   keywords: 'AI brand strategy, founder positioning, brand clarity tools, startup branding, brand identity system, strategic positioning',
-  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  authors: [{ name: 'Maximilian Appelt', url: 'https://www.brandkernel.io' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/features',
+    canonical: 'https://www.brandkernel.io/features',
   }
 };
 

@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How BrandKernel Works: 4-Level Journey From Lost to Laser-Focused',
+  title: 'How Brand Kernel Works - 4-Level Journey to Brand Clarity',
   description: 'Discover how BrandKernel\'s 4-level system transforms founders from confusion to clarity. Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization in 3-4 hours total.',
   openGraph: {
     title: 'How BrandKernel Works: 4-Level Journey From Lost to Laser-Focused',
     description: 'Discover how BrandKernel\'s 4-level system transforms founders from confusion to clarity. Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization in 3-4 hours total.',
     type: 'website',
-    url: 'https://brandkernel.io/how-it-works',
+    url: 'https://www.brandkernel.io/how-it-works',
     siteName: 'BrandKernel',
     images: [
       {
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     images: ['/og-how-it-works.jpg'],
   },
   keywords: 'brand strategy process, founder brand journey, brand clarity method, startup positioning system, brand development steps',
-  authors: [{ name: 'Maximilian Appelt', url: 'https://brandkernel.io' }],
+  authors: [{ name: 'Maximilian Appelt', url: 'https://www.brandkernel.io' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/how-it-works',
+    canonical: 'https://www.brandkernel.io/how-it-works',
   }
 };
 

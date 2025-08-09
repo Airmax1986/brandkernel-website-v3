@@ -1,5 +1,5 @@
 // types/index.ts
-// Zentrale Type Definitions für BrandKernel Website
+// Central Type Definitions for BrandKernel Website
 
 import { ReactNode } from 'react';
 

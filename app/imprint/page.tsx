@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: 'Imprint | BrandKernel Legal Information',
     description: 'Legal information and contact details for BrandKernel. Founded by Maximilian Appelt in Münster, Germany.',
     type: 'website',
-    url: 'https://brandkernel.io/imprint',
+    url: 'https://www.brandkernel.io/imprint',
     siteName: 'BrandKernel',
   },
   twitter: {
@@ -15,9 +15,10 @@ export const metadata: Metadata = {
     title: 'Imprint | BrandKernel Legal Information',
     description: 'Legal information and contact details for BrandKernel. Founded by Maximilian Appelt in Münster, Germany.',
   },
+  keywords: 'Brand Kernel imprint, legal information, company details, Maximilian Appelt, Münster Germany, contact information',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://brandkernel.io/imprint',
+    canonical: 'https://www.brandkernel.io/imprint',
   }
 };
 
