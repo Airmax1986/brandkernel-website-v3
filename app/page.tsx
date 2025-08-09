@@ -46,9 +46,9 @@ export default function HomePage() {
           <section className="bg-white py-12 px-4">
             <div className="max-w-2xl mx-auto text-center">
               {/* Hero Heading */}
-              <h1 className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8">
+              <div className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8" role="heading" aria-level={1}>
                 Finally. The Conversation That Changes Everything.
-              </h1>
+              </div>
               
               {/* Hero Subheadline */}
               <div className="text-brand-black text-base font-bold leading-relaxed pb-8">
