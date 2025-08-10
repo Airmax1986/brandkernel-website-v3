@@ -1,5 +1,7 @@
 import CtaButton from "@/components/CtaButton";
 import { Metadata } from 'next';
+import { AutoBreadcrumbs } from '@/components/Breadcrumbs';
+import { getPricingPageSchemas, injectSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Brand Kernel Pricing - $297 Special Offer for Early Adopters',
@@ -34,9 +36,21 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
+  const pricingSchemas = getPricingPageSchemas();
+
   return (
-    <div className="min-h-screen bg-white text-brand-black py-32">
-      <div className="max-w-5xl mx-auto px-10">
+    <>
+      {/* Schema markup for pricing page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={injectSchema(pricingSchemas)}
+      />
+      
+      <div className="min-h-screen bg-white text-brand-black py-32">
+        <div className="max-w-5xl mx-auto px-10">
+          
+          {/* Breadcrumbs */}
+          <AutoBreadcrumbs path="/pricing" pageTitle="Pricing" className="mb-8" />
         
         {/* Header */}
         <div className="text-center mb-16">
@@ -366,5 +380,6 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

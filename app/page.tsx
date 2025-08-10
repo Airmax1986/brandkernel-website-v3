@@ -5,6 +5,7 @@ import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
 import DynamicBrandChatbot from '@/components/DynamicBrandChatbot';
 import HeroWaitlistForm from '@/components/HeroWaitlistForm';
+import { getHomePageSchemas, injectSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
@@ -27,8 +28,18 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  // Get combined schema markup for homepage
+  const homeSchemas = getHomePageSchemas();
+
   return (
-    <div className="min-h-screen bg-brand-white">
+    <>
+      {/* Schema markup for homepage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={injectSchema(homeSchemas)}
+      />
+      
+      <div className="min-h-screen bg-brand-white">
       
       {/* Hero Section with Chatbot */}
       <main>
@@ -463,6 +474,7 @@ export default function HomePage() {
         </div>
       </footer>
 
-    </div>
+      </div>
+    </>
   );
 }

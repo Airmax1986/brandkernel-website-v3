@@ -1,89 +1,53 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/contentful/contentful'
 
-// Base URL for the website
 const baseUrl = 'https://www.brandkernel.io'
 
-// Static pages configuration with SEO priorities
+// Enhanced page configuration with better SEO priorities
 const staticPages = [
-  {
-    url: '',
-    priority: 1.0,
-    changeFrequency: 'weekly' as const,
-  },
-  {
-    url: '/about',
-    priority: 0.8,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/blog',
-    priority: 0.9,
-    changeFrequency: 'daily' as const,
-  },
-  {
-    url: '/approach',
-    priority: 0.8,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/how-it-works',
-    priority: 0.8,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/features',
-    priority: 0.8,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/pricing',
-    priority: 0.9,
-    changeFrequency: 'weekly' as const,
-  },
-  {
-    url: '/manifest',
-    priority: 0.7,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/waitlist',
-    priority: 0.6,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/founders',
-    priority: 0.6,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/freelancers',
-    priority: 0.6,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/creators',
-    priority: 0.6,
-    changeFrequency: 'monthly' as const,
-  },
-  {
-    url: '/contact',
-    priority: 0.5,
-    changeFrequency: 'yearly' as const,
-  },
-  {
-    url: '/privacy-policy',
-    priority: 0.3,
-    changeFrequency: 'yearly' as const,
-  },
-  {
-    url: '/imprint',
-    priority: 0.3,
-    changeFrequency: 'yearly' as const,
-  },
+  { url: '', priority: 1.0, changeFrequency: 'daily' as const },
+  { url: '/pricing', priority: 0.95, changeFrequency: 'weekly' as const },
+  { url: '/features', priority: 0.9, changeFrequency: 'weekly' as const },
+  { url: '/how-it-works', priority: 0.85, changeFrequency: 'monthly' as const },
+  { url: '/blog', priority: 0.85, changeFrequency: 'daily' as const },
+  { url: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
+  { url: '/approach', priority: 0.8, changeFrequency: 'monthly' as const },
+  { url: '/founders', priority: 0.75, changeFrequency: 'monthly' as const },
+  { url: '/freelancers', priority: 0.75, changeFrequency: 'monthly' as const },
+  { url: '/creators', priority: 0.75, changeFrequency: 'monthly' as const },
+  { url: '/manifest', priority: 0.7, changeFrequency: 'yearly' as const },
+  { url: '/waitlist', priority: 0.6, changeFrequency: 'monthly' as const },
+  { url: '/contact', priority: 0.5, changeFrequency: 'yearly' as const },
+  { url: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' as const },
+  { url: '/imprint', priority: 0.3, changeFrequency: 'yearly' as const },
 ]
 
-// Function to get blog posts from Contentful
+// Future dynamic pages that will be added
+const futurePages = {
+  tools: [
+    { slug: 'brand-audit', priority: 0.9 },
+    { slug: 'brand-personality-quiz', priority: 0.85 },
+    { slug: 'competitor-analysis', priority: 0.85 },
+    { slug: 'brand-name-generator', priority: 0.8 },
+  ],
+  alternatives: [
+    { slug: 'brandbuildr', priority: 0.85 },
+    { slug: 'brand-ai', priority: 0.85 },
+    { slug: 'personalbrandpro', priority: 0.8 },
+  ],
+  guides: [
+    { slug: 'ai-brand-strategy', priority: 0.8 },
+    { slug: 'personal-branding', priority: 0.8 },
+    { slug: 'startup-branding', priority: 0.75 },
+  ],
+  templates: [
+    { slug: 'brand-strategy', priority: 0.75 },
+    { slug: 'brand-audit-checklist', priority: 0.75 },
+    { slug: 'positioning-statement', priority: 0.7 },
+  ],
+}
+
+// Get blog posts from Contentful
 async function getBlogPosts() {
   try {
     console.log('Fetching blog posts for sitemap...')
@@ -100,7 +64,7 @@ async function getBlogPosts() {
       lastModified: post.date || new Date().toISOString(),
     }))
   } catch (error) {
-    console.log('Error fetching blog posts for sitemap:', error)
+    console.error('Error fetching blog posts for sitemap:', error)
     return []
   }
 }
@@ -117,13 +81,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Get dynamic blog posts
-  const blogPosts = await getBlogPosts()
-  const blogSitemapEntries: MetadataRoute.Sitemap = blogPosts.map(post => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.lastModified),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  let blogSitemapEntries: MetadataRoute.Sitemap = []
+  try {
+    const blogPosts = await getBlogPosts()
+    blogSitemapEntries = blogPosts.map(post => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.lastModified),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  } catch (error) {
+    console.error('Failed to generate blog sitemap entries:', error)
+  }
+
+  // Note: Add future dynamic pages here when they're created
+  // const toolEntries = futurePages.tools.map(tool => ({
+  //   url: `${baseUrl}/free-tools/${tool.slug}`,
+  //   lastModified: currentDate,
+  //   changeFrequency: 'weekly' as const,
+  //   priority: tool.priority,
+  // }))
 
   // Combine all entries
   return [

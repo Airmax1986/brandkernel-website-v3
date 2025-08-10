@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import MarkdownContent from "@/components/MarkdownContent";
 import { Metadata } from "next";
 import { createBlogPostMetadata } from "@/lib/metadata";
+import { BlogBreadcrumbs } from "@/components/Breadcrumbs";
 
 // This function now receives the correctly formatted data.
 export async function generateStaticParams() {
@@ -95,6 +96,9 @@ export default async function PostPage({ params }: { params: { slug: string } })
       
       <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50">
         <article className="container mx-auto px-10 py-8 md:px-12 md:py-12 max-w-4xl">
+          {/* Breadcrumbs */}
+          <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
+          
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             
             {/* Hero Image */}
