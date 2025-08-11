@@ -6,9 +6,15 @@ const WEBHOOK_SECRET = process.env.CONTENTFUL_WEBHOOK_SECRET
 
 export async function POST(request: NextRequest) {
   try {
+    // Debug: Log all headers to see what Contentful is sending
+    console.log('🔍 Webhook headers:', Object.fromEntries(request.headers.entries()))
+    
     // Verify webhook secret if configured
     if (WEBHOOK_SECRET) {
       const signature = request.headers.get('x-contentful-webhook-signature')
+      console.log('🔐 Expected secret:', WEBHOOK_SECRET)
+      console.log('🔐 Received signature:', signature)
+      
       if (!signature || signature !== WEBHOOK_SECRET) {
         return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
       }
