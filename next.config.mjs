@@ -1,3 +1,5 @@
+import { createHash } from 'crypto';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -248,8 +250,7 @@ const nextConfig = {
               return module.size() > 160000;
             },
             name(module) {
-              const crypto = require('crypto');
-              const hash = crypto.createHash('sha1');
+              const hash = createHash('sha1');
               hash.update(module.identifier());
               return hash.digest('hex').substring(0, 8);
             },
