@@ -193,7 +193,12 @@ const nextConfig = {
         destination: '/creators', 
         permanent: true,
       },
-      // Old blog URLs if any
+      // Old blog URLs - redirect /posts/ to /blog/
+      {
+        source: '/posts/:slug*',
+        destination: '/blog/:slug*',
+        permanent: true,
+      },
       {
         source: '/blog/posts/:slug*',
         destination: '/blog/:slug*',
