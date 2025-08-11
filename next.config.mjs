@@ -193,10 +193,10 @@ const nextConfig = {
         destination: '/creators', 
         permanent: true,
       },
-      // Handle trailing slashes
+      // Handle trailing slashes (but exclude root)
       {
-        source: '/:path*/',
-        destination: '/:path*',
+        source: '/:path+/',
+        destination: '/:path+',
         permanent: true,
       },
       // Old blog URLs if any
@@ -216,18 +216,18 @@ const nextConfig = {
         destination: '/alternatives/brand-ai',
         permanent: true,
       },
-      // Non-www to www redirect
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'brandkernel.io',
-          },
-        ],
-        destination: 'https://www.brandkernel.io/:path*',
-        permanent: true,
-      },
+      // Non-www to www redirect - temporarily disabled to fix redirect loop
+      // {
+      //   source: '/:path*',
+      //   has: [
+      //     {
+      //       type: 'host',
+      //       value: 'brandkernel.io',
+      //     },
+      //   ],
+      //   destination: 'https://www.brandkernel.io/:path*',
+      //   permanent: true,
+      // },
     ]
   },
   // Webpack optimization for better performance
