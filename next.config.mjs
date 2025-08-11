@@ -193,12 +193,6 @@ const nextConfig = {
         destination: '/creators', 
         permanent: true,
       },
-      // Handle trailing slashes (but exclude root)
-      {
-        source: '/:path+/',
-        destination: '/:path+',
-        permanent: true,
-      },
       // Old blog URLs if any
       {
         source: '/blog/posts/:slug*',
