@@ -95,7 +95,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       />
       
       <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50">
-        <article className="container mx-auto px-10 py-8 md:px-12 md:py-12 max-w-4xl">
+        <article className="container mx-auto px-10 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-4xl">
           {/* Breadcrumbs */}
           <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
           
