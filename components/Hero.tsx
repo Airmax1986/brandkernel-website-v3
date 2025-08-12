@@ -31,11 +31,11 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-regular leading-tight mb-6">
-                The Conversation That Changes Everything.
+                The Dialogue That Changes Everything.
               </h1>
               
               <p className="text-lg sm:text-xl md:text-2xl font-light mb-8 max-w-3xl">
-                While millions fight for attention with generic AI content, the winners go deeper. BrandKernel guides you through the strategic dialogue that uncovers your authentic positioning—the foundation successful creators, consultants, and founders build empires on.
+                While millions fight for attention with generic AI content, the winners go deeper. BrandKernel guides you through the dialogue that uncovers your authentic brand identity, strategy and positioning — the foundation successful freelancers, founders and creators build empires on.
               </p>
 
               <div className="w-full max-w-2xl">
