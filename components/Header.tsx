@@ -41,11 +41,11 @@ export default function Header({
 
   // Navigation items
   const navItems = [
-    { name: 'Manifest', href: '#manifest' },
-    { name: 'Approach', href: '#approach' },
-    { name: 'How it works', href: '#how-it-works' },
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Manifest', href: '/manifest' },
+    { name: 'Approach', href: '/approach' },
+    { name: 'How it works', href: '/how-it-works' },
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
   ];
 
   const secondaryNavItems = [
