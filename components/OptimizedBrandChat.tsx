@@ -13,29 +13,47 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: '1',
-    text: 'Hi! I\'m Felix, your AI Brand Consultant. Most branding starts with the wrong questions. Let\'s try three that actually matter.',
+    text: 'Welcome to BrandKernel! I\'m here to help you get clarity on your business and figure out what you\'re really worth. Before we dive in - what brings you here today?',
     isUser: false,
     timestamp: '2:30 PM'
   },
   {
     id: '2',
-    text: 'Tell me about a moment in the last few months where you thought: "Damn, I\'m really good at this" - what was that project or situation?',
+    text: 'Just checking this out',
+    isUser: true,
+    timestamp: '2:31 PM'
+  },
+  {
+    id: '3',
+    text: 'I hear you. That\'s exactly what we\'ll work on together. Just so you know how this works - we\'ll have a conversation about your business, your clients, what you\'ve achieved. Most people are surprised by what we uncover. Ready to explore?',
     isUser: false,
-    timestamp: '2:30 PM'
+    timestamp: '2:31 PM'
+  },
+  {
+    id: '4',
+    text: 'Sure',
+    isUser: true,
+    timestamp: '2:32 PM'
+  },
+  {
+    id: '5',
+    text: 'Great. Let\'s start with something easy - tell me about your work. What do you do?',
+    isUser: false,
+    timestamp: '2:32 PM'
   }
 ];
 
-const felixResponses = [
-  "What would you think about yourself and your offering if you assumed for a moment that your personal way of working and thinking already contains everything you need for a distinctive brand?",
-  "If your absolute dream client - someone who working with would feel like a gift - had to describe you to a friend, what do you think they would say? Not your deliverables, but WHO you are to them.",
-  "That sounds fascinating. What do you think made the difference in that moment?",
-  "If you could have that same feeling in every project - what would need to be different?",
-  "I hear something special in that. Can you say that in a different way?",
-  "What would happen if more people knew THAT about you?",
-  "How does it feel to hear that?",
-  "What part of what you just said surprises you?",
-  "That's a powerful insight. Let's dig deeper into what makes that approach uniquely yours...",
-  "I'm sensing there's something even more fundamental here. What would you say is the real transformation you create for people?"
+const consultantResponses = [
+  "That's interesting. Tell me more about that - what's the most challenging part?",
+  "I can see why that matters to you. What would change if you solved this completely?",
+  "That's a powerful insight. How long have you been thinking about this?",
+  "What you're describing is exactly what we help with. What's been holding you back?",
+  "That makes perfect sense. What would success look like for you?",
+  "I hear that a lot from our clients. What's your biggest priority right now?",
+  "That's exactly the kind of clarity we can help you achieve. What questions do you have?",
+  "You're thinking about this the right way. What's your timeline for making this happen?",
+  "That's valuable experience. How can we help you leverage that?",
+  "Interesting perspective. What results are you hoping to see?"
 ];
 
 // Chat Header Component
@@ -56,10 +74,10 @@ function ChatHeader() {
             </svg>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-brand-black">Felix</h3>
+            <h3 className="text-sm font-semibold text-brand-black">Consultant</h3>
             <div className="flex items-center gap-1.5 text-xs">
               <div className="w-2 h-2 bg-brand-green rounded-full animate-pulse"></div>
-              <span className="text-neutral-600">Brand Consultant</span>
+              <span className="text-neutral-600">Brand Specialist</span>
             </div>
           </div>
         </div>
@@ -161,15 +179,15 @@ export default function OptimizedBrandChat() {
 
     setMessages(prev => [...prev, userMessage]);
 
-    // Felix response with typing delay
+    // Consultant response with typing delay
     setTimeout(() => {
-      const felixResponse: Message = {
+      const consultantResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: felixResponses[Math.floor(Math.random() * felixResponses.length)],
+        text: consultantResponses[Math.floor(Math.random() * consultantResponses.length)],
         isUser: false,
         timestamp
       };
-      setMessages(prev => [...prev, felixResponse]);
+      setMessages(prev => [...prev, consultantResponse]);
     }, 1200);
   };
 

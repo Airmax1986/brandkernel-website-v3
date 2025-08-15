@@ -11,7 +11,7 @@ export function ChatHeader() {
           </svg>
         </div>
         <div>
-          <h1 className="text-lg font-semibold text-white">Felix</h1>
+          <h1 className="text-lg font-semibold text-white">Consultant</h1>
           <div className="flex items-center gap-2 text-sm text-lime-300">
             <div className="w-2 h-2 bg-lime-300 rounded-full"></div>
             <span>Online</span>

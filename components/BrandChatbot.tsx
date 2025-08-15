@@ -14,83 +14,48 @@ interface Message {
 const conversationFlow = [
   {
     id: '1',
-    text: 'Hi! I\'m Felix, your AI Brand Consultant. Most branding starts with the wrong questions. Let\'s try three that actually matter.',
+    text: 'Welcome to BrandKernel! I\'m here to help you get clarity on your business and figure out what you\'re really worth. Before we dive in - what brings you here today?',
     isUser: false,
     timestamp: '2:30 PM',
     delay: 0
   },
   {
     id: '2',
-    text: 'Tell me about a moment in the last few months where you thought: "Damn, I\'m really good at this" - what was that project or situation?',
-    isUser: false,
-    timestamp: '2:30 PM',
-    delay: 2000
+    text: 'Just checking this out',
+    isUser: true,
+    timestamp: '2:31 PM',
+    delay: 4000
   },
   {
     id: '3',
-    text: 'Last month I helped a struggling startup completely pivot their messaging. They went from confusing jargon to crystal clear value prop. Landed 3 new clients within 2 weeks.',
-    isUser: true,
+    text: 'I hear you. That\'s exactly what we\'ll work on together. Just so you know how this works - we\'ll have a conversation about your business, your clients, what you\'ve achieved. Most people are surprised by what we uncover. Ready to explore?',
+    isUser: false,
     timestamp: '2:31 PM',
     delay: 7000
   },
   {
     id: '4',
-    text: 'That sounds fascinating. What do you think made the difference in that moment?',
-    isUser: false,
-    timestamp: '2:31 PM',
+    text: 'Sure',
+    isUser: true,
+    timestamp: '2:32 PM',
     delay: 12000
   },
   {
     id: '5',
-    text: 'I stopped trying to sound "professional" and started talking like a human. I asked them: what would you tell your best friend about this product over coffee?',
-    isUser: true,
-    timestamp: '2:32 PM',
-    delay: 17000
-  },
-  {
-    id: '6',
-    text: 'I hear something special in that. Can you say that in a different way?',
+    text: 'Great. Let\'s start with something easy - tell me about your work. What do you do?',
     isUser: false,
     timestamp: '2:32 PM',
-    delay: 22000
-  },
-  {
-    id: '7',
-    text: 'I guess... I have this ability to cut through corporate BS and find the real story. I see what makes people tick and translate that into words that actually connect.',
-    isUser: true,
-    timestamp: '2:33 PM',
-    delay: 27000
-  },
-  {
-    id: '8',
-    text: 'What would happen if more people knew THAT about you?',
-    isUser: false,
-    timestamp: '2:33 PM',
-    delay: 32000
-  },
-  {
-    id: '9',
-    text: 'Wow... I\'d probably stop competing on price and start attracting clients who actually value strategic thinking. This is exactly what I need to figure out.',
-    isUser: true,
-    timestamp: '2:34 PM',
-    delay: 37000
-  },
-  {
-    id: '10',
-    text: 'That\'s a powerful insight. This is exactly how breakthrough happens - one conversation that changes everything. Ready to dive deeper?',
-    isUser: false,
-    timestamp: '2:34 PM',
-    delay: 42000
+    delay: 15000
   }
 ];
 
 // Responses for after the animation completes
-const felixResponses = [
-  "What part of what you just said surprises you?",
-  "I hear something special in that. Can you say that in a different way?",
-  "That's a powerful insight. Let's dig deeper into what makes that approach uniquely yours...",
-  "How does it feel to hear that?",
-  "What would happen if more people knew THAT about you?"
+const consultantResponses = [
+  "That's interesting. Tell me more about that - what's the most challenging part?",
+  "I can see why that matters to you. What would change if you solved this completely?",
+  "That's a powerful insight. How long have you been thinking about this?",
+  "What you're describing is exactly what we help with. What's been holding you back?",
+  "That makes perfect sense. What would success look like for you?"
 ];
 
 const ChatHeader = memo(() => {
@@ -113,7 +78,7 @@ const ChatHeader = memo(() => {
             </svg>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-brand-black">Felix</h3>
+            <h3 className="text-sm font-semibold text-brand-black">Consultant</h3>
             <div className="flex items-center gap-1">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               <span className="text-xs text-neutral-500">Online</span>
@@ -317,13 +282,13 @@ export default function BrandChatbot() {
     setMessages(prev => [...prev, userMessage]);
 
     setTimeout(() => {
-      const felixResponse: Message = {
+      const consultantResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: felixResponses[Math.floor(Math.random() * felixResponses.length)],
+        text: consultantResponses[Math.floor(Math.random() * consultantResponses.length)],
         isUser: false,
         timestamp
       };
-      setMessages(prev => [...prev, felixResponse]);
+      setMessages(prev => [...prev, consultantResponse]);
     }, 1000);
   }, [isAnimationComplete]);
 
@@ -382,7 +347,7 @@ export default function BrandChatbot() {
             <input
               type="text"
               disabled
-              placeholder="Felix is demonstrating the conversation flow..."
+              placeholder="Consultant is demonstrating the conversation flow..."
               className="w-full px-4 py-3 pr-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-brand-black placeholder-neutral-400 cursor-not-allowed opacity-60"
             />
             <div className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-brand flex items-center justify-center bg-neutral-200 text-neutral-400">

@@ -16,36 +16,48 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: '1',
-    text: 'Hi! I\'m Felix, your Brand Consultant. I help businesses create powerful brands that connect with their audience. How can I help with your brand today?',
+    text: 'Welcome to BrandKernel! I\'m here to help you get clarity on your business and figure out what you\'re really worth. Before we dive in - what brings you here today?',
     isUser: false,
     timestamp: '2:30 PM'
   },
   {
     id: '2',
-    text: 'Hi Felix! I need help with my brand strategy.',
+    text: 'Just checking this out',
     isUser: true,
     timestamp: '2:31 PM'
   },
   {
     id: '3',
-    text: 'Perfect! Let\'s dive into your brand strategy. Tell me about your business - what industry are you in, and what makes you different from your competitors?',
+    text: 'I hear you. That\'s exactly what we\'ll work on together. Just so you know how this works - we\'ll have a conversation about your business, your clients, what you\'ve achieved. Most people are surprised by what we uncover. Ready to explore?',
     isUser: false,
     timestamp: '2:31 PM'
+  },
+  {
+    id: '4',
+    text: 'Sure',
+    isUser: true,
+    timestamp: '2:32 PM'
+  },
+  {
+    id: '5',
+    text: 'Great. Let\'s start with something easy - tell me about your work. What do you do?',
+    isUser: false,
+    timestamp: '2:32 PM'
   }
 ];
 
-// Felix's brand consulting responses
-const felixResponses = [
-  "That's an excellent brand question! Let me share some strategic insights...",
-  "From a brand positioning perspective, I'd recommend focusing on your unique value proposition...",
-  "Great question! Brand consistency is key. Here's what I'd suggest...",
-  "That's where strong brand storytelling comes in. Your brand story should...",
-  "Excellent point about brand differentiation! Consider these strategic approaches...",
-  "Perfect timing for brand optimization! Here's my professional take...",
-  "Brand perception is crucial. I'd recommend analyzing your target audience's...",
-  "That's a smart branding consideration. Let's explore your brand architecture...",
-  "From my consulting experience, successful brands always...",
-  "Let's talk about your brand's visual identity and how it supports your strategy..."
+// Consultant's brand consulting responses
+const consultantResponses = [
+  "That's interesting. Tell me more about that - what's the most challenging part?",
+  "I can see why that matters to you. What would change if you solved this completely?",
+  "That's a powerful insight. How long have you been thinking about this?",
+  "What you're describing is exactly what we help with. What's been holding you back?",
+  "That makes perfect sense. What would success look like for you?",
+  "I hear that a lot from our clients. What's your biggest priority right now?",
+  "That's exactly the kind of clarity we can help you achieve. What questions do you have?",
+  "You're thinking about this the right way. What's your timeline for making this happen?",
+  "That's valuable experience. How can we help you leverage that?",
+  "Interesting perspective. What results are you hoping to see?"
 ];
 
 export function BrandChatbot() {
@@ -73,15 +85,15 @@ export function BrandChatbot() {
 
     setMessages(prev => [...prev, userMessage]);
 
-    // Simulate Felix's brand consulting response
+    // Simulate Consultant's brand consulting response
     setTimeout(() => {
-      const felixResponse: Message = {
+      const consultantResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: felixResponses[Math.floor(Math.random() * felixResponses.length)],
+        text: consultantResponses[Math.floor(Math.random() * consultantResponses.length)],
         isUser: false,
         timestamp
       };
-      setMessages(prev => [...prev, felixResponse]);
+      setMessages(prev => [...prev, consultantResponse]);
     }, 1000);
   };
 
