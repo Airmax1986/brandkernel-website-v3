@@ -30,7 +30,10 @@ export function createIntlMetadata({
   tags,
   locale = 'en-US'
 }: IntlSEOProps): Metadata {
-  const localizedDescription = description || seoConfig[locale]?.metaDescription || 
+  // Fallback to 'en-US' for 'en' locale
+  const seoLocale = locale === 'en' ? 'en-US' : locale;
+  const localizedDescription = description || 
+    (seoLocale in seoConfig ? seoConfig[seoLocale as keyof typeof seoConfig].metaDescription : null) || 
     "Your empathetic AI brand consultant guides you through a deep, personal brand discovery.";
   
   const url = `${i18nConfig.domains[locale]}${path}`;
@@ -73,7 +76,7 @@ export function createIntlMetadata({
       },
     },
     authors: authors?.map(name => ({ name })),
-    keywords: [...(seoConfig[locale]?.keywords || []), ...(tags || [])],
+    keywords: [...((seoLocale in seoConfig ? seoConfig[seoLocale as keyof typeof seoConfig].keywords : []) || []), ...(tags || [])],
     alternates: {
       canonical: url,
       languages: alternateLinks
@@ -105,6 +108,8 @@ export function generateHreflangTags(path: string): string {
 }
 
 export function generateStructuredData(locale: Locale, path: string) {
+  // Fallback to 'en-US' for 'en' locale
+  const seoLocale = locale === 'en' ? 'en-US' : locale;
   const baseStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -117,7 +122,7 @@ export function generateStructuredData(locale: Locale, path: string) {
       "width": 600,
       "height": 60
     },
-    "description": seoConfig[locale]?.metaDescription,
+    "description": seoLocale in seoConfig ? seoConfig[seoLocale as keyof typeof seoConfig].metaDescription : undefined,
     "sameAs": [
       "https://linkedin.com/company/brandkernel",
       "https://twitter.com/brandkernel"

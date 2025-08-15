@@ -450,7 +450,7 @@ export class SEOAuditFramework {
       });
     }
 
-    if (result.internationalSEO?.usMarketOptimization.score < 70) {
+    if (result.internationalSEO?.usMarketOptimization?.score && result.internationalSEO.usMarketOptimization.score < 70) {
       issues.push({
         severity: 'high',
         category: 'US Market Optimization',
@@ -463,7 +463,7 @@ export class SEOAuditFramework {
       });
     }
 
-    if (result.technicalSEO?.performance.pageSpeed.mobile < 80) {
+    if (result.technicalSEO?.performance?.pageSpeed?.mobile && result.technicalSEO.performance.pageSpeed.mobile < 80) {
       issues.push({
         severity: 'high',
         category: 'Performance',
