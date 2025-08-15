@@ -45,8 +45,8 @@ export default function HomePage() {
       <main>
         {/* Mobile Layout: Chat first, then content below */}
         <div className="lg:hidden relative">
-          {/* Mobile Chat Section with Solid Green Background */}
-          <section className="min-h-screen flex items-center justify-center relative bg-brand-green">
+          {/* Mobile Chat Section with Purple Background */}
+          <section className="min-h-screen flex items-center justify-center relative bg-[#A364FF]">
             <Header variant="transparent" fixed={true} />
             <div className="w-full max-w-sm h-[600px] p-6 pt-20">
               <DynamicBrandChatbot />
@@ -137,7 +137,7 @@ export default function HomePage() {
             }}
           >
             <div 
-              className="absolute inset-0 bg-brand-green"
+              className="absolute inset-0 bg-[#A364FF]"
               style={{
                 borderRadius: '1.5rem'
               }}
