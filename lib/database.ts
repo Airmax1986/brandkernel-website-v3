@@ -5,12 +5,12 @@ let redis: Redis | null = null;
 
 function getRedis(): Redis | null {
   if (!redis) {
-    // Check if Redis environment variables are available
-    const url = process.env.UPSTASH_REDIS_REST_URL;
-    const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+    // Check for Vercel KV environment variables first, then fall back to Upstash
+    const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+    const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
     
     if (!url || !token) {
-      console.warn('Upstash Redis environment variables not found. Using fallback storage.');
+      console.warn('Redis/KV environment variables not found. Using fallback storage.');
       return null;
     }
     
@@ -19,6 +19,7 @@ function getRedis(): Redis | null {
         url,
         token,
       });
+      console.log('Redis client initialized successfully with', url.includes('vercel') ? 'Vercel KV' : 'Upstash');
     } catch (error) {
       console.error('Failed to initialize Redis connection:', error);
       return null;
@@ -108,11 +109,19 @@ export async function addToWaitlist(
       
     } catch (error) {
       console.error('Redis error in addToWaitlist:', error);
+      console.error('Error details:', {
+        message: error instanceof Error ? error.message : 'Unknown error',
+        stack: error instanceof Error ? error.stack : undefined
+      });
       // Fall back to in-memory storage
+      console.warn('Falling back to in-memory storage due to Redis error');
     }
   }
   
   // Fallback to in-memory storage
+  console.warn('⚠️ Using in-memory storage - data will not persist!');
+  console.warn('To use Redis, run: vercel env pull .env.development.local');
+  
   if (fallbackStorage.has(normalizedEmail)) {
     return {
       success: false,
@@ -127,7 +136,8 @@ export async function addToWaitlist(
   fallbackCounter++;
   const position = fallbackCounter;
   
-  console.log(`Fallback: Added ${normalizedEmail} to waitlist (Position: ${position})`);
+  console.log(`📝 IN-MEMORY: Added ${normalizedEmail} to waitlist (Position: ${position})`);
+  console.warn('⚠️ This data will be lost when the server restarts!');
   
   return {
     success: true,
