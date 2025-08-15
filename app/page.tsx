@@ -58,7 +58,7 @@ export default function HomePage() {
             <div className="max-w-2xl mx-auto text-center">
               {/* Hero Heading */}
               <div className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8" role="heading" aria-level={1}>
-                Finally. The AI dialogue that builds your <span className="text-[#A364FF]">Brand Kernel</span> and changes everything.
+                Finally. The AI dialogue that builds your <span className="text-[#A364FF]">&lt;Brand Kernel&gt;</span> and changes everything.
               </div>
               
               {/* Hero Subheadline */}
@@ -98,7 +98,7 @@ export default function HomePage() {
               <div className="text-center max-w-4xl">
                 {/* Hero Heading */}
                 <h1 className="text-brand-black font-light leading-tight pb-6 px-2" style={{ fontSize: '5rem', marginTop: '5rem' }}>
-                  Finally. The AI dialogue that builds your <span className="text-[#A364FF]">Brand Kernel</span> and changes everything.
+                  Finally. The AI dialogue that builds your <span className="text-[#A364FF]">&lt;Brand Kernel&gt;</span> and changes everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
