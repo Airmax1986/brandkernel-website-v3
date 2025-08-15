@@ -66,22 +66,6 @@ export default function HomePage() {
                 <p>You're a brilliant entrepreneur lost in the noise, seeking traction, clients and growth. One dialogue with our AI Brand Consultant away from the clarity that makes you unstoppable.</p>
               </div>
 
-              {/* Profession Selection */}
-              <div className="mb-8">
-                <p className="text-brand-black text-base font-bold leading-relaxed mb-6">First, choose your profession</p>
-                <div className="flex flex-wrap justify-center gap-3">
-                  <a href="/freelancer" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
-                    Freelancer
-                  </a>
-                  <a href="/founder" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
-                    Founder
-                  </a>
-                  <a href="/creator" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-sm">
-                    Creator
-                  </a>
-                </div>
-              </div>
-
               {/* Waitlist Form */}
               <HeroWaitlistForm variant="mobile" />
             </div>
@@ -104,22 +88,6 @@ export default function HomePage() {
                 {/* Hero Subheadline */}
                 <div className="text-brand-black text-xl font-normal leading-relaxed pb-8 px-10">
                   <p>You're a brilliant entrepreneur lost in the noise, seeking traction, clients and growth. One dialogue with our AI Brand Consultant away from the clarity that makes you unstoppable.</p>
-                </div>
-
-                {/* Profession Selection */}
-                <div className="mb-8 px-10">
-                  <p className="text-brand-black text-lg font-bold leading-relaxed mb-6">First, choose your profession</p>
-                  <div className="flex flex-wrap justify-center gap-3">
-                    <a href="/freelancer" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
-                      Freelancer
-                    </a>
-                    <a href="/founder" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
-                      Founder
-                    </a>
-                    <a href="/creator" className="bg-[#957FFF] text-white px-10 py-2.5 rounded-full font-medium hover:bg-[#957FFF]/90 transition-all  transform hover:-translate-y-0.5 inline-block text-base">
-                      Creator
-                    </a>
-                  </div>
                 </div>
               </div>
 
