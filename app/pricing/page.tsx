@@ -107,7 +107,7 @@ export default function PricingPage() {
               The Breakthrough Investment
             </h2>
             
-            <div className="bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-12 rounded-lg text-white max-w-4xl mx-auto">
+            <div className="bg-brand-green p-12 rounded-lg text-brand-black max-w-4xl mx-auto">
               <h3 style={{ 
                 fontSize: '2rem', 
                 lineHeight: '2.5rem',
@@ -233,7 +233,7 @@ export default function PricingPage() {
           </section>
 
           {/* Zero-Risk Clarity */}
-          <section className="bg-[#FF5A21] p-8 rounded-lg">
+          <section className="bg-brand-green p-8 rounded-lg">
             <h2 style={{ 
               fontSize: '2.5rem', 
               lineHeight: '3rem',

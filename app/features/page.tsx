@@ -59,7 +59,7 @@ export default function FeaturesPage() {
             </h2>
             
             <div className="grid lg:grid-cols-2 gap-12">
-              <div className="bg-gradient-to-br from-[#FF5A21] to-[#957FFF] p-8 rounded-lg text-white">
+              <div className="bg-brand-green p-8 rounded-lg text-brand-black">
                 <h3 style={{ 
                   fontSize: '1.75rem', 
                   lineHeight: '2.25rem',
@@ -213,7 +213,7 @@ export default function FeaturesPage() {
           </section>
 
           {/* The Experience Design */}
-          <section className="bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-12 rounded-lg text-white">
+          <section className="bg-brand-green p-12 rounded-lg text-brand-black">
             <h2 style={{ 
               fontSize: '3rem', 
               lineHeight: '3.5rem',

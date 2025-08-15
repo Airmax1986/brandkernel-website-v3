@@ -79,7 +79,7 @@ export default function ContactPage() {
           </div>
         </div>
         
-        <div className="text-center mt-16 bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-8 rounded-lg text-white">
+        <div className="text-center mt-16 bg-brand-green p-8 rounded-lg text-brand-black">
           <h2 className="text-2xl font-bold mb-4">Ready for Your Breakthrough?</h2>
           <p className="mb-6">Join 400+ founders who are waiting for the conversation that changes everything.</p>
           <a href="/waitlist" className="bg-white text-[#957FFF] px-10 py-3 rounded-full hover:bg-gray-100 transition-all inline-block font-bold">

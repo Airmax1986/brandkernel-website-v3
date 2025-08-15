@@ -204,7 +204,7 @@ export default function ApproachPage() {
           </section>
 
           {/* The Guide Makes the Difference */}
-          <section className="bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-8 rounded-lg text-white">
+          <section className="bg-brand-green p-8 rounded-lg text-brand-black">
             <h2 style={{ 
               fontSize: '2.5rem', 
               lineHeight: '3rem',
