@@ -58,12 +58,12 @@ export default function HomePage() {
             <div className="max-w-2xl mx-auto text-center">
               {/* Hero Heading */}
               <div className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8" role="heading" aria-level={1}>
-                Finally. The Conversation That Changes Everything.
+                Finally. The AI dialogue that builds your <span className="text-[#A364FF]">Brand Kernel</span> and changes everything.
               </div>
               
               {/* Hero Subheadline */}
               <div className="text-brand-black text-base font-bold leading-relaxed pb-8">
-                <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
+                <p>You're a brilliant entrepreneur lost in the noise, seeking traction, clients and growth. One dialogue with our AI Brand Consultant away from the clarity that makes you unstoppable.</p>
               </div>
 
               {/* Profession Selection */}
@@ -98,12 +98,12 @@ export default function HomePage() {
               <div className="text-center max-w-2xl">
                 {/* Hero Heading */}
                 <h1 className="text-brand-black text-6xl xl:text-7xl 2xl:text-8xl font-light leading-tight pt-24 pb-12 px-10">
-                  Finally. The Conversation That Changes Everything.
+                  Finally. The AI dialogue that builds your <span className="text-[#A364FF]">Brand Kernel</span> and changes everything.
                 </h1>
                 
                 {/* Hero Subheadline */}
                 <div className="text-brand-black text-xl font-normal leading-relaxed pb-8 px-10">
-                  <p>You're a brilliant founder lost in the noise. One strategic dialogue away from the clarity that makes you unstoppable. Welcome to your breakthrough.</p>
+                  <p>You're a brilliant entrepreneur lost in the noise, seeking traction, clients and growth. One dialogue with our AI Brand Consultant away from the clarity that makes you unstoppable.</p>
                 </div>
 
                 {/* Profession Selection */}

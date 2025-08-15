@@ -119,7 +119,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
     return (
       <div className="w-full">
         <div className="flex flex-col items-center gap-4">
-          <p className="text-brand-black text-base font-bold">Join our Waitlist</p>
+          <p className="text-brand-black text-base font-bold">Join the waitlist</p>
           
           {isSuccess ? (
             <div className="text-center">
@@ -194,7 +194,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
         <>
           <form onSubmit={handleSubmit}>
             <div className="flex items-center gap-4">
-              <p className="text-brand-black text-base font-bold whitespace-nowrap">Join our Waitlist</p>
+              <p className="text-brand-black text-base font-bold whitespace-nowrap">Join the waitlist</p>
               <div className="flex-1 relative">
                 <input
                   type="email"
