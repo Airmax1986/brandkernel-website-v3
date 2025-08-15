@@ -97,7 +97,7 @@ export default function HomePage() {
               {/* Text Block - Center of left side */}
               <div className="text-center max-w-4xl">
                 {/* Hero Heading */}
-                <h1 className="text-brand-black font-light leading-tight pt-12 pb-6 px-2" style={{ fontSize: '5rem' }}>
+                <h1 className="text-brand-black font-light leading-tight pb-6 px-2" style={{ fontSize: '5rem', marginTop: '3rem' }}>
                   Finally. The AI dialogue that builds your <span className="text-[#A364FF]">Brand Kernel</span> and changes everything.
                 </h1>
                 
