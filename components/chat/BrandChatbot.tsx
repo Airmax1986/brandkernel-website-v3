@@ -96,7 +96,7 @@ export function BrandChatbot() {
       <ChatHeader />
       
       {/* Messages */}
-      <div className="h-80 overflow-y-auto px-4 py-2 bg-gradient-to-b from-brand-white to-brand-light/30">
+      <div className="h-80 overflow-y-auto px-4 py-2 bg-brand-green/10">
         {messages.map((message) => (
           <ChatMessage
             key={message.id}

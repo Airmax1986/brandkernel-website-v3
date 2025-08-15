@@ -14,7 +14,7 @@ export default function PathButton({ href, children }: PathButtonProps) {
         block w-full text-center py-4 px-8 
         rounded-full 
         text-white font-semibold text-2xl 
-        bg-gradient-to-r from-orange-500 via-fuchsia-500 to-purple-600 
+        bg-brand-green 
         transition-transform duration-200 ease-in-out hover:scale-105 
         shadow-lg
       "

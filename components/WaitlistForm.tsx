@@ -185,7 +185,7 @@ export default function WaitlistForm({
             <button
               type="submit"
               className={`
-                bg-gradient-brand text-brand-black font-semibold p-2 rounded-r-brand 
+                bg-brand-green text-brand-black font-semibold p-2 rounded-r-brand 
                 hover:shadow-brand-md focus:shadow-brand-md
                 transition-all duration-200 h-[42px] min-w-[42px]
                 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2

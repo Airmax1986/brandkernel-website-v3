@@ -59,7 +59,7 @@ export default function FeaturesPage() {
             </h2>
             
             <div className="grid lg:grid-cols-2 gap-12">
-              <div className="bg-gradient-to-br from-[#DAFF96] to-[#957FFF] p-8 rounded-lg text-white">
+              <div className="bg-gradient-to-br from-[#FF5A21] to-[#957FFF] p-8 rounded-lg text-white">
                 <h3 style={{ 
                   fontSize: '1.75rem', 
                   lineHeight: '2.25rem',
@@ -110,7 +110,7 @@ export default function FeaturesPage() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="bg-[#DAFF96] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-[#FF5A21] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-brand-black font-bold text-xl">1</span>
                 </div>
                 <h4 className="font-bold text-brand-black mb-2">Foundation</h4>
@@ -126,7 +126,7 @@ export default function FeaturesPage() {
               </div>
               
               <div className="text-center">
-                <div className="bg-[#DAFF96] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-[#FF5A21] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-brand-black font-bold text-xl">3</span>
                 </div>
                 <h4 className="font-bold text-brand-black mb-2">Voice</h4>
@@ -213,7 +213,7 @@ export default function FeaturesPage() {
           </section>
 
           {/* The Experience Design */}
-          <section className="bg-gradient-to-r from-[#DAFF96] to-[#957FFF] p-12 rounded-lg text-white">
+          <section className="bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-12 rounded-lg text-white">
             <h2 style={{ 
               fontSize: '3rem', 
               lineHeight: '3.5rem',

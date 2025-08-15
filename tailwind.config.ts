@@ -43,15 +43,16 @@ const config: Config = {
         'brand': {
           'white': '#FFFFFF',      // Pure white
           'light': '#D4D4D6',      // Light gray
-          'green': '#B8FF4D',      // Brand green  
+          'green': '#D8FF96',      // Brand green (was gradient, now solid)  
           'purple': '#7D5FFF',     // Brand purple
+          'orange': '#FF5A21',     // Brand orange (replaces old green)
           'black': '#000000',      // Pure black
         },
         
-        // Gradient Colors for CTAs (NEW)
+        // Solid Colors for CTAs (NO GRADIENTS)
         'gradient': {
-          'from': '#B8FF4D',       // Green start
-          'to': '#7D5FFF',         // Purple end
+          'from': '#D8FF96',       // Solid green (no gradient)
+          'to': '#D8FF96',         // Solid green (no gradient)
         },
 
         // Legacy colors for compatibility
@@ -106,10 +107,10 @@ const config: Config = {
       // BACKGROUND PATTERNS - UPDATED GRADIENTS
       // ==========================================================================
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(135deg, #B8FF4D 0%, #7D5FFF 100%)',
-        'gradient-brand-subtle': 'linear-gradient(135deg, #B8FF4D 0%, #D4D4D6 50%, #7D5FFF 100%)',
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-brand': 'linear-gradient(135deg, #D8FF96 0%, #D8FF96 100%)',  // Solid green
+        'gradient-brand-subtle': 'linear-gradient(135deg, #D8FF96 0%, #D8FF96 100%)',  // Solid green
+        'gradient-radial': 'radial-gradient(#D8FF96, #D8FF96)',  // Solid green
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, #D8FF96, #D8FF96)',  // Solid green
       },
 
       // ==========================================================================
@@ -124,7 +125,8 @@ const config: Config = {
         'brand-xl': '0 25px 50px -12px rgba(149, 127, 255, 0.25)',
         
         // Brand-specific shadows
-        'brand-green': '0 4px 6px -1px rgba(218, 255, 150, 0.2), 0 2px 4px -1px rgba(218, 255, 150, 0.1)',
+        'brand-green': '0 4px 6px -1px rgba(216, 255, 150, 0.2), 0 2px 4px -1px rgba(216, 255, 150, 0.1)',
+        'brand-orange': '0 4px 6px -1px rgba(255, 90, 33, 0.2), 0 2px 4px -1px rgba(255, 90, 33, 0.1)',
         'brand-purple': '0 4px 6px -1px rgba(149, 127, 255, 0.2), 0 2px 4px -1px rgba(149, 127, 255, 0.1)',
         
         // Glow effects

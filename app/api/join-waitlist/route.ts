@@ -56,7 +56,7 @@ async function sendWelcomeEmail(email: string, position: number): Promise<boolea
               <h1 style="color: #957FFF; font-size: 28px; margin: 0;">BrandKernel</h1>
             </div>
             
-            <div style="background: linear-gradient(135deg, #DAFF96 0%, #957FFF 100%); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 30px;">
+            <div style="background: linear-gradient(135deg, #FF5A21 0%, #957FFF 100%); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 30px;">
               <h2 style="color: #000000; font-size: 24px; margin: 0 0 10px 0;">Welcome to the Waitlist!</h2>
               <p style="color: #000000; font-size: 16px; margin: 0;">You're now part of our exclusive early access community.</p>
             </div>

@@ -52,7 +52,7 @@ export default function HowItWorksPage() {
           
           {/* Level 1 */}
           <section>
-            <div className="bg-gradient-to-r from-[#DAFF96] to-[#957FFF] p-8 rounded-lg text-white mb-8">
+            <div className="bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-8 rounded-lg text-white mb-8">
               <h2 style={{ 
                 fontSize: '2rem', 
                 lineHeight: '2.5rem',
@@ -95,7 +95,7 @@ export default function HowItWorksPage() {
 
           {/* Level 2 */}
           <section>
-            <div className="bg-gradient-to-r from-[#957FFF] to-[#DAFF96] p-8 rounded-lg text-white mb-8">
+            <div className="bg-gradient-to-r from-[#957FFF] to-[#FF5A21] p-8 rounded-lg text-white mb-8">
               <h2 style={{ 
                 fontSize: '2rem', 
                 lineHeight: '2.5rem',
@@ -138,7 +138,7 @@ export default function HowItWorksPage() {
 
           {/* Level 3 */}
           <section>
-            <div className="bg-gradient-to-r from-[#DAFF96] to-[#957FFF] p-8 rounded-lg text-white mb-8">
+            <div className="bg-gradient-to-r from-[#FF5A21] to-[#957FFF] p-8 rounded-lg text-white mb-8">
               <h2 style={{ 
                 fontSize: '2rem', 
                 lineHeight: '2.5rem',
@@ -181,7 +181,7 @@ export default function HowItWorksPage() {
 
           {/* Level 4 */}
           <section>
-            <div className="bg-gradient-to-r from-[#957FFF] to-[#DAFF96] p-8 rounded-lg text-white mb-8">
+            <div className="bg-gradient-to-r from-[#957FFF] to-[#FF5A21] p-8 rounded-lg text-white mb-8">
               <h2 style={{ 
                 fontSize: '2rem', 
                 lineHeight: '2.5rem',

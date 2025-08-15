@@ -164,7 +164,7 @@ export default function SolutionsSection() {
                 </ul>
 
                 {/* Hover Effect Border */}
-                <div className="absolute inset-0 rounded-brand border-1 border-transparent group-hover:border-gradient-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 rounded-brand border-1 border-transparent group-hover:border-brand-green opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             </motion.div>
           ))}
@@ -181,7 +181,7 @@ export default function SolutionsSection() {
             Ready to transform your brand? Let's discuss your project.
           </p>
           <motion.button
-            className="bg-gradient-brand text-brand-black font-semibold px-8 py-3 rounded-brand-lg hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
+            className="bg-brand-green text-brand-black font-semibold px-8 py-3 rounded-brand-lg hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {

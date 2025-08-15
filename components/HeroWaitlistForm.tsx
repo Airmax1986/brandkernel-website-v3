@@ -137,7 +137,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
                     value={email}
                     onChange={handleEmailChange}
                     placeholder="name@email.com"
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base  ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF5A21] focus:border-transparent text-base  ${
                       validationError ? 'border-red-400' : 'border-neutral-300'
                     }`}
                     disabled={isLoading}
@@ -152,7 +152,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
                 <button
                   onClick={handleSubmit}
                   disabled={isLoading || !email.trim()}
-                  className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all  transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-[#FF5A21] text-brand-black p-3 rounded-lg hover:bg-[#FF5A21]/90 transition-all  transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -201,7 +201,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
                   value={email}
                   onChange={handleEmailChange}
                   placeholder="name@email.com"
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DAFF96] focus:border-transparent text-base  ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF5A21] focus:border-transparent text-base  ${
                     validationError ? 'border-red-400' : 'border-neutral-300'
                   }`}
                   disabled={isLoading}
@@ -213,7 +213,7 @@ export default function HeroWaitlistForm({ variant = 'desktop' }: HeroWaitlistFo
               <button
                 type="submit"
                 disabled={isLoading || !email.trim()}
-                className="bg-[#DAFF96] text-brand-black p-3 rounded-lg hover:bg-[#DAFF96]/90 transition-all  transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#FF5A21] text-brand-black p-3 rounded-lg hover:bg-[#FF5A21]/90 transition-all  transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

@@ -213,7 +213,7 @@ const ChatInput = memo(({ onSendMessage }: { onSendMessage: (message: string) =>
   const buttonClass = useMemo(() => 
     `absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-brand flex items-center justify-center transition-all duration-200 ${
       message.trim() 
-        ? 'bg-gradient-brand hover:shadow-brand text-brand-black' 
+        ? 'bg-brand-green hover:shadow-brand text-brand-black' 
         : 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
     }`, 
     [message]

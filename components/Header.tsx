@@ -267,7 +267,7 @@ export default function Header({
                       handleJoinWaitlist();
                       setIsMobileMenuOpen(false);
                     }}
-                    className="bg-gradient-brand text-brand-black font-semibold px-10 py-3 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 w-full text-center"
+                    className="bg-brand-green text-brand-black font-semibold px-10 py-3 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 w-full text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}

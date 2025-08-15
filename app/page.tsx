@@ -168,15 +168,15 @@ export default function HomePage() {
                 <p>The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
                 
                 <div className="grid md:grid-cols-3 gap-8 mt-12 mb-12">
-                  <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 text-center">
+                  <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
                     <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Founders</h3>
                     <p>Transform from invisible builder to industry voice</p>
                   </div>
-                  <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 text-center">
+                  <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
                     <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Freelancers</h3>
                     <p>Escape the commodity trap with crystal-clear positioning</p>
                   </div>
-                  <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6 text-center">
+                  <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
                     <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Creators</h3>
                     <p>Turn followers into a real business with strategic clarity</p>
                   </div>
@@ -215,11 +215,11 @@ export default function HomePage() {
               
               {/* Key Points */}
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">The Truth About Breakthrough</h3>
                   <p className="text-brand-black">Your breakthrough isn't hiding in another course, template, or AI tool. It's buried inside you, waiting for the right questions to set it free.</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">What We Stand For</h3>
                   <p className="text-brand-black">Deep over surface. Identity before strategy. Guided discovery over generic frameworks. Transformation over information.</p>
                 </div>
@@ -248,15 +248,15 @@ export default function HomePage() {
               
               {/* Method Steps */}
               <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Phase 1: Archaeology of You</h3>
                   <p className="text-brand-black text-sm">We dig deep. Past the surface story to the bedrock truth of why you're building this.</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Phase 2: Alchemy of Positioning</h3>
                   <p className="text-brand-black text-sm">Raw truth becomes crystal-clear positioning that feels like finally exhaling.</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Phase 3: Architecture of Activation</h3>
                   <p className="text-brand-black text-sm">Clarity becomes action with your complete Brand Kernel and activation blueprints.</p>
                 </div>
@@ -285,28 +285,28 @@ export default function HomePage() {
               
               {/* 4 Levels */}
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
-                  <div className="bg-[#DAFF96] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-4 text-center">
+                  <div className="bg-[#FF5A21] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-brand-black font-bold">1</span>
                   </div>
                   <h3 className="font-bold text-sm mb-2">Foundation Discovery</h3>
                   <p className="text-brand-black text-xs">45-60 minutes</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-4 text-center">
                   <div className="bg-[#957FFF] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">2</span>
                   </div>
                   <h3 className="font-bold text-sm mb-2">Position Clarification</h3>
                   <p className="text-brand-black text-xs">30-45 minutes</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
-                  <div className="bg-[#DAFF96] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-4 text-center">
+                  <div className="bg-[#FF5A21] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-brand-black font-bold">3</span>
                   </div>
                   <h3 className="font-bold text-sm mb-2">Voice Activation</h3>
                   <p className="text-brand-black text-xs">30-45 minutes</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-4 text-center">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-4 text-center">
                   <div className="bg-[#957FFF] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">4</span>
                   </div>
@@ -338,22 +338,22 @@ export default function HomePage() {
               
               {/* Key Features */}
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Strategic AI Guide</h3>
                   <p className="text-brand-black mb-3">Not a chatbot. A trained brand strategist that asks the questions that unlock breakthrough, listens for what you're not saying, and guides you to your own truth.</p>
                   <p className="text-sm text-brand-black/70">Because the best answers come from the right questions.</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Your Brand Kernel Book</h3>
                   <p className="text-brand-black mb-3">Your living strategic document that captures every breakthrough insight, your crystallized positioning, your authentic voice, and your action framework.</p>
                   <p className="text-sm text-brand-black/70">Because clarity deserves documentation.</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Activation Blueprints</h3>
                   <p className="text-brand-black mb-3">Turn clarity into action with content strategy frameworks, network building plans, message templates, and growth roadmaps.</p>
                   <p className="text-sm text-brand-black/70">Because insight without action is just expensive therapy.</p>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">Visual Clarity Maps</h3>
                   <p className="text-brand-black mb-3">See your breakthrough in positioning matrices, voice spectrums, audience alignment charts, and competition landscapes.</p>
                   <p className="text-sm text-brand-black/70">Because sometimes you need to see it to believe it.</p>
@@ -387,7 +387,7 @@ export default function HomePage() {
               
               {/* Value Proposition */}
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">What You Get</h3>
                   <ul className="text-brand-black text-sm space-y-2 text-left">
                     <li>✓ Complete 4-level guided journey</li>
@@ -398,7 +398,7 @@ export default function HomePage() {
                     <li>✓ Lifetime access to your foundation</li>
                   </ul>
                 </div>
-                <div className="bg-white border-2 border-[#DAFF96] rounded-lg p-6">
+                <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6">
                   <h3 className="font-bold text-lg mb-3">The ROI Reality</h3>
                   <div className="text-brand-black text-sm space-y-2 text-left">
                     <p>Win one ideal client → <span className="font-bold text-[#957FFF]">10x return</span></p>

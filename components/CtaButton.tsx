@@ -27,7 +27,7 @@ const CtaButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, CtaButtonPro
     
     // Variant styles with new brand colors
     const variantStyles = {
-      primary: "bg-gradient-brand text-brand-black hover:shadow-brand-md focus:ring-brand-purple disabled:opacity-50",
+      primary: "bg-brand-green text-brand-black hover:shadow-brand-md focus:ring-brand-purple disabled:opacity-50",
       secondary: "bg-brand-white text-brand-black border-1 border-brand-light hover:bg-brand-light hover:shadow-brand focus:ring-brand-purple disabled:opacity-50",
       outline: "bg-transparent text-brand-purple border-1 border-brand-purple hover:bg-brand-purple hover:text-brand-white focus:ring-brand-purple disabled:opacity-50",
       ghost: "bg-transparent text-brand-black hover:bg-brand-light focus:ring-brand-purple disabled:opacity-50",

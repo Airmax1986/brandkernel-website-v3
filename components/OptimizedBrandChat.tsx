@@ -50,7 +50,7 @@ function ChatHeader() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {/* Avatar with brand colors */}
-          <div className="w-11 h-11 rounded-brand bg-gradient-brand flex items-center justify-center shadow-brand">
+          <div className="w-11 h-11 rounded-brand bg-brand-green flex items-center justify-center shadow-brand">
             <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
             </svg>
@@ -90,7 +90,7 @@ function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         <div
           className={`px-4 py-3 rounded-brand-lg shadow-brand-sm ${
             isUser 
-              ? 'bg-gradient-brand text-white shadow-brand-purple/20' 
+              ? 'bg-brand-green text-white shadow-brand-purple/20' 
               : 'bg-white border border-brand-green/30 text-brand-black shadow-brand-green/10'
           }`}
         >
@@ -189,7 +189,7 @@ export default function OptimizedBrandChat() {
       <ChatHeader />
       
       <div className="h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 overflow-y-auto px-4 py-4 
-                      bg-gradient-to-b from-white/50 to-brand-light/30 scrollbar-thin">
+                      bg-brand-green scrollbar-thin">
         {messages.map((message) => (
           <ChatMessage
             key={message.id}
