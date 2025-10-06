@@ -54,13 +54,18 @@ export default async function PostPage({ params }: { params: { slug: string } })
   const imageUrl = post.headerImage;
   const publishedDate = new Date(post.date).toISOString();
 
-  // Structured Data (JSON-LD) for SEO
+  // Structured Data (JSON-LD) for SEO - BlogPosting + Article
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": ["BlogPosting", "Article"],
     "headline": post.title,
     "description": post.summary || post.description || `Read "${post.title}" on BrandKernel`,
-    "image": imageUrl ? (imageUrl.startsWith('//') ? `https:${imageUrl}` : imageUrl) : `${baseUrl}/og-default.jpg`,
+    "image": {
+      "@type": "ImageObject",
+      "url": imageUrl ? (imageUrl.startsWith('//') ? `https:${imageUrl}` : imageUrl) : `${baseUrl}/og-default.jpg`,
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Person",
       "name": post.author?.name || 'BrandKernel Team',
@@ -69,9 +74,12 @@ export default async function PostPage({ params }: { params: { slug: string } })
     "publisher": {
       "@type": "Organization",
       "name": "BrandKernel",
+      "url": baseUrl,
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/logo.png`
+        "url": `${baseUrl}/logo.png`,
+        "width": 600,
+        "height": 60
       }
     },
     "datePublished": publishedDate,
@@ -83,7 +91,10 @@ export default async function PostPage({ params }: { params: { slug: string } })
     "url": postUrl,
     "keywords": post.tags?.join(', ') || 'branding, brand strategy, AI consultant',
     "articleSection": "Business",
-    "wordCount": post.content ? post.content.split(' ').length : 0
+    "wordCount": post.content ? post.content.split(' ').length : 0,
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "commentCount": 0
   };
 
   return (

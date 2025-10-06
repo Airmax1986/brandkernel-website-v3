@@ -176,7 +176,61 @@ const nextConfig = {
     ]
   },
   async redirects() {
+    // Blog slug redirects (SEO optimization - shortened URLs)
+    const blogSlugRedirects = [
+      { source: '/blog/ai-impact-branding-jobs-future-designers', destination: '/blog/ai-impact-branding-jobs-future', permanent: true },
+      { source: '/blog/30-day-brand-activation-challenge-freelancers', destination: '/blog/30-day-brand-activation-challenge', permanent: true },
+      { source: '/blog/branding-perfectionism-define-brand-core-freelancers', destination: '/blog/branding-perfectionism-define-brand-core', permanent: true },
+      { source: '/blog/chatgpt-claude-gemini-ai-tools-branding-text', destination: '/blog/chatgpt-claude-gemini-ai-tools', permanent: true },
+      { source: '/blog/brandkernel-review-ai-brand-strategy-freelancers', destination: '/blog/brandkernel-review-ai-brand-strategy', permanent: true },
+      { source: '/blog/brand-personality-examples-authentic-voice-freelancers', destination: '/blog/brand-personality-examples-authentic-voice', permanent: true },
+      { source: '/blog/branding-cost-small-business-budget-guide', destination: '/blog/branding-cost-small-business-budget', permanent: true },
+      { source: '/blog/content-repurposing-strategy-branding-5-channels', destination: '/blog/content-repurposing-strategy-branding-5', permanent: true },
+      { source: '/blog/visibility-for-introverts-brand-strategies', destination: '/blog/visibility-for-introverts-brand', permanent: true },
+      { source: '/blog/micro-saas-branding-memorable-brand-budget', destination: '/blog/micro-saas-branding-memorable-brand', permanent: true },
+      { source: '/blog/freelance-portfolio-branding-guide', destination: '/blog/freelance-portfolio-branding', permanent: true },
+      { source: '/blog/branding-for-therapists-coaches-trust-building', destination: '/blog/branding-for-therapists-coaches-trust', permanent: true },
+      { source: '/blog/esch-brand-steering-wheel-markensteuerrad-english-guide', destination: '/blog/esch-brand-steering-wheel-markensteuerrad', permanent: true },
+      { source: '/blog/brand-strategy-packages-small-business-guide', destination: '/blog/brand-strategy-packages-small-business', permanent: true },
+      { source: '/blog/personal-branding-freelancers-brand-core-guide', destination: '/blog/personal-branding-freelancers-brand-core', permanent: true },
+      { source: '/blog/chatgpt-branding-freelancers-strategic-ai', destination: '/blog/chatgpt-branding-freelancers', permanent: true },
+      { source: '/blog/brandkernel-case-study-freelancer-tripled-clients', destination: '/blog/brandkernel-case-study-freelancer-tripled', permanent: true },
+      { source: '/blog/competitor-analysis-branding-unique-angle-framework', destination: '/blog/competitor-analysis-branding-unique-angle', permanent: true },
+      { source: '/blog/brand-consistency-importance-freelancers-trust-building', destination: '/blog/brand-consistency-importance-freelancers-trust', permanent: true },
+      { source: '/blog/saas-scale-up-branding-evolve-brand-guide', destination: '/blog/saas-scale-up-branding-evolve', permanent: true },
+      { source: '/blog/brand-metrics-kpis-business-growth-measurement', destination: '/blog/brand-metrics-kpis-business-growth', permanent: true },
+      { source: '/blog/user-generated-content-branding-trust-strategies', destination: '/blog/user-generated-content-branding-trust', permanent: true },
+      { source: '/blog/brand-kernel-community-authentic-brand-network', destination: '/blog/brand-kernel-community-authentic-brand', permanent: true },
+      { source: '/blog/affordable-branding-resources-freelancers-budget-tools', destination: '/blog/affordable-branding-resources-freelancers-budget', permanent: true },
+      { source: '/blog/authentic-personal-brand-check-over-optimize-tips', destination: '/blog/authentic-personal-brand-check-over', permanent: true },
+      { source: '/blog/ai-competitor-analysis-branding-tools-market-research', destination: '/blog/ai-competitor-analysis-branding-tools', permanent: true },
+      { source: '/blog/brand-equity-score-freelancer-calculate-value-guide', destination: '/blog/brand-equity-score-freelancer-calculate', permanent: true },
+      { source: '/blog/ai-branding-tools-solopreneurs-reality-check', destination: '/blog/ai-branding-tools-solopreneurs-reality', permanent: true },
+      { source: '/blog/ai-brand-voice-generator-freelancers-authentic-guide', destination: '/blog/ai-brand-voice-generator-freelancers', permanent: true },
+      { source: '/blog/branding-for-freelancers-examples', destination: '/blog/branding-for-freelancers', permanent: true },
+      { source: '/blog/ai-for-brand-strategy-authentic-positioning', destination: '/blog/ai-for-brand-strategy-authentic', permanent: true },
+      { source: '/blog/consistent-brand-messaging-freelancers-voice-guide', destination: '/blog/consistent-brand-messaging-freelancers-voice', permanent: true },
+      { source: '/blog/how-to-build-personal-brand-freelance', destination: '/blog/how-to-build-personal-brand', permanent: true },
+      { source: '/blog/guided-brand-strategy-tool-vs-chatgpt-comparison', destination: '/blog/guided-brand-strategy-tool-vs', permanent: true },
+      { source: '/blog/minimum-viable-brand-startup-branding-essentials', destination: '/blog/minimum-viable-brand-startup-branding', permanent: true },
+      { source: '/blog/brand-identity-guide-core-discovery-framework', destination: '/blog/brand-identity-guide-core-discovery', permanent: true },
+      { source: '/blog/personal-branding-digital-nomads-build-reputation', destination: '/blog/personal-branding-digital-nomads-build', permanent: true },
+      { source: '/blog/linkedin-personal-brand-guide-attract-clients', destination: '/blog/linkedin-personal-brand-guide-attract', permanent: true },
+      { source: '/blog/what-is-brand-marketing-business-guide', destination: '/blog/what-is-brand-marketing-business', permanent: true },
+      { source: '/blog/using-content-marketing-build-brand-strategy', destination: '/blog/using-content-marketing-build-brand', permanent: true },
+      { source: '/blog/brand-marketing-strategies-small-business-growth', destination: '/blog/brand-marketing-strategies-small-business', permanent: true },
+      { source: '/blog/linkedin-personal-branding-freelancers-guide', destination: '/blog/linkedin-personal-branding-freelancers', permanent: true },
+      { source: '/blog/linkedin-profile-optimization-personal-branding-tips', destination: '/blog/linkedin-profile-optimization-personal-branding', permanent: true },
+      { source: '/blog/brand-core-vs-corporate-identity-difference', destination: '/blog/brand-core-vs-corporate-identity', permanent: true },
+      { source: '/blog/personal-brand-vs-business-brand-freelancers', destination: '/blog/personal-brand-vs-business-brand', permanent: true },
+      { source: '/blog/professional-branding-services-freelancers-beyond-logo', destination: '/blog/professional-branding-services-freelancers-beyond', permanent: true },
+      { source: '/blog/using-ai-for-branding-freelancers-guide', destination: '/blog/using-ai-for-branding-freelancers', permanent: true },
+    ];
+
     return [
+      // Blog slug redirects (48 redirects)
+      ...blogSlugRedirects,
+
       // Redirect singular to plural paths
       {
         source: '/founder',
@@ -184,13 +238,13 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/freelancer', 
+        source: '/freelancer',
         destination: '/freelancers',
         permanent: true,
       },
       {
         source: '/creator',
-        destination: '/creators', 
+        destination: '/creators',
         permanent: true,
       },
       // Old blog URLs - redirect /posts/ to /blog/
