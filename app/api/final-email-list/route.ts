@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getFinalEmailList } from '@/lib/database';
+import { getAllEmails } from '@/lib/database';
 
 export async function GET(request: NextRequest) {
   try {
-    // Get all emails from the final email list
-    const emails = await getFinalEmailList();
+    // Get all emails from the waitlist
+    const emails = await getAllEmails();
     
     return NextResponse.json({
       success: true,
