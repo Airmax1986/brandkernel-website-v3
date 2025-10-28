@@ -18,8 +18,8 @@
     "shorten-slugs:dry-run": "tsx scripts/shorten-contentful-slugs.ts --dry-run"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.1",
     "@tailwindcss/typography": "^0.5.16",
-    "@vercel/postgres": "^0.10.0",
     "contentful": "10.12.2",
     "contentful-management": "11.27.1",
     "critters": "^0.0.23",

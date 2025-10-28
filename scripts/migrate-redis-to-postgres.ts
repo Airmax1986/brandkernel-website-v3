@@ -9,7 +9,7 @@
  */
 
 import { Redis } from '@upstash/redis';
-import { sql } from '@vercel/postgres';
+import { neon } from '@neondatabase/serverless';
 
 // Redis connection (old database)
 function getRedisClient(): Redis | null {
@@ -38,7 +38,15 @@ interface WaitlistEntry {
 }
 
 async function migrateData() {
-  console.log('🚀 Starting migration from Redis to Postgres...\n');
+  console.log('🚀 Starting migration from Redis to Neon Postgres...\n');
+
+  // Connect to Neon Postgres
+  const databaseUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!databaseUrl) {
+    console.error('❌ DATABASE_URL not found. Make sure Neon is connected to Vercel.');
+    process.exit(1);
+  }
+  const sql = neon(databaseUrl);
 
   // Connect to Redis
   const redis = getRedisClient();
@@ -80,7 +88,7 @@ async function migrateData() {
 
     // Check if Postgres already has data
     const existingCount = await sql`SELECT COUNT(*) as count FROM waitlist`;
-    const existingRows = parseInt(existingCount.rows[0].count as string, 10);
+    const existingRows = parseInt(existingCount[0].count as string, 10);
 
     if (existingRows > 0) {
       console.log(`⚠️  Postgres already has ${existingRows} entries.`);
@@ -154,7 +162,7 @@ async function migrateData() {
 
     // Verify Postgres data
     const finalCount = await sql`SELECT COUNT(*) as count FROM waitlist`;
-    const finalRows = parseInt(finalCount.rows[0].count as string, 10);
+    const finalRows = parseInt(finalCount[0].count as string, 10);
     console.log(`\n✅ Final Postgres count: ${finalRows} entries`);
 
     console.log('\n🎉 Migration complete!');

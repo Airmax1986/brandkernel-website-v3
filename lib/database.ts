@@ -1,6 +1,6 @@
-import { sql } from '@vercel/postgres';
+import { neon } from '@neondatabase/serverless';
 
-// Database operations for waitlist using Vercel Postgres
+// Database operations for waitlist using Neon Postgres
 export interface WaitlistEntry {
   email: string;
   timestamp: string;
@@ -13,11 +13,24 @@ export interface WaitlistStats {
   timestamp: string;
 }
 
+// Get SQL client
+function getSQL() {
+  const databaseUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+
+  if (!databaseUrl) {
+    throw new Error('DATABASE_URL not found in environment variables');
+  }
+
+  return neon(databaseUrl);
+}
+
 /**
  * Initialize database and create tables if they don't exist
  */
 export async function initializeDatabase(): Promise<void> {
   try {
+    const sql = getSQL();
+
     // Create waitlist table if it doesn't exist
     await sql`
       CREATE TABLE IF NOT EXISTS waitlist (
@@ -38,14 +51,14 @@ export async function initializeDatabase(): Promise<void> {
     // Create sequence for position counter (starts at 71 to match existing counter)
     await sql`CREATE SEQUENCE IF NOT EXISTS waitlist_position_seq START WITH 71`;
 
-    console.log('✅ Postgres: Database initialized successfully');
+    console.log('✅ Neon Postgres: Database initialized successfully');
   } catch (error) {
     // If error is about objects already existing, that's fine
     if (error instanceof Error && error.message.includes('already exists')) {
-      console.log('✅ Postgres: Database tables already exist');
+      console.log('✅ Neon Postgres: Database tables already exist');
       return;
     }
-    console.error('❌ Postgres: Error initializing database:', error);
+    console.error('❌ Neon Postgres: Error initializing database:', error);
     throw error;
   }
 }
@@ -60,13 +73,15 @@ export async function addToWaitlist(
   const normalizedEmail = email.toLowerCase().trim();
 
   try {
+    const sql = getSQL();
+
     // Check if email already exists
     const existingEntry = await sql`
       SELECT email, position FROM waitlist WHERE email = ${normalizedEmail}
     `;
 
-    if (existingEntry.rows.length > 0) {
-      const existing = existingEntry.rows[0];
+    if (existingEntry.length > 0) {
+      const existing = existingEntry[0];
       return {
         success: false,
         position: existing.position as number,
@@ -77,7 +92,7 @@ export async function addToWaitlist(
 
     // Get next position from sequence
     const positionResult = await sql`SELECT nextval('waitlist_position_seq') as position`;
-    const position = positionResult.rows[0].position as number;
+    const position = positionResult[0].position as number;
 
     // Insert new waitlist entry
     await sql`
@@ -87,9 +102,9 @@ export async function addToWaitlist(
 
     // Get total signups
     const statsResult = await sql`SELECT COUNT(*) as count FROM waitlist`;
-    const totalSignups = parseInt(statsResult.rows[0].count as string, 10);
+    const totalSignups = parseInt(statsResult[0].count as string, 10);
 
-    console.log(`✅ Postgres: Added ${normalizedEmail} to waitlist (Position: ${position})`);
+    console.log(`✅ Neon Postgres: Added ${normalizedEmail} to waitlist (Position: ${position})`);
 
     return {
       success: true,
@@ -97,7 +112,7 @@ export async function addToWaitlist(
       totalSignups
     };
   } catch (error) {
-    console.error('❌ Postgres error in addToWaitlist:', error);
+    console.error('❌ Neon Postgres error in addToWaitlist:', error);
 
     // Check if it's a unique constraint violation
     if (error instanceof Error && error.message.includes('duplicate key')) {
@@ -120,13 +135,14 @@ export async function isEmailInWaitlist(email: string): Promise<boolean> {
   const normalizedEmail = email.toLowerCase().trim();
 
   try {
+    const sql = getSQL();
     const result = await sql`
       SELECT email FROM waitlist WHERE email = ${normalizedEmail}
     `;
 
-    return result.rows.length > 0;
+    return result.length > 0;
   } catch (error) {
-    console.error('❌ Postgres error in isEmailInWaitlist:', error);
+    console.error('❌ Neon Postgres error in isEmailInWaitlist:', error);
     throw error;
   }
 }
@@ -136,6 +152,7 @@ export async function isEmailInWaitlist(email: string): Promise<boolean> {
  */
 export async function getWaitlistStats(): Promise<WaitlistStats> {
   try {
+    const sql = getSQL();
     const result = await sql`
       SELECT
         COUNT(*) as total_signups,
@@ -143,7 +160,7 @@ export async function getWaitlistStats(): Promise<WaitlistStats> {
       FROM waitlist
     `;
 
-    const row = result.rows[0];
+    const row = result[0];
     const totalSignups = parseInt(row.total_signups as string, 10);
     const timestamp = row.last_updated ? new Date(row.last_updated as string).toISOString() : new Date().toISOString();
 
@@ -152,7 +169,7 @@ export async function getWaitlistStats(): Promise<WaitlistStats> {
       timestamp
     };
   } catch (error) {
-    console.error('❌ Postgres error in getWaitlistStats:', error);
+    console.error('❌ Neon Postgres error in getWaitlistStats:', error);
 
     // Return default stats if table doesn't exist yet
     return {
@@ -169,17 +186,18 @@ export async function getWaitlistEntry(email: string): Promise<WaitlistEntry | n
   const normalizedEmail = email.toLowerCase().trim();
 
   try {
+    const sql = getSQL();
     const result = await sql`
       SELECT email, source, position, created_at
       FROM waitlist
       WHERE email = ${normalizedEmail}
     `;
 
-    if (result.rows.length === 0) {
+    if (result.length === 0) {
       return null;
     }
 
-    const row = result.rows[0];
+    const row = result[0];
     return {
       email: row.email as string,
       timestamp: new Date(row.created_at as string).toISOString(),
@@ -187,7 +205,7 @@ export async function getWaitlistEntry(email: string): Promise<WaitlistEntry | n
       position: row.position as number
     };
   } catch (error) {
-    console.error('❌ Postgres error in getWaitlistEntry:', error);
+    console.error('❌ Neon Postgres error in getWaitlistEntry:', error);
     return null;
   }
 }
@@ -197,13 +215,14 @@ export async function getWaitlistEntry(email: string): Promise<WaitlistEntry | n
  */
 export async function getAllEmails(): Promise<string[]> {
   try {
+    const sql = getSQL();
     const result = await sql`
       SELECT email FROM waitlist ORDER BY position ASC
     `;
 
-    return result.rows.map(row => row.email as string);
+    return result.map(row => row.email as string);
   } catch (error) {
-    console.error('❌ Postgres error in getAllEmails:', error);
+    console.error('❌ Neon Postgres error in getAllEmails:', error);
     return [];
   }
 }
@@ -213,20 +232,21 @@ export async function getAllEmails(): Promise<string[]> {
  */
 export async function getAllWaitlistEntries(): Promise<WaitlistEntry[]> {
   try {
+    const sql = getSQL();
     const result = await sql`
       SELECT email, source, position, created_at
       FROM waitlist
       ORDER BY position ASC
     `;
 
-    return result.rows.map(row => ({
+    return result.map(row => ({
       email: row.email as string,
       timestamp: new Date(row.created_at as string).toISOString(),
       source: row.source as string,
       position: row.position as number
     }));
   } catch (error) {
-    console.error('❌ Postgres error in getAllWaitlistEntries:', error);
+    console.error('❌ Neon Postgres error in getAllWaitlistEntries:', error);
     return [];
   }
 }
