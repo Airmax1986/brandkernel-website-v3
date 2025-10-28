@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   }
 };
 
+// Static generation hints for better SEO
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
+
 export default function HomePage() {
   // Get combined schema markup for homepage
   const homeSchemas = getHomePageSchemas();

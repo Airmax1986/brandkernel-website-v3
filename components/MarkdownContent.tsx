@@ -80,16 +80,25 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
               {children}
             </pre>
           ),
-          a: ({ href, children }) => (
-            <a 
-              href={href} 
-              className="text-purple-600 hover:text-purple-700 underline transition-colors"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              {children}
-            </a>
-          ),
+          a: ({ href, children }) => {
+            // Check if link is internal (critical for SEO internal linking)
+            const isInternal = href?.startsWith('/') ||
+                               href?.startsWith('#') ||
+                               href?.includes('brandkernel.io');
+
+            return (
+              <a
+                href={href}
+                className="text-purple-600 hover:text-purple-700 underline transition-colors"
+                {...(!isInternal && {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                })}
+              >
+                {children}
+              </a>
+            );
+          },
           strong: ({ children }) => (
             <strong className="font-semibold text-gray-900">
               {children}

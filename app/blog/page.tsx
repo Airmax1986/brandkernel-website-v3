@@ -15,6 +15,10 @@ export const metadata = createMetadata({
   authors: ['Maximilian Appelt']
 });
 
+// Static generation hints for better SEO
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
+
 export default async function Blog() {
   let posts: PostType[] = [];
   
