@@ -60,31 +60,38 @@ async function getRelatedPosts(currentSlug: string, currentTags: string[] = []):
       return [];
     }
 
+    // Filter out current post
+    const otherPosts = allPosts.filter((post: PostType) => post.slug !== currentSlug);
+
+    if (otherPosts.length === 0) {
+      return [];
+    }
+
     // Calculate relevance score for each post
     type PostWithScore = { post: PostType; score: number };
 
-    const postsWithScores = allPosts
-      .filter((post: PostType) => post.slug !== currentSlug) // Exclude current post
-      .map((post: PostType): PostWithScore => {
-        // Count matching tags
-        const postTags = post.tags || [];
-        const matchingTags = postTags.filter((tag: string) =>
-          currentTags.some((currentTag: string) =>
-            currentTag.toLowerCase() === tag.toLowerCase()
-          )
-        );
+    const postsWithScores = otherPosts.map((post: PostType): PostWithScore => {
+      // Count matching tags
+      const postTags = post.tags || [];
+      const matchingTags = postTags.filter((tag: string) =>
+        currentTags.some((currentTag: string) =>
+          currentTag.toLowerCase() === tag.toLowerCase()
+        )
+      );
 
-        return {
-          post,
-          score: matchingTags.length
-        };
-      })
-      .filter((item: PostWithScore) => item.score > 0) // Only posts with at least 1 matching tag
-      .sort((a: PostWithScore, b: PostWithScore) => b.score - a.score) // Sort by relevance
-      .slice(0, 3) // Take top 3
-      .map((item: PostWithScore) => item.post); // Return just the posts without score
+      return {
+        post,
+        score: matchingTags.length
+      };
+    });
 
-    return postsWithScores;
+    // Sort by relevance score (highest first)
+    const sortedPosts = postsWithScores.sort((a: PostWithScore, b: PostWithScore) => b.score - a.score);
+
+    // Take top 3 posts (even if score is 0)
+    const topPosts = sortedPosts.slice(0, 3).map((item: PostWithScore) => item.post);
+
+    return topPosts;
   } catch (error) {
     console.error('Error fetching related posts:', error);
     return [];
