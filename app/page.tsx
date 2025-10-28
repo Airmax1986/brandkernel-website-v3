@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Header from '@/components/Header';
+import HeaderNav from '@/components/HeaderNav';
 import SolutionsSection from '@/components/SolutionsSection';
 import ClientCtaButtons from '@/components/ClientCtaButtons';
 import CtaButton from '@/components/CtaButton';
@@ -47,7 +47,7 @@ export default function HomePage() {
         <div className="lg:hidden relative">
           {/* Mobile Chat Section with Purple Background */}
           <section className="min-h-screen flex items-center justify-center relative bg-[#A364FF]">
-            <Header variant="transparent" fixed={true} />
+            <HeaderNav variant="transparent" fixed={true} />
             <div className="w-full max-w-sm h-[600px] p-6 pt-20">
               <DynamicBrandChatbot />
             </div>
@@ -74,7 +74,7 @@ export default function HomePage() {
 
         {/* Desktop Layout: Side by side */}
         <section id="home" className="hidden lg:flex min-h-screen absolute top-0 left-0 right-0" style={{ zIndex: 1 }}>
-          <Header variant="transparent" fixed={true} />
+          <HeaderNav variant="transparent" fixed={true} />
           {/* Desktop: Text content on left */}
           <div className="w-[50vw] bg-white flex flex-col relative min-h-screen">
             <div className="flex-1 flex flex-col justify-between items-center px-10" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>

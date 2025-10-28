@@ -8,6 +8,7 @@ import MarkdownContent from "@/components/MarkdownContent";
 import { Metadata } from "next";
 import { createBlogPostMetadata } from "@/lib/metadata";
 import { BlogBreadcrumbs } from "@/components/Breadcrumbs";
+import HeaderNav from "@/components/HeaderNav";
 
 // This function now receives the correctly formatted data.
 export async function generateStaticParams() {
@@ -104,7 +105,8 @@ export default async function PostPage({ params }: { params: { slug: string } })
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+
+      <HeaderNav />
       <div className="min-h-screen bg-brand-green">
         <article className="container mx-auto px-10 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-4xl">
           {/* Breadcrumbs */}

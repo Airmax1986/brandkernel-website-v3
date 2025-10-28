@@ -1,0 +1,2148 @@
+{
+  "topicClusters": {
+    "AI & Tools": [
+      "ai-impact-branding-jobs-future",
+      "chatgpt-claude-gemini-ai-tools",
+      "brandkernel-review-ai-brand-strategy",
+      "chatgpt-branding-freelancers",
+      "ai-competitor-analysis-branding-tools",
+      "ai-branding-tools-solopreneurs-reality",
+      "ai-brand-voice-generator-freelancers",
+      "ai-for-brand-strategy-authentic",
+      "guided-brand-strategy-tool-vs",
+      "using-ai-for-branding-freelancers"
+    ],
+    "Brand Strategy": [
+      "branding-perfectionism-define-brand-core",
+      "brandkernel-review-ai-brand-strategy",
+      "brand-strategy-packages-small-business",
+      "personal-branding-freelancers-brand-core",
+      "ai-for-brand-strategy-authentic",
+      "guided-brand-strategy-tool-vs",
+      "brand-identity-guide-core-discovery",
+      "brand-core-vs-corporate-identity"
+    ],
+    "BrandKernel Product": [
+      "brandkernel-review-ai-brand-strategy",
+      "brandkernel-case-study-freelancer-tripled",
+      "brand-kernel-community-authentic-brand"
+    ],
+    "Personal Branding": [
+      "brand-personality-examples-authentic-voice",
+      "personal-branding-freelancers-brand-core",
+      "brand-kernel-community-authentic-brand",
+      "authentic-personal-brand-check-over",
+      "ai-for-brand-strategy-authentic",
+      "how-to-build-personal-brand",
+      "personal-branding-digital-nomads-build",
+      "linkedin-personal-brand-guide-attract",
+      "linkedin-personal-branding-freelancers",
+      "linkedin-profile-optimization-personal-branding",
+      "personal-brand-vs-business-brand"
+    ],
+    "Brand Voice & Messaging": [
+      "brand-personality-examples-authentic-voice",
+      "brand-consistency-importance-freelancers-trust",
+      "ai-brand-voice-generator-freelancers",
+      "consistent-brand-messaging-freelancers-voice"
+    ],
+    "Resources & Guides": [
+      "branding-cost-small-business-budget",
+      "freelance-portfolio-branding",
+      "affordable-branding-resources-freelancers-budget"
+    ],
+    "Marketing & Content": [
+      "content-repurposing-strategy-branding-5",
+      "user-generated-content-branding-trust",
+      "using-content-marketing-build-brand",
+      "brand-marketing-strategies-small-business"
+    ],
+    "Professionals": [
+      "visibility-for-introverts-brand",
+      "branding-for-therapists-coaches-trust",
+      "personal-branding-digital-nomads-build"
+    ],
+    "Founders & Startups": [
+      "micro-saas-branding-memorable-brand",
+      "saas-scale-up-branding-evolve",
+      "minimum-viable-brand-startup-branding"
+    ],
+    "Freelancers": [
+      "freelance-portfolio-branding",
+      "personal-branding-freelancers-brand-core",
+      "chatgpt-branding-freelancers",
+      "brandkernel-case-study-freelancer-tripled",
+      "brand-consistency-importance-freelancers-trust",
+      "affordable-branding-resources-freelancers-budget",
+      "brand-equity-score-freelancer-calculate",
+      "ai-branding-tools-solopreneurs-reality",
+      "ai-brand-voice-generator-freelancers",
+      "branding-for-freelancers",
+      "consistent-brand-messaging-freelancers-voice",
+      "linkedin-personal-branding-freelancers",
+      "professional-branding-services-freelancers-beyond",
+      "using-ai-for-branding-freelancers"
+    ],
+    "Brand Building": [
+      "branding-for-therapists-coaches-trust",
+      "branding-for-freelancers",
+      "how-to-build-personal-brand",
+      "using-content-marketing-build-brand"
+    ],
+    "Brand Theory": [
+      "esch-brand-steering-wheel-markensteuerrad",
+      "brand-core-vs-corporate-identity"
+    ],
+    "Brand Analysis": [
+      "competitor-analysis-branding-unique-angle",
+      "brand-metrics-kpis-business-growth",
+      "ai-competitor-analysis-branding-tools",
+      "brand-equity-score-freelancer-calculate"
+    ],
+    "LinkedIn": [
+      "linkedin-personal-brand-guide-attract",
+      "linkedin-personal-branding-freelancers",
+      "linkedin-profile-optimization-personal-branding"
+    ]
+  },
+  "articleCategories": {
+    "ai-impact-branding-jobs-future": [
+      "AI & Tools"
+    ],
+    "30-day-brand-activation-challenge": [
+      "General Branding"
+    ],
+    "branding-perfectionism-define-brand-core": [
+      "Brand Strategy"
+    ],
+    "chatgpt-claude-gemini-ai-tools": [
+      "AI & Tools"
+    ],
+    "brandkernel-review-ai-brand-strategy": [
+      "AI & Tools",
+      "Brand Strategy",
+      "BrandKernel Product"
+    ],
+    "brand-personality-examples-authentic-voice": [
+      "Personal Branding",
+      "Brand Voice & Messaging"
+    ],
+    "branding-cost-small-business-budget": [
+      "Resources & Guides"
+    ],
+    "content-repurposing-strategy-branding-5": [
+      "Marketing & Content"
+    ],
+    "visibility-for-introverts-brand": [
+      "Professionals"
+    ],
+    "micro-saas-branding-memorable-brand": [
+      "Founders & Startups"
+    ],
+    "freelance-portfolio-branding": [
+      "Freelancers",
+      "Resources & Guides"
+    ],
+    "branding-for-therapists-coaches-trust": [
+      "Brand Building",
+      "Professionals"
+    ],
+    "esch-brand-steering-wheel-markensteuerrad": [
+      "Brand Theory"
+    ],
+    "brand-strategy-packages-small-business": [
+      "Brand Strategy"
+    ],
+    "personal-branding-freelancers-brand-core": [
+      "Personal Branding",
+      "Freelancers",
+      "Brand Strategy"
+    ],
+    "chatgpt-branding-freelancers": [
+      "AI & Tools",
+      "Freelancers"
+    ],
+    "brandkernel-case-study-freelancer-tripled": [
+      "Freelancers",
+      "BrandKernel Product"
+    ],
+    "competitor-analysis-branding-unique-angle": [
+      "Brand Analysis"
+    ],
+    "brand-consistency-importance-freelancers-trust": [
+      "Freelancers",
+      "Brand Voice & Messaging"
+    ],
+    "saas-scale-up-branding-evolve": [
+      "Founders & Startups"
+    ],
+    "brand-metrics-kpis-business-growth": [
+      "Brand Analysis"
+    ],
+    "user-generated-content-branding-trust": [
+      "Marketing & Content"
+    ],
+    "brand-kernel-community-authentic-brand": [
+      "Personal Branding",
+      "BrandKernel Product"
+    ],
+    "affordable-branding-resources-freelancers-budget": [
+      "Freelancers",
+      "Resources & Guides"
+    ],
+    "authentic-personal-brand-check-over": [
+      "Personal Branding"
+    ],
+    "ai-competitor-analysis-branding-tools": [
+      "AI & Tools",
+      "Brand Analysis"
+    ],
+    "brand-equity-score-freelancer-calculate": [
+      "Freelancers",
+      "Brand Analysis"
+    ],
+    "ai-branding-tools-solopreneurs-reality": [
+      "AI & Tools",
+      "Freelancers"
+    ],
+    "ai-brand-voice-generator-freelancers": [
+      "AI & Tools",
+      "Freelancers",
+      "Brand Voice & Messaging"
+    ],
+    "branding-for-freelancers": [
+      "Freelancers",
+      "Brand Building"
+    ],
+    "ai-for-brand-strategy-authentic": [
+      "AI & Tools",
+      "Personal Branding",
+      "Brand Strategy"
+    ],
+    "consistent-brand-messaging-freelancers-voice": [
+      "Freelancers",
+      "Brand Voice & Messaging"
+    ],
+    "how-to-build-personal-brand": [
+      "Personal Branding",
+      "Brand Building"
+    ],
+    "guided-brand-strategy-tool-vs": [
+      "AI & Tools",
+      "Brand Strategy"
+    ],
+    "minimum-viable-brand-startup-branding": [
+      "Founders & Startups"
+    ],
+    "brand-identity-guide-core-discovery": [
+      "Brand Strategy"
+    ],
+    "personal-branding-digital-nomads-build": [
+      "Personal Branding",
+      "Professionals"
+    ],
+    "linkedin-personal-brand-guide-attract": [
+      "Personal Branding",
+      "LinkedIn"
+    ],
+    "what-is-brand-marketing-business": [
+      "General Branding"
+    ],
+    "using-content-marketing-build-brand": [
+      "Brand Building",
+      "Marketing & Content"
+    ],
+    "brand-marketing-strategies-small-business": [
+      "Marketing & Content"
+    ],
+    "linkedin-personal-branding-freelancers": [
+      "Personal Branding",
+      "Freelancers",
+      "LinkedIn"
+    ],
+    "linkedin-profile-optimization-personal-branding": [
+      "Personal Branding",
+      "LinkedIn"
+    ],
+    "brand-core-vs-corporate-identity": [
+      "Brand Strategy",
+      "Brand Theory"
+    ],
+    "personal-brand-vs-business-brand": [
+      "Personal Branding"
+    ],
+    "professional-branding-services-freelancers-beyond": [
+      "Freelancers"
+    ],
+    "using-ai-for-branding-freelancers": [
+      "AI & Tools",
+      "Freelancers"
+    ]
+  },
+  "linkingStrategy": {
+    "ai-impact-branding-jobs-future": {
+      "themes": [
+        "AI & Tools"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-competitor-analysis-branding-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-branding-tools-solopreneurs-reality",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "30-day-brand-activation-challenge": {
+      "themes": [
+        "General Branding"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "what-is-brand-marketing-business",
+          "sharedThemes": [
+            "General Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "branding-perfectionism-define-brand-core": {
+      "themes": [
+        "Brand Strategy"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-strategy-packages-small-business",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "guided-brand-strategy-tool-vs",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "chatgpt-claude-gemini-ai-tools": {
+      "themes": [
+        "AI & Tools"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-competitor-analysis-branding-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-branding-tools-solopreneurs-reality",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brandkernel-review-ai-brand-strategy": {
+      "themes": [
+        "AI & Tools",
+        "Brand Strategy",
+        "BrandKernel Product"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "AI & Tools",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "guided-brand-strategy-tool-vs",
+          "sharedThemes": [
+            "AI & Tools",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-personality-examples-authentic-voice": {
+      "themes": [
+        "Personal Branding",
+        "Brand Voice & Messaging"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-consistency-importance-freelancers-trust",
+          "sharedThemes": [
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "authentic-personal-brand-check-over",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-brand-voice-generator-freelancers",
+          "sharedThemes": [
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "branding-cost-small-business-budget": {
+      "themes": [
+        "Resources & Guides"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Resources & Guides"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "affordable-branding-resources-freelancers-budget",
+          "sharedThemes": [
+            "Resources & Guides"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "content-repurposing-strategy-branding-5": {
+      "themes": [
+        "Marketing & Content"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "user-generated-content-branding-trust",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "using-content-marketing-build-brand",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-marketing-strategies-small-business",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "visibility-for-introverts-brand": {
+      "themes": [
+        "Professionals"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "branding-for-therapists-coaches-trust",
+          "sharedThemes": [
+            "Professionals"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-digital-nomads-build",
+          "sharedThemes": [
+            "Professionals"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "micro-saas-branding-memorable-brand": {
+      "themes": [
+        "Founders & Startups"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "saas-scale-up-branding-evolve",
+          "sharedThemes": [
+            "Founders & Startups"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "minimum-viable-brand-startup-branding",
+          "sharedThemes": [
+            "Founders & Startups"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "freelance-portfolio-branding": {
+      "themes": [
+        "Freelancers",
+        "Resources & Guides"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "affordable-branding-resources-freelancers-budget",
+          "sharedThemes": [
+            "Freelancers",
+            "Resources & Guides"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "branding-cost-small-business-budget",
+          "sharedThemes": [
+            "Resources & Guides"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-case-study-freelancer-tripled",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "branding-for-therapists-coaches-trust": {
+      "themes": [
+        "Brand Building",
+        "Professionals"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "visibility-for-introverts-brand",
+          "sharedThemes": [
+            "Professionals"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-for-freelancers",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "how-to-build-personal-brand",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-digital-nomads-build",
+          "sharedThemes": [
+            "Professionals"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "using-content-marketing-build-brand",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "esch-brand-steering-wheel-markensteuerrad": {
+      "themes": [
+        "Brand Theory"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-core-vs-corporate-identity",
+          "sharedThemes": [
+            "Brand Theory"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-strategy-packages-small-business": {
+      "themes": [
+        "Brand Strategy"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "guided-brand-strategy-tool-vs",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "personal-branding-freelancers-brand-core": {
+      "themes": [
+        "Personal Branding",
+        "Freelancers",
+        "Brand Strategy"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "Personal Branding",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "linkedin-personal-branding-freelancers",
+          "sharedThemes": [
+            "Personal Branding",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "chatgpt-branding-freelancers": {
+      "themes": [
+        "AI & Tools",
+        "Freelancers"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "ai-branding-tools-solopreneurs-reality",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-brand-voice-generator-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "using-ai-for-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brandkernel-case-study-freelancer-tripled": {
+      "themes": [
+        "Freelancers",
+        "BrandKernel Product"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "BrandKernel Product"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-consistency-importance-freelancers-trust",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "competitor-analysis-branding-unique-angle": {
+      "themes": [
+        "Brand Analysis"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-metrics-kpis-business-growth",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-competitor-analysis-branding-tools",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-equity-score-freelancer-calculate",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-consistency-importance-freelancers-trust": {
+      "themes": [
+        "Freelancers",
+        "Brand Voice & Messaging"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "ai-brand-voice-generator-freelancers",
+          "sharedThemes": [
+            "Freelancers",
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "consistent-brand-messaging-freelancers-voice",
+          "sharedThemes": [
+            "Freelancers",
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "saas-scale-up-branding-evolve": {
+      "themes": [
+        "Founders & Startups"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "micro-saas-branding-memorable-brand",
+          "sharedThemes": [
+            "Founders & Startups"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "minimum-viable-brand-startup-branding",
+          "sharedThemes": [
+            "Founders & Startups"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-metrics-kpis-business-growth": {
+      "themes": [
+        "Brand Analysis"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "competitor-analysis-branding-unique-angle",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-competitor-analysis-branding-tools",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-equity-score-freelancer-calculate",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "user-generated-content-branding-trust": {
+      "themes": [
+        "Marketing & Content"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "content-repurposing-strategy-branding-5",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "using-content-marketing-build-brand",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-marketing-strategies-small-business",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-kernel-community-authentic-brand": {
+      "themes": [
+        "Personal Branding",
+        "BrandKernel Product"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "BrandKernel Product"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-case-study-freelancer-tripled",
+          "sharedThemes": [
+            "BrandKernel Product"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "authentic-personal-brand-check-over",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "affordable-branding-resources-freelancers-budget": {
+      "themes": [
+        "Freelancers",
+        "Resources & Guides"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers",
+            "Resources & Guides"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "branding-cost-small-business-budget",
+          "sharedThemes": [
+            "Resources & Guides"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-case-study-freelancer-tripled",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "authentic-personal-brand-check-over": {
+      "themes": [
+        "Personal Branding"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "how-to-build-personal-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "ai-competitor-analysis-branding-tools": {
+      "themes": [
+        "AI & Tools",
+        "Brand Analysis"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "competitor-analysis-branding-unique-angle",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-equity-score-freelancer-calculate": {
+      "themes": [
+        "Freelancers",
+        "Brand Analysis"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-case-study-freelancer-tripled",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "competitor-analysis-branding-unique-angle",
+          "sharedThemes": [
+            "Brand Analysis"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "ai-branding-tools-solopreneurs-reality": {
+      "themes": [
+        "AI & Tools",
+        "Freelancers"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-brand-voice-generator-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "using-ai-for-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "ai-brand-voice-generator-freelancers": {
+      "themes": [
+        "AI & Tools",
+        "Freelancers",
+        "Brand Voice & Messaging"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "brand-consistency-importance-freelancers-trust",
+          "sharedThemes": [
+            "Freelancers",
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-branding-tools-solopreneurs-reality",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "consistent-brand-messaging-freelancers-voice",
+          "sharedThemes": [
+            "Freelancers",
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "using-ai-for-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        }
+      ]
+    },
+    "branding-for-freelancers": {
+      "themes": [
+        "Freelancers",
+        "Brand Building"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-for-therapists-coaches-trust",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-case-study-freelancer-tripled",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "ai-for-brand-strategy-authentic": {
+      "themes": [
+        "AI & Tools",
+        "Personal Branding",
+        "Brand Strategy"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "AI & Tools",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "guided-brand-strategy-tool-vs",
+          "sharedThemes": [
+            "AI & Tools",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "consistent-brand-messaging-freelancers-voice": {
+      "themes": [
+        "Freelancers",
+        "Brand Voice & Messaging"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-consistency-importance-freelancers-trust",
+          "sharedThemes": [
+            "Freelancers",
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-brand-voice-generator-freelancers",
+          "sharedThemes": [
+            "Freelancers",
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Brand Voice & Messaging"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "how-to-build-personal-brand": {
+      "themes": [
+        "Personal Branding",
+        "Brand Building"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-for-therapists-coaches-trust",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "authentic-personal-brand-check-over",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "guided-brand-strategy-tool-vs": {
+      "themes": [
+        "AI & Tools",
+        "Brand Strategy"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "AI & Tools",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "AI & Tools",
+            "Brand Strategy"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "minimum-viable-brand-startup-branding": {
+      "themes": [
+        "Founders & Startups"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "micro-saas-branding-memorable-brand",
+          "sharedThemes": [
+            "Founders & Startups"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "saas-scale-up-branding-evolve",
+          "sharedThemes": [
+            "Founders & Startups"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-identity-guide-core-discovery": {
+      "themes": [
+        "Brand Strategy"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-strategy-packages-small-business",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "personal-branding-digital-nomads-build": {
+      "themes": [
+        "Personal Branding",
+        "Professionals"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "visibility-for-introverts-brand",
+          "sharedThemes": [
+            "Professionals"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-for-therapists-coaches-trust",
+          "sharedThemes": [
+            "Professionals"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "linkedin-personal-brand-guide-attract": {
+      "themes": [
+        "Personal Branding",
+        "LinkedIn"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "linkedin-personal-branding-freelancers",
+          "sharedThemes": [
+            "Personal Branding",
+            "LinkedIn"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "linkedin-profile-optimization-personal-branding",
+          "sharedThemes": [
+            "Personal Branding",
+            "LinkedIn"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "what-is-brand-marketing-business": {
+      "themes": [
+        "General Branding"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "30-day-brand-activation-challenge",
+          "sharedThemes": [
+            "General Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "using-content-marketing-build-brand": {
+      "themes": [
+        "Brand Building",
+        "Marketing & Content"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "content-repurposing-strategy-branding-5",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-for-therapists-coaches-trust",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "user-generated-content-branding-trust",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "branding-for-freelancers",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "how-to-build-personal-brand",
+          "sharedThemes": [
+            "Brand Building"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-marketing-strategies-small-business": {
+      "themes": [
+        "Marketing & Content"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "content-repurposing-strategy-branding-5",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "user-generated-content-branding-trust",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "using-content-marketing-build-brand",
+          "sharedThemes": [
+            "Marketing & Content"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "linkedin-personal-branding-freelancers": {
+      "themes": [
+        "Personal Branding",
+        "Freelancers",
+        "LinkedIn"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "linkedin-personal-brand-guide-attract",
+          "sharedThemes": [
+            "Personal Branding",
+            "LinkedIn"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "linkedin-profile-optimization-personal-branding",
+          "sharedThemes": [
+            "Personal Branding",
+            "LinkedIn"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "linkedin-profile-optimization-personal-branding": {
+      "themes": [
+        "Personal Branding",
+        "LinkedIn"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "linkedin-personal-brand-guide-attract",
+          "sharedThemes": [
+            "Personal Branding",
+            "LinkedIn"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "linkedin-personal-branding-freelancers",
+          "sharedThemes": [
+            "Personal Branding",
+            "LinkedIn"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "brand-core-vs-corporate-identity": {
+      "themes": [
+        "Brand Strategy",
+        "Brand Theory"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "branding-perfectionism-define-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-review-ai-brand-strategy",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "esch-brand-steering-wheel-markensteuerrad",
+          "sharedThemes": [
+            "Brand Theory"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-strategy-packages-small-business",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Brand Strategy"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "personal-brand-vs-business-brand": {
+      "themes": [
+        "Personal Branding"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "brand-personality-examples-authentic-voice",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-kernel-community-authentic-brand",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "authentic-personal-brand-check-over",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "ai-for-brand-strategy-authentic",
+          "sharedThemes": [
+            "Personal Branding"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "professional-branding-services-freelancers-beyond": {
+      "themes": [
+        "Freelancers"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "freelance-portfolio-branding",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "personal-branding-freelancers-brand-core",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brandkernel-case-study-freelancer-tripled",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "brand-consistency-importance-freelancers-trust",
+          "sharedThemes": [
+            "Freelancers"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    },
+    "using-ai-for-branding-freelancers": {
+      "themes": [
+        "AI & Tools",
+        "Freelancers"
+      ],
+      "relatedArticles": [
+        {
+          "slug": "chatgpt-branding-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-branding-tools-solopreneurs-reality",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-brand-voice-generator-freelancers",
+          "sharedThemes": [
+            "AI & Tools",
+            "Freelancers"
+          ],
+          "relevanceScore": 2
+        },
+        {
+          "slug": "ai-impact-branding-jobs-future",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        },
+        {
+          "slug": "chatgpt-claude-gemini-ai-tools",
+          "sharedThemes": [
+            "AI & Tools"
+          ],
+          "relevanceScore": 1
+        }
+      ]
+    }
+  },
+  "priorityArticles": [
+    {
+      "slug": "personal-branding-freelancers-brand-core",
+      "recommendationCount": 22
+    },
+    {
+      "slug": "brandkernel-review-ai-brand-strategy",
+      "recommendationCount": 12
+    },
+    {
+      "slug": "chatgpt-branding-freelancers",
+      "recommendationCount": 12
+    },
+    {
+      "slug": "brand-personality-examples-authentic-voice",
+      "recommendationCount": 11
+    },
+    {
+      "slug": "freelance-portfolio-branding",
+      "recommendationCount": 9
+    },
+    {
+      "slug": "ai-for-brand-strategy-authentic",
+      "recommendationCount": 8
+    },
+    {
+      "slug": "ai-impact-branding-jobs-future",
+      "recommendationCount": 8
+    },
+    {
+      "slug": "chatgpt-claude-gemini-ai-tools",
+      "recommendationCount": 7
+    },
+    {
+      "slug": "branding-perfectionism-define-brand-core",
+      "recommendationCount": 7
+    },
+    {
+      "slug": "brand-kernel-community-authentic-brand",
+      "recommendationCount": 7
+    },
+    {
+      "slug": "ai-brand-voice-generator-freelancers",
+      "recommendationCount": 6
+    },
+    {
+      "slug": "brandkernel-case-study-freelancer-tripled",
+      "recommendationCount": 6
+    },
+    {
+      "slug": "ai-branding-tools-solopreneurs-reality",
+      "recommendationCount": 5
+    },
+    {
+      "slug": "brand-consistency-importance-freelancers-trust",
+      "recommendationCount": 5
+    },
+    {
+      "slug": "branding-for-therapists-coaches-trust",
+      "recommendationCount": 5
+    },
+    {
+      "slug": "ai-competitor-analysis-branding-tools",
+      "recommendationCount": 4
+    },
+    {
+      "slug": "guided-brand-strategy-tool-vs",
+      "recommendationCount": 4
+    },
+    {
+      "slug": "authentic-personal-brand-check-over",
+      "recommendationCount": 4
+    },
+    {
+      "slug": "using-content-marketing-build-brand",
+      "recommendationCount": 4
+    },
+    {
+      "slug": "brand-strategy-packages-small-business",
+      "recommendationCount": 3
+    }
+  ]
+}

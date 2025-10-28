@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import HeaderNav from "@/components/HeaderNav";
 import { createMetadata } from "@/lib/metadata";
 import dynamic from "next/dynamic";
 
@@ -77,8 +77,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
+        {children}
         <CookieConsent />
       </body>
     </html>

@@ -4,6 +4,7 @@ import { getAllPostsGraphQL } from "@/lib/contentful/contentful-graphql";
 import BlogPost from "@/components/BlogPost";
 import { Post as PostType } from "@/lib/types"; // Import the type definition
 import { createMetadata } from "@/lib/metadata";
+import HeaderNav from "@/components/HeaderNav";
 
 export const metadata = createMetadata({
   title: 'BrandKernel Blog: Brand Strategy Insights for Founders',
@@ -40,8 +41,10 @@ export default async function Blog() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-brand-black py-32">
-      <div className="container mx-auto px-4">
+    <>
+      <HeaderNav />
+      <div className="min-h-screen bg-white text-brand-black py-32">
+        <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-4 font-normal leading-tight">Brand Strategy Insights</h1>
           <p className="text-xl text-brand-black max-w-3xl mx-auto">
@@ -61,6 +64,6 @@ export default async function Blog() {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 }
