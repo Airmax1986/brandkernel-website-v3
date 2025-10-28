@@ -136,25 +136,25 @@ export default function HomePage() {
               }} className="text-brand-black space-y-6 mb-16">
                 <p>You've tried everything.</p>
                 <p>But you're still stuck. Still invisible. Still wondering why your brilliance isn't breaking through.</p>
-                <p>Here's what nobody tells you: You're not missing tactics. You're missing clarity.</p>
-                <p>The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
+                <p>Here's what nobody tells you: You're not missing tactics. You're missing <a href="/blog" className="text-[#957FFF] hover:underline font-semibold">brand clarity</a>.</p>
+                <p>The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and <a href="/approach" className="text-[#957FFF] hover:underline font-semibold">how to make the world finally pay attention</a>.</p>
 
                 <div className="grid md:grid-cols-3 gap-8 mt-12 mb-12">
-                  <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
+                  <a href="/founders" className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center hover:shadow-lg transition-all duration-200 hover:-translate-y-1 block">
                     <h3 className="font-bold text-lg mb-3 text-[#957FFF]">Personal Branding for Founders</h3>
-                    <p>Transform from invisible builder to industry voice</p>
-                  </div>
-                  <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
+                    <p className="text-brand-black">Transform from invisible builder to industry voice</p>
+                  </a>
+                  <a href="/freelancers" className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center hover:shadow-lg transition-all duration-200 hover:-translate-y-1 block">
                     <h3 className="font-bold text-lg mb-3 text-[#957FFF]">Brand Positioning for Freelancers</h3>
-                    <p>Escape the commodity trap with crystal-clear positioning</p>
-                  </div>
-                  <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
+                    <p className="text-brand-black">Escape the commodity trap with crystal-clear positioning</p>
+                  </a>
+                  <a href="/creators" className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center hover:shadow-lg transition-all duration-200 hover:-translate-y-1 block">
                     <h3 className="font-bold text-lg mb-3 text-[#957FFF]">Brand Strategy for Creators</h3>
-                    <p>Turn followers into a real business with strategic clarity</p>
-                  </div>
+                    <p className="text-brand-black">Turn followers into a real business with strategic clarity</p>
+                  </a>
                 </div>
 
-                <p className="font-bold text-xl">Your breakthrough is waiting.</p>
+                <p className="font-bold text-xl">Your breakthrough is waiting. <a href="/how-it-works" className="text-[#957FFF] hover:underline">See how it works →</a></p>
               </div>
 
               {/* Max Quote - Big */}

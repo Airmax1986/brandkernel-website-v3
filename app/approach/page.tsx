@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { AutoBreadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: "Our Approach - Guided Discovery Method | BrandKernel",
@@ -20,13 +21,19 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://www.brandkernel.io/approach',
+  }
 };
 
 export default function ApproachPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
       <div className="max-w-5xl mx-auto px-10">
-        
+
+        {/* Breadcrumbs */}
+        <AutoBreadcrumbs path="/approach" pageTitle="Our Approach" className="mb-8" />
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-brand-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight mb-8 px-4 sm:px-10 md:px-10">

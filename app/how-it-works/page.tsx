@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { AutoBreadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'How Brand Kernel Works - 4-Level Journey to Brand Clarity',
@@ -36,7 +37,10 @@ export default function HowItWorksPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
       <div className="max-w-5xl mx-auto px-10">
-        
+
+        {/* Breadcrumbs */}
+        <AutoBreadcrumbs path="/how-it-works" pageTitle="How It Works" className="mb-8" />
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-brand-black mb-8 font-normal leading-tight">

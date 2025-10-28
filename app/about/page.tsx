@@ -1,5 +1,6 @@
 import CtaButton from "@/components/CtaButton";
 import { Metadata } from "next";
+import { AutoBreadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: "About Max - Founder & Brand Strategist | BrandKernel",
@@ -21,13 +22,19 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://www.brandkernel.io/about',
+  }
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
       <div className="max-w-4xl mx-auto px-10">
-        
+
+        {/* Breadcrumbs */}
+        <AutoBreadcrumbs path="/about" pageTitle="About" className="mb-8" />
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4 sm:px-10 md:px-10">

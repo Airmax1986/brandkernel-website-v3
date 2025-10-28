@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { AutoBreadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Contact BrandKernel | Get in Touch About Brand Strategy',
@@ -36,6 +37,9 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
       <div className="max-w-4xl mx-auto px-10">
+        {/* Breadcrumbs */}
+        <AutoBreadcrumbs path="/contact" pageTitle="Contact" className="mb-8" />
+
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 font-normal leading-tight">
             Get in Touch

@@ -1,5 +1,6 @@
 import CtaButton from "@/components/CtaButton";
 import { Metadata } from 'next';
+import { AutoBreadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'The Clarity Manifesto: Why Every Founder is One Conversation Away | BrandKernel',
@@ -37,7 +38,10 @@ export default function ManifestPage() {
   return (
     <div className="min-h-screen bg-white text-brand-black py-32">
       <div className="max-w-4xl mx-auto px-10">
-        
+
+        {/* Breadcrumbs */}
+        <AutoBreadcrumbs path="/manifest" pageTitle="Manifesto" className="mb-8" />
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 font-normal leading-tight">

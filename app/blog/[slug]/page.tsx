@@ -1,8 +1,9 @@
 // app/blog/[slug]/page.tsx
 
-import { getPostGraphQL, getAllPostSlugsGraphQL } from "@/lib/contentful/contentful-graphql";
+import { getPostGraphQL, getAllPostSlugsGraphQL, getAllPostsGraphQL } from "@/lib/contentful/contentful-graphql";
 import { Post as PostType } from "@/lib/types";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import MarkdownContent from "@/components/MarkdownContent";
 import { Metadata } from "next";
@@ -41,6 +42,42 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   });
 }
 
+// Helper function to get related posts
+async function getRelatedPosts(currentPost: PostType, limit: number = 3): Promise<PostType[]> {
+  try {
+    const allPosts = await getAllPostsGraphQL();
+
+    // Filter out current post and find posts with matching tags
+    const relatedPosts = allPosts
+      .filter(post => post.slug !== currentPost.slug)
+      .map(post => {
+        // Calculate relevance score based on matching tags
+        const matchingTags = post.tags?.filter(tag =>
+          currentPost.tags?.includes(tag)
+        ).length || 0;
+
+        return { post, score: matchingTags };
+      })
+      .sort((a, b) => b.score - a.score) // Sort by relevance
+      .slice(0, limit)
+      .map(item => item.post);
+
+    // If we don't have enough related posts, fill with recent posts
+    if (relatedPosts.length < limit) {
+      const recentPosts = allPosts
+        .filter(post => post.slug !== currentPost.slug && !relatedPosts.includes(post))
+        .slice(0, limit - relatedPosts.length);
+
+      relatedPosts.push(...recentPosts);
+    }
+
+    return relatedPosts;
+  } catch (error) {
+    console.error('Error fetching related posts:', error);
+    return [];
+  }
+}
+
 // This component definition is correct and will now work.
 export default async function PostPage({ params }: { params: { slug: string } }) {
   const post: PostType | null = await getPostGraphQL(params.slug);
@@ -48,6 +85,9 @@ export default async function PostPage({ params }: { params: { slug: string } })
   if (!post) {
     notFound();
   }
+
+  // Get related posts
+  const relatedPosts = await getRelatedPosts(post, 3);
 
   const baseUrl = 'https://www.brandkernel.io';
   const postUrl = `${baseUrl}/blog/${params.slug}`;
@@ -173,7 +213,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                     Published on BrandKernel
                   </div>
                   <div className="flex space-x-4">
-                    <a 
+                    <a
                       href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(postUrl)}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -181,7 +221,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                     >
                       Share on Twitter
                     </a>
-                    <a 
+                    <a
                       href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -192,6 +232,55 @@ export default async function PostPage({ params }: { params: { slug: string } })
                   </div>
                 </div>
               </footer>
+
+              {/* Related Posts Section */}
+              {relatedPosts.length > 0 && (
+                <section className="mt-16 pt-8 border-t border-gray-200">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                    Related Articles
+                  </h2>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {relatedPosts.map((relatedPost) => (
+                      <Link
+                        key={relatedPost.slug}
+                        href={`/blog/${relatedPost.slug}`}
+                        className="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-200 hover:-translate-y-1"
+                      >
+                        {relatedPost.headerImage && (
+                          <div className="relative h-48 overflow-hidden">
+                            <Image
+                              src={relatedPost.headerImage.startsWith('//') ? `https:${relatedPost.headerImage}` : relatedPost.headerImage}
+                              alt={relatedPost.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-200"
+                            />
+                          </div>
+                        )}
+                        <div className="p-4">
+                          <h3 className="font-bold text-lg text-gray-900 group-hover:text-[#957FFF] transition-colors mb-2 line-clamp-2">
+                            {relatedPost.title}
+                          </h3>
+                          {relatedPost.summary && (
+                            <p className="text-gray-600 text-sm line-clamp-3">
+                              {relatedPost.summary}
+                            </p>
+                          )}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* CTA to Blog Overview */}
+                  <div className="text-center mt-8">
+                    <Link
+                      href="/blog"
+                      className="inline-flex items-center text-[#957FFF] hover:text-[#8a73f5] font-semibold transition-colors"
+                    >
+                      View all articles →
+                    </Link>
+                  </div>
+                </section>
+              )}
             </div>
           </div>
         </article>
