@@ -73,13 +73,14 @@ async function getRelatedPosts(currentSlug: string, currentTags: string[] = []):
         );
 
         return {
-          ...post,
-          relevanceScore: matchingTags.length
+          post,
+          score: matchingTags.length
         };
       })
-      .filter(post => post.relevanceScore > 0) // Only posts with at least 1 matching tag
-      .sort((a, b) => b.relevanceScore - a.relevanceScore) // Sort by relevance
-      .slice(0, 3); // Take top 3
+      .filter(item => item.score > 0) // Only posts with at least 1 matching tag
+      .sort((a, b) => b.score - a.score) // Sort by relevance
+      .slice(0, 3) // Take top 3
+      .map(item => item.post); // Return just the posts without score
 
     return postsWithScores;
   } catch (error) {
