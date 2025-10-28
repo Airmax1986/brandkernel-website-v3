@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import HeaderNav from '@/components/HeaderNav';
 import SolutionsSection from '@/components/SolutionsSection';
 import ClientCtaButtons from '@/components/ClientCtaButtons';
@@ -6,6 +7,8 @@ import CtaButton from '@/components/CtaButton';
 import DynamicBrandChatbot from '@/components/DynamicBrandChatbot';
 import HeroWaitlistForm from '@/components/HeroWaitlistForm';
 import { getHomePageSchemas, injectSchema } from '@/lib/schemas';
+import { getAllPostsGraphQL } from '@/lib/contentful/contentful-graphql';
+import { Post as PostType } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
@@ -31,9 +34,20 @@ export const metadata: Metadata = {
 export const dynamic = 'force-static';
 export const revalidate = 3600; // Revalidate every hour
 
-export default function HomePage() {
+export default async function HomePage() {
   // Get combined schema markup for homepage
   const homeSchemas = getHomePageSchemas();
+
+  // Fetch latest 2 blog posts
+  let latestPosts: PostType[] = [];
+  try {
+    if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
+      const allPosts = await getAllPostsGraphQL();
+      latestPosts = allPosts.slice(0, 2); // Get 2 most recent posts
+    }
+  } catch (error) {
+    console.error('Error fetching blog posts for homepage:', error);
+  }
 
   return (
     <>
@@ -387,6 +401,68 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Blog Section */}
+        {latestPosts.length > 0 && (
+          <section id="blog" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
+            <div className="container mx-auto px-10">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10 text-center">
+                  Brand Strategy Insights
+                </h2>
+                <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-12 text-center">
+                  Actionable insights on positioning, clarity, and building brands that breakthrough. Real stories from founders who found their voice.
+                </p>
+
+                {/* Blog Posts Grid */}
+                <div className="grid md:grid-cols-2 gap-8 mb-12">
+                  {latestPosts.map((post) => (
+                    <Link
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="group bg-white border-2 border-[#FF5A21] rounded-lg overflow-hidden hover:border-[#957FFF] transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                      {post.featuredImage && (
+                        <div className="aspect-video overflow-hidden">
+                          <img
+                            src={post.featuredImage}
+                            alt={post.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      )}
+                      <div className="p-6">
+                        <h3 className="font-bold text-xl mb-3 text-brand-black group-hover:text-[#957FFF] transition-colors duration-300">
+                          {post.title}
+                        </h3>
+                        {post.summary && (
+                          <p className="text-brand-black text-sm mb-4 line-clamp-3">
+                            {post.summary}
+                          </p>
+                        )}
+                        <div className="flex items-center justify-between text-sm text-brand-black/70">
+                          <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                          <span className="text-[#957FFF] group-hover:underline">Read more →</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+
+                {/* View All Blog Button */}
+                <div className="text-center">
+                  <Link
+                    href="/blog"
+                    style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
+                    className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all transform hover:-translate-y-0.5 inline-block"
+                  >
+                    View All Articles
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
 
       {/* Footer */}
