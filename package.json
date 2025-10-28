@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "@upstash/redis": "1.31.5",
+    "@vercel/postgres": "^0.10.0",
     "contentful": "10.12.2",
     "contentful-management": "11.27.1",
     "critters": "^0.0.23",

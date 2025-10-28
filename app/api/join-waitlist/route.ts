@@ -21,8 +21,10 @@ interface WaitlistResponse {
   error?: string;
 }
 
-// Initialize database on module load
-initializeDatabase();
+// Initialize database on module load (async, but we don't await - it will complete before first request)
+initializeDatabase().catch(err => {
+  console.error('Failed to initialize database:', err);
+});
 
 // Email validation
 function isValidEmail(email: string): boolean {
