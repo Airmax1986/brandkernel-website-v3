@@ -422,10 +422,10 @@ export default async function HomePage() {
                       href={`/blog/${post.slug}`}
                       className="group bg-white border-2 border-[#FF5A21] rounded-lg overflow-hidden hover:border-[#957FFF] transition-all duration-300 transform hover:-translate-y-1"
                     >
-                      {post.featuredImage && (
+                      {post.headerImage && (
                         <div className="aspect-video overflow-hidden">
                           <img
-                            src={post.featuredImage}
+                            src={post.headerImage}
                             alt={post.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -441,7 +441,7 @@ export default async function HomePage() {
                           </p>
                         )}
                         <div className="flex items-center justify-between text-sm text-brand-black/70">
-                          <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                          <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                           <span className="text-[#957FFF] group-hover:underline">Read more →</span>
                         </div>
                       </div>
