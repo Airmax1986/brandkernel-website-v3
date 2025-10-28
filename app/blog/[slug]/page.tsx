@@ -166,7 +166,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       />
 
       <HeaderNav />
-      <div className="min-h-screen bg-brand-green">
+      <div className="min-h-screen bg-white">
         <article className="container mx-auto px-10 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-4xl">
           {/* Breadcrumbs */}
           <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
