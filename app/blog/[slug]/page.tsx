@@ -62,12 +62,12 @@ async function getRelatedPosts(currentSlug: string, currentTags: string[] = []):
 
     // Calculate relevance score for each post
     const postsWithScores = allPosts
-      .filter(post => post.slug !== currentSlug) // Exclude current post
-      .map(post => {
+      .filter((post: PostType) => post.slug !== currentSlug) // Exclude current post
+      .map((post: PostType) => {
         // Count matching tags
         const postTags = post.tags || [];
-        const matchingTags = postTags.filter(tag =>
-          currentTags.some(currentTag =>
+        const matchingTags = postTags.filter((tag: string) =>
+          currentTags.some((currentTag: string) =>
             currentTag.toLowerCase() === tag.toLowerCase()
           )
         );
