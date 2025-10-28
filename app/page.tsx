@@ -8,22 +8,22 @@ import HeroWaitlistForm from '@/components/HeroWaitlistForm';
 import { getHomePageSchemas, injectSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
-  title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
-  description: 'Uncover your brand identity & strategy guided by your AI Brand Consultant. Personal branding for freelancers, founders & creators. Join 250+ →',
-  keywords: 'AI brand strategy, brand identity, personal branding, freelancers, founders, creators, brand consultant, brand strategy platform',
+  title: 'Personal Branding & AI Brand Strategy Platform | BrandKernel - Build Your Brand in 4 Hours',
+  description: 'AI-powered brand strategy platform for founders, freelancers & creators. Complete guided brand discovery journey with personalized positioning, voice activation & strategy blueprints. $297 lifetime access, no subscription. Join 250+ entrepreneurs.',
+  keywords: 'personal branding, AI brand strategy, brand positioning, how to build a personal brand, personal branding for freelancers, brand strategy framework, AI brand consultant, brand identity development, freelancer branding, founder branding, creator branding, brand clarity, brand positioning strategy, authentic branding',
   authors: [{ name: 'BrandKernel Team' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
-    title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
-    description: 'Uncover your brand identity & strategy guided by your AI Brand Consultant. Personal branding for freelancers, founders & creators. Join 250+ →',
+    title: 'Personal Branding & AI Brand Strategy | BrandKernel',
+    description: 'AI-powered brand strategy platform for founders, freelancers & creators. Complete guided brand discovery in 3-4 hours. $297 lifetime access. Transform from invisible to inevitable.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
-    description: 'Uncover your brand identity & strategy guided by your AI Brand Consultant. Personal branding for freelancers, founders & creators. Join 250+ →',
+    title: 'Personal Branding & AI Brand Strategy | BrandKernel',
+    description: 'AI-powered brand strategy platform for founders, freelancers & creators. Complete guided brand discovery in 3-4 hours. $297 lifetime access.',
   }
 };
 
@@ -57,9 +57,9 @@ export default function HomePage() {
           <section className="bg-white py-12 px-4">
             <div className="max-w-2xl mx-auto text-center">
               {/* Hero Heading */}
-              <div className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8" role="heading" aria-level={1}>
+              <h1 className="text-brand-black text-3xl sm:text-4xl font-normal leading-tight pb-8">
                 Finally. The AI dialogue that builds your <span className="text-[#A364FF]">&lt;Brand Kernel&gt;</span> and changes everything.
-              </div>
+              </h1>
               
               {/* Hero Subheadline */}
               <div className="text-brand-black text-base font-bold leading-relaxed pb-8">
@@ -124,32 +124,36 @@ export default function HomePage() {
         <section className="py-20 bg-white lg:mt-[calc(100vh+3rem)]">
           <div className="container mx-auto px-10">
             <div className="max-w-4xl mx-auto text-center">
-              
+
               {/* Body Copy */}
-              <div style={{ 
-                fontSize: '1.125rem', 
+              <h2 className="text-brand-black text-3xl md:text-4xl lg:text-5xl font-normal leading-tight mb-8">
+                Why Your Brand Strategy Isn't Working
+              </h2>
+
+              <div style={{
+                fontSize: '1.125rem',
                 lineHeight: '1.75rem'
               }} className="text-brand-black space-y-6 mb-16">
                 <p>You've tried everything.</p>
                 <p>But you're still stuck. Still invisible. Still wondering why your brilliance isn't breaking through.</p>
                 <p>Here's what nobody tells you: You're not missing tactics. You're missing clarity.</p>
                 <p>The breakthrough you need isn't in another framework. It's in the conversation you haven't had yet. The one that uncovers who you really are, why you're building this, and how to make the world finally pay attention.</p>
-                
+
                 <div className="grid md:grid-cols-3 gap-8 mt-12 mb-12">
                   <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
-                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Founders</h3>
+                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">Personal Branding for Founders</h3>
                     <p>Transform from invisible builder to industry voice</p>
                   </div>
                   <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
-                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Freelancers</h3>
+                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">Brand Positioning for Freelancers</h3>
                     <p>Escape the commodity trap with crystal-clear positioning</p>
                   </div>
                   <div className="bg-white border-2 border-[#FF5A21] rounded-lg p-6 text-center">
-                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">For Creators</h3>
+                    <h3 className="font-bold text-lg mb-3 text-[#957FFF]">Brand Strategy for Creators</h3>
                     <p>Turn followers into a real business with strategic clarity</p>
                   </div>
                 </div>
-                
+
                 <p className="font-bold text-xl">Your breakthrough is waiting.</p>
               </div>
 
@@ -172,7 +176,7 @@ export default function HomePage() {
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
-                The Clarity Manifesto
+                The Brand Clarity Manifesto: Why Authentic Branding Matters
               </h2>
               <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', fontWeight: 'bold' }} className="text-brand-black mb-6">
                 We believe every founder is one conversation away from changing everything.
@@ -205,7 +209,7 @@ export default function HomePage() {
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
-                Guided Discovery, Not Generic Answers
+                Our Brand Strategy Framework: Guided Discovery, Not Generic Answers
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 Courses give you someone else's framework. Templates force you into someone else's box. Coaches tell you what worked for someone else. AI tools regurgitate what everyone else is saying. We start with a different question: Who the hell are you, really?
@@ -242,7 +246,7 @@ export default function HomePage() {
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
-                From Lost to Laser-Focused
+                How to Build Your Personal Brand: From Lost to Laser-Focused
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 Your clarity breakthrough in 4 progressive levels: Foundation Discovery → Position Clarification → Voice Activation → Strategy Crystallization.
@@ -295,7 +299,7 @@ export default function HomePage() {
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
-                Features That Transform
+                AI Brand Strategy Features That Transform Your Business
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
                 Not another template tool. Not another AI chatbot. Not another generic framework. A strategic AI guide trained on thousands of breakthrough conversations and decades of brand wisdom.
@@ -340,7 +344,7 @@ export default function HomePage() {
           <div className="container mx-auto px-10">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 sm:mb-12 px-4 sm:px-10 md:px-10">
-                Your Clarity Investment
+                Brand Strategy Pricing: Your Clarity Investment
               </h2>
               <div className="text-brand-black mb-6">
                 <p className="text-lg leading-relaxed">

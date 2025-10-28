@@ -7,7 +7,7 @@ export const faqSchema = {
       "name": "What is BrandKernel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel is an AI-powered brand strategy platform that helps businesses and individuals develop authentic, compelling brand identities through guided conversations with an AI brand consultant. It combines the expertise of professional brand strategists with advanced AI technology."
+        "text": "BrandKernel is an AI-powered brand strategy platform that helps entrepreneurs, founders, freelancers, and creators develop authentic brand identities through guided conversations with an AI brand consultant. It provides a comprehensive 4-level guided journey from foundation discovery to strategy crystallization, delivering your complete Brand Kernel with positioning clarity, voice activation, and action blueprints."
       }
     },
     {
@@ -15,23 +15,23 @@ export const faqSchema = {
       "name": "How much does BrandKernel cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel is currently available for $297/month as an early adopter special offer. This includes full access to all AI features, unlimited brand audits, strategy templates, and regular platform updates."
+        "text": "BrandKernel is currently available for $297 as a one-time payment with lifetime access (early founder pricing, soon to be $497). This includes the complete 4-level guided journey, your personal AI brand strategist, comprehensive Brand Kernel Book, all visual clarity maps, complete activation blueprints, and lifetime access to your strategic foundation. No subscription or recurring fees."
       }
     },
     {
       "@type": "Question",
-      "name": "Is there a free trial for BrandKernel?",
+      "name": "How long does the BrandKernel journey take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! BrandKernel offers a 14-day free trial with full access to all features. No credit card is required to start your trial. You can explore the platform and see the value it provides before committing to a subscription."
+        "text": "The complete BrandKernel journey takes 3-4 hours of guided dialogue across 4 progressive levels: Foundation Discovery (45-60 min), Position Clarification (30-45 min), Voice Activation (30-45 min), and Strategy Crystallization (30-45 min). You can complete it at your own pace and return anytime to refine your brand strategy."
       }
     },
     {
       "@type": "Question",
-      "name": "How is BrandKernel different from BrandBuildr or Brand.ai?",
+      "name": "How is BrandKernel different from ChatGPT or other AI tools?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel focuses on comprehensive brand strategy, not just visual design. Unlike BrandBuildr which emphasizes logo creation, or Brand.ai which targets enterprise teams, BrandKernel offers personal branding features, all major brand frameworks, and costs 70% less than competitors while providing more strategic depth."
+        "text": "Unlike generic AI chatbots, BrandKernel is a specialized AI brand consultant trained on 20 years of brand strategy expertise and thousands of breakthrough conversations. It provides guided discovery through a structured 4-level framework, asks strategic questions you're avoiding, listens for what you're not saying, and delivers your complete Brand Kernel Book with positioning, voice, and activation blueprints. It's not just answers—it's a transformative dialogue."
       }
     },
     {
@@ -39,23 +39,23 @@ export const faqSchema = {
       "name": "Who is BrandKernel for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel is designed for entrepreneurs, founders, freelancers, creators, and small to medium businesses who want to build a strong brand strategy. Whether you're launching a startup, building a personal brand, or rebranding an existing business, BrandKernel provides the guidance you need."
+        "text": "BrandKernel is designed for entrepreneurs, founders, freelancers, and creators who are brilliant but invisible—seeking clarity, traction, and growth. Whether you're launching a startup, building a personal brand, pivoting your positioning, or struggling to articulate your value, BrandKernel helps you uncover your authentic brand foundation and transform it into crystal-clear positioning."
       }
     },
     {
       "@type": "Question",
-      "name": "What features does BrandKernel include?",
+      "name": "What do I get from BrandKernel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel includes an AI Brand Consultant, comprehensive brand audit tools, personality assessments, competitor analysis, brand voice generator, strategy templates, content calendars, brand guidelines generator, and more. All features are designed to help you build a complete brand strategy."
+        "text": "You receive your complete Brand Kernel Book—a comprehensive strategic document capturing every breakthrough insight, your crystallized positioning, authentic voice framework, and detailed activation blueprints. This includes visual clarity maps (positioning matrices, voice spectrums, audience alignment), content strategy frameworks, network building plans, message templates, and growth roadmaps. Everything you need to go from confused to clear, from invisible to inevitable."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I cancel my BrandKernel subscription anytime?",
+      "name": "Is there a money-back guarantee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can cancel your BrandKernel subscription at any time. There are no long-term contracts or cancellation fees. Your access will continue until the end of your current billing period."
+        "text": "BrandKernel is currently in pre-launch waitlist phase. Once launched, we'll offer a satisfaction guarantee—if you complete the full 4-level journey and don't experience breakthrough clarity, we'll refund your investment. We're confident in the transformative power of guided brand discovery."
       }
     },
     {
@@ -63,7 +63,7 @@ export const faqSchema = {
       "name": "Does BrandKernel work for personal branding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! BrandKernel has dedicated features for personal branding, including personal brand audits, professional positioning tools, and strategies specifically designed for individuals looking to build their personal brand as freelancers, creators, or thought leaders."
+        "text": "Absolutely! BrandKernel is specifically designed for personal branding for founders, freelancers, and creators. The guided dialogue uncovers your unique story, expertise, and positioning. You'll discover your authentic voice, clarify your value proposition, and build a strategic foundation that helps you stand out in your market. Many of our users are solopreneurs building personal brands."
       }
     }
   ]
