@@ -61,9 +61,11 @@ async function getRelatedPosts(currentSlug: string, currentTags: string[] = []):
     }
 
     // Calculate relevance score for each post
+    type PostWithScore = { post: PostType; score: number };
+
     const postsWithScores = allPosts
       .filter((post: PostType) => post.slug !== currentSlug) // Exclude current post
-      .map((post: PostType) => {
+      .map((post: PostType): PostWithScore => {
         // Count matching tags
         const postTags = post.tags || [];
         const matchingTags = postTags.filter((tag: string) =>
@@ -77,10 +79,10 @@ async function getRelatedPosts(currentSlug: string, currentTags: string[] = []):
           score: matchingTags.length
         };
       })
-      .filter(item => item.score > 0) // Only posts with at least 1 matching tag
-      .sort((a, b) => b.score - a.score) // Sort by relevance
+      .filter((item: PostWithScore) => item.score > 0) // Only posts with at least 1 matching tag
+      .sort((a: PostWithScore, b: PostWithScore) => b.score - a.score) // Sort by relevance
       .slice(0, 3) // Take top 3
-      .map(item => item.post); // Return just the posts without score
+      .map((item: PostWithScore) => item.post); // Return just the posts without score
 
     return postsWithScores;
   } catch (error) {
