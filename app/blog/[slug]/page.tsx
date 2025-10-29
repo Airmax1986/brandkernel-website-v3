@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.tsx
 
-import { getPostGraphQL, getAllPostSlugsGraphQL } from "@/lib/contentful/contentful-graphql";
+import { getPostGraphQL, getAllPostSlugsGraphQL, getRelatedPostsGraphQL } from "@/lib/contentful/contentful-graphql";
 import { Post as PostType } from "@/lib/types";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -8,6 +8,7 @@ import MarkdownContent from "@/components/MarkdownContent";
 import { Metadata } from "next";
 import { createBlogPostMetadata } from "@/lib/metadata";
 import { BlogBreadcrumbs } from "@/components/Breadcrumbs";
+import RelatedArticles from "@/components/RelatedArticles";
 
 // This function now receives the correctly formatted data.
 export async function generateStaticParams() {
@@ -48,6 +49,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
   if (!post) {
     notFound();
   }
+
+  // Fetch related articles based on current post tags
+  const relatedArticles = await getRelatedPostsGraphQL(
+    params.slug,
+    post.tags || [],
+    3
+  );
 
   const baseUrl = 'https://www.brandkernel.io';
   const postUrl = `${baseUrl}/blog/${params.slug}`;
@@ -105,7 +113,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <div className="min-h-screen bg-brand-green">
+      <div className="min-h-screen bg-white">
         <article className="container mx-auto px-10 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-4xl">
           {/* Breadcrumbs */}
           <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
@@ -173,7 +181,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                     Published on BrandKernel
                   </div>
                   <div className="flex space-x-4">
-                    <a 
+                    <a
                       href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(postUrl)}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -181,7 +189,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                     >
                       Share on Twitter
                     </a>
-                    <a 
+                    <a
                       href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -192,6 +200,14 @@ export default async function PostPage({ params }: { params: { slug: string } })
                   </div>
                 </div>
               </footer>
+
+              {/* Related Articles */}
+              {relatedArticles.length > 0 && (
+                <RelatedArticles
+                  articles={relatedArticles}
+                  currentSlug={params.slug}
+                />
+              )}
             </div>
           </div>
         </article>
