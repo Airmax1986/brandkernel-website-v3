@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import HeaderServer from "@/components/HeaderServer";
 import { createMetadata } from "@/lib/metadata";
 import dynamic from "next/dynamic";
 
@@ -46,11 +46,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.ctfassets.net" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        
+
         {/* DNS prefetch for other domains */}
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://cdn.contentful.com" />
-        
+
         {/* Lazy load Google Analytics to prevent render blocking */}
         <script
           dangerouslySetInnerHTML={{
@@ -58,7 +58,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              
+
               // Load Google Analytics after page load
               window.addEventListener('load', function() {
                 var script = document.createElement('script');
@@ -77,7 +77,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Header />
+        <HeaderServer />
         <main>{children}</main>
         <CookieConsent />
       </body>
