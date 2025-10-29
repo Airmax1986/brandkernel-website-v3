@@ -65,10 +65,17 @@ export default function Header({
   const headerPosition = fixed ? 'fixed' : 'relative';
 
   const handleJoinWaitlist = () => {
-    // Scroll to waitlist form or open modal
-    const waitlistElement = document.getElementById('waitlist');
-    if (waitlistElement) {
-      waitlistElement.scrollIntoView({ behavior: 'smooth' });
+    // Navigate to homepage waitlist section
+    // Check if we're already on the homepage
+    if (window.location.pathname === '/') {
+      // If on homepage, scroll to waitlist
+      const waitlistElement = document.getElementById('waitlist');
+      if (waitlistElement) {
+        waitlistElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page, navigate to homepage with anchor
+      window.location.href = '/#waitlist';
     }
   };
 

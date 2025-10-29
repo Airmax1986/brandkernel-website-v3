@@ -67,7 +67,9 @@ export default function HomePage() {
               </div>
 
               {/* Waitlist Form */}
-              <HeroWaitlistForm variant="mobile" />
+              <div id="waitlist">
+                <HeroWaitlistForm variant="mobile" />
+              </div>
             </div>
           </section>
         </div>

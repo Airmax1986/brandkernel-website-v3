@@ -185,9 +185,14 @@ export default function SolutionsSection() {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
-              const waitlistElement = document.getElementById('waitlist');
-              if (waitlistElement) {
-                waitlistElement.scrollIntoView({ behavior: 'smooth' });
+              // Navigate to homepage waitlist section
+              if (window.location.pathname === '/') {
+                const waitlistElement = document.getElementById('waitlist');
+                if (waitlistElement) {
+                  waitlistElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              } else {
+                window.location.href = '/#waitlist';
               }
             }}
           >

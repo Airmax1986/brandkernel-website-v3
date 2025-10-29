@@ -11,9 +11,14 @@ export default function ClientCtaButtons() {
   };
 
   const handleJoinWaitlist = () => {
-    const waitlistElement = document.getElementById('waitlist');
-    if (waitlistElement) {
-      waitlistElement.scrollIntoView({ behavior: 'smooth' });
+    // Navigate to homepage waitlist section
+    if (window.location.pathname === '/') {
+      const waitlistElement = document.getElementById('waitlist');
+      if (waitlistElement) {
+        waitlistElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = '/#waitlist';
     }
   };
 
