@@ -178,6 +178,10 @@ const nextConfig = {
   async redirects() {
     // Blog slug redirects (SEO optimization - shortened URLs)
     const blogSlugRedirects = [
+      // Missing redirects for Google Search Console duplicates
+      { source: '/blog/content-marketing-for-branding-guide', destination: '/blog/content-marketing-for-branding', permanent: true },
+      { source: '/blog/brand-equity-score-freelancer-calculate-framework', destination: '/blog/brand-equity-score-freelancer-calculate', permanent: true },
+      // Original redirects
       { source: '/blog/ai-impact-branding-jobs-future-designers', destination: '/blog/ai-impact-branding-jobs-future', permanent: true },
       { source: '/blog/30-day-brand-activation-challenge-freelancers', destination: '/blog/30-day-brand-activation-challenge', permanent: true },
       { source: '/blog/branding-perfectionism-define-brand-core-freelancers', destination: '/blog/branding-perfectionism-define-brand-core', permanent: true },
