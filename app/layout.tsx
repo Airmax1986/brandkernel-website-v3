@@ -50,27 +50,20 @@ export default function RootLayout({
         {/* DNS prefetch for other domains */}
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://cdn.contentful.com" />
-        
-        {/* Lazy load Google Analytics to prevent render blocking */}
+
+        {/* Google Analytics - Standard Implementation */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DH4KGB266D"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              
-              // Load Google Analytics after page load
-              window.addEventListener('load', function() {
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-DH4KGB266D';
-                document.head.appendChild(script);
-                script.onload = function() {
-                  gtag('config', 'G-DH4KGB266D', {
-                    'transport_type': 'beacon',
-                    'page_view': true
-                  });
-                };
+              gtag('config', 'G-DH4KGB266D', {
+                page_path: window.location.pathname,
               });
             `,
           }}
