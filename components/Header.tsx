@@ -93,10 +93,10 @@ export default function Header({
             <div className="w-[50vw] flex items-center justify-between px-10">
               {/* Logo */}
               <div className="flex-shrink-0">
-                <a 
-                  href="/" 
+                <a
+                  href="/"
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'normal' }}
-                  className="text-brand-black hover:text-brand-purple hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3 py-2 border border-transparent hover:border-gray-200"
+                  className="text-brand-black hover:text-brand-purple transition-colors duration-200 px-3 py-2"
                   aria-label="BrandKernel Home"
                 >
                   BrandKernel
@@ -110,7 +110,7 @@ export default function Header({
                     key={item.name}
                     href={item.href}
                     style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'normal' }}
-                    className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                    className="text-brand-black hover:text-brand-purple transition-colors duration-200 px-2 py-2"
                   >
                     {item.name}
                   </a>
@@ -127,7 +127,7 @@ export default function Header({
                     key={item.name}
                     href={item.href}
                     style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'normal' }}
-                    className="text-brand-black hover:text-brand-purple transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-2 py-2"
+                    className="text-brand-black hover:text-brand-purple transition-colors duration-200 px-2 py-2"
                   >
                     {item.name}
                   </a>
@@ -150,7 +150,7 @@ export default function Header({
               <div className="md:hidden">
                 <button
                 type="button"
-                className="text-brand-black hover:text-brand-purple focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md p-2 transition-colors duration-200"
+                className="text-brand-black hover:text-brand-purple p-2 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
@@ -231,7 +231,7 @@ export default function Header({
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
+                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal py-2 px-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -250,7 +250,7 @@ export default function Header({
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 rounded-md px-3"
+                      className="text-nav text-brand-black hover:text-brand-purple transition-colors duration-200 font-normal py-2 px-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
