@@ -6,6 +6,10 @@ import CtaButton from '@/components/CtaButton';
 import DynamicBrandChatbot from '@/components/DynamicBrandChatbot';
 import HeroWaitlistForm from '@/components/HeroWaitlistForm';
 import { getHomePageSchemas, injectSchema } from '@/lib/schemas';
+import { getAllPostsGraphQL } from '@/lib/contentful/contentful-graphql';
+import BlogPost from '@/components/BlogPost';
+import Link from 'next/link';
+import { Post } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'AI Brand Strategy Platform - Craft Your Brand Identity Today ● Brand Kernel',
@@ -27,9 +31,21 @@ export const metadata: Metadata = {
   }
 };
 
-export default function HomePage() {
+export default async function HomePage() {
   // Get combined schema markup for homepage
   const homeSchemas = getHomePageSchemas();
+
+  // Fetch blog posts
+  let posts: Post[] = [];
+  try {
+    if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
+      const allPosts = await getAllPostsGraphQL();
+      // Get the 3 most recent posts
+      posts = allPosts.slice(0, 3);
+    }
+  } catch (error) {
+    console.error('Error fetching blog posts for homepage:', error);
+  }
 
   return (
     <>
@@ -383,6 +399,42 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Blog Section */}
+        {posts.length > 0 && (
+          <section id="blog" className="py-20 bg-white" style={{ marginTop: '3rem' }}>
+            <div className="container mx-auto px-10">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-brand-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8 px-4 sm:px-10 md:px-10">
+                    Latest Insights
+                  </h2>
+                  <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem' }} className="text-brand-black mb-6">
+                    Brand strategy insights, positioning frameworks, and clarity breakthroughs for founders.
+                  </p>
+                </div>
+
+                {/* Blog Posts Grid */}
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                  {posts.map((post) => (
+                    <BlogPost key={post.slug} post={post} />
+                  ))}
+                </div>
+
+                {/* View All Posts Button */}
+                <div className="text-center">
+                  <Link
+                    href="/blog"
+                    style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'bold' }}
+                    className="bg-[#957FFF] text-white px-10 py-3 rounded-full hover:bg-[#957FFF]/90 transition-all transform hover:-translate-y-0.5 inline-block"
+                  >
+                    View All Posts
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
 
       {/* Footer */}
