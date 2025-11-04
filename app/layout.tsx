@@ -4,11 +4,12 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { createMetadata } from "@/lib/metadata";
 import dynamic from "next/dynamic";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // Lazy load CookieConsent to prevent layout shift
 const CookieConsent = dynamic(
   () => import("@/components/CookieConsentOptimized"),
-  { 
+  {
     ssr: false,
     loading: () => null // Prevents layout shift during loading
   }
@@ -46,37 +47,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.ctfassets.net" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        
+
         {/* DNS prefetch for other domains */}
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://cdn.contentful.com" />
-        
-        {/* Lazy load Google Analytics to prevent render blocking */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              
-              // Load Google Analytics after page load
-              window.addEventListener('load', function() {
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-DH4KGB266D';
-                document.head.appendChild(script);
-                script.onload = function() {
-                  gtag('config', 'G-DH4KGB266D', {
-                    'transport_type': 'beacon',
-                    'page_view': true
-                  });
-                };
-              });
-            `,
-          }}
-        />
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <Header />
         <main>{children}</main>
         <CookieConsent />

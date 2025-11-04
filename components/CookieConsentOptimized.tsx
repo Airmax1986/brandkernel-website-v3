@@ -91,13 +91,16 @@ export default function CookieConsentOptimized() {
     localStorage.setItem('cookieConsent', 'accepted')
     localStorage.setItem('cookieConsentDate', new Date().toISOString())
     setShowBanner(false)
-    
-    // Initialize analytics after consent
+
+    // Update consent mode
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
         'analytics_storage': 'granted'
       })
     }
+
+    // Dispatch event to notify GoogleAnalytics component
+    window.dispatchEvent(new Event('cookieConsentAccepted'))
   }
 
   if (!mounted || !showBanner) return null
