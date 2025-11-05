@@ -12,21 +12,32 @@ export const organizationSchema = {
     "height": 512,
     "caption": "BrandKernel Logo"
   },
-  "description": "AI-powered brand strategy platform helping businesses and individuals build authentic brands",
+  "description": "BrandKernel.io is an AI-powered SaaS platform for brand strategy development, not to be confused with traditional brand consulting services. We provide an AI brand consultant that guides entrepreneurs, freelancers, and creators through guided brand discovery conversations to uncover their authentic brand identity.",
   "email": "hello@brandkernel.io",
-  "foundingDate": "2023-01-01",
+  "foundingDate": "2024",
+  "knowsAbout": [
+    "AI-powered Brand Strategy",
+    "Brand Identity Development",
+    "Personal Branding for Freelancers",
+    "Founder Brand Positioning",
+    "Authentic Brand Voice",
+    "Brand Strategy for Creators",
+    "AI Brand Consultant",
+    "Strategic Brand Discovery"
+  ],
   "sameAs": [
-    "https://linkedin.com/company/brandkernel",
+    "https://www.linkedin.com/company/brandkernel",
     "https://twitter.com/brandkernel"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer support",
-    "email": "support@brandkernel.io",
-    "availableLanguage": ["English"]
+    "email": "hello@brandkernel.io",
+    "availableLanguage": ["English", "German"]
   },
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US"
-  }
+    "addressCountry": "DE"
+  },
+  "slogan": "The AI dialogue that builds your Brand Kernel and changes everything"
 }

@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.tsx
 
-import { getPostGraphQL, getAllPostSlugsGraphQL } from "@/lib/contentful/contentful-graphql";
+import { getPostGraphQL, getAllPostSlugsGraphQL, getAllPostsGraphQL } from "@/lib/contentful/contentful-graphql";
 import { Post as PostType } from "@/lib/types";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -8,6 +8,8 @@ import MarkdownContent from "@/components/MarkdownContent";
 import { Metadata } from "next";
 import { createBlogPostMetadata } from "@/lib/metadata";
 import { BlogBreadcrumbs } from "@/components/Breadcrumbs";
+import { getRelatedPosts } from "@/lib/related-posts";
+import Link from "next/link";
 
 // This function now receives the correctly formatted data.
 export async function generateStaticParams() {
@@ -48,6 +50,10 @@ export default async function PostPage({ params }: { params: { slug: string } })
   if (!post) {
     notFound();
   }
+
+  // Get all posts for related articles
+  const allPosts = await getAllPostsGraphQL();
+  const relatedPosts = getRelatedPosts(post, allPosts, 3);
 
   const baseUrl = 'https://www.brandkernel.io';
   const postUrl = `${baseUrl}/blog/${params.slug}`;
@@ -105,7 +111,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <div className="min-h-screen bg-brand-green">
+      <div className="min-h-screen bg-white">
         <article className="container mx-auto px-10 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-4xl">
           {/* Breadcrumbs */}
           <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
@@ -165,6 +171,59 @@ export default async function PostPage({ params }: { params: { slug: string } })
               <div itemProp="articleBody">
                 <MarkdownContent content={post.content || 'No content available.'} />
               </div>
+
+              {/* Related Articles */}
+              {relatedPosts.length > 0 && (
+                <section className="mt-16 pt-8 border-t border-gray-200">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                    Related Articles
+                  </h2>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {relatedPosts.map((relatedPost) => (
+                      <Link
+                        key={relatedPost.slug}
+                        href={`/blog/${relatedPost.slug}`}
+                        className="group"
+                      >
+                        <article className="border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white h-full flex flex-col">
+                          {relatedPost.headerImage && (
+                            <div className="relative h-48 overflow-hidden">
+                              <Image
+                                src={relatedPost.headerImage.startsWith('//') ? `https:${relatedPost.headerImage}` : relatedPost.headerImage}
+                                alt={relatedPost.title}
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          )}
+                          <div className="p-4 flex-1 flex flex-col">
+                            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-purple transition-colors line-clamp-2">
+                              {relatedPost.title}
+                            </h3>
+                            {relatedPost.summary && (
+                              <p className="text-gray-600 text-sm line-clamp-3 flex-1">
+                                {relatedPost.summary}
+                              </p>
+                            )}
+                            {relatedPost.tags && relatedPost.tags.length > 0 && (
+                              <div className="flex flex-wrap gap-2 mt-4">
+                                {relatedPost.tags.slice(0, 2).map((tag, index) => (
+                                  <span
+                                    key={index}
+                                    className="bg-brand-light text-brand-black px-2 py-1 rounded-full text-xs"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </article>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {/* Article Footer */}
               <footer className="mt-12 pt-8 border-t border-gray-200">

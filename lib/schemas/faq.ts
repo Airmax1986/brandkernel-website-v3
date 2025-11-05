@@ -7,7 +7,15 @@ export const faqSchema = {
       "name": "What is BrandKernel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel is an AI-powered brand strategy platform that helps businesses and individuals develop authentic, compelling brand identities through guided conversations with an AI brand consultant. It combines the expertise of professional brand strategists with advanced AI technology."
+        "text": "BrandKernel is an AI-powered brand strategy platform that helps entrepreneurs, freelancers, and creators develop authentic brand identities through guided conversations with an AI brand consultant. Unlike traditional brand consulting services or generic AI tools, BrandKernel is a SaaS platform specifically designed for personal branding and small business brand strategy. In 3-4 hours of strategic dialogue, you uncover your Brand Kernel - the core foundation that makes your business unstoppable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BrandKernel a consulting service or software platform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BrandKernel is a software platform (SaaS), not a traditional consulting service. While traditional brand consultants charge $10,000-$50,000 for brand strategy work, BrandKernel provides an AI-powered guided experience for $297 one-time payment with lifetime access. You get the strategic depth of professional brand consulting through an intelligent AI guide, without the high cost or long timelines of traditional consulting."
       }
     },
     {
@@ -15,15 +23,15 @@ export const faqSchema = {
       "name": "How much does BrandKernel cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BrandKernel is currently available for $297/month as an early adopter special offer. This includes full access to all AI features, unlimited brand audits, strategy templates, and regular platform updates."
+        "text": "BrandKernel is available for a one-time payment of $297 (early adopter pricing, soon to be $497). This is not a subscription - you get lifetime access to your Brand Kernel, all strategic insights, visual clarity maps, and activation blueprints. Your identity doesn't expire, and neither does your access."
       }
     },
     {
       "@type": "Question",
-      "name": "Is there a free trial for BrandKernel?",
+      "name": "Do I need a subscription for BrandKernel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! BrandKernel offers a 14-day free trial with full access to all features. No credit card is required to start your trial. You can explore the platform and see the value it provides before committing to a subscription."
+        "text": "No! BrandKernel is a one-time investment with lifetime access. Unlike subscription-based tools, you pay once ($297 early adopter special) and own your Brand Kernel forever. We believe your breakthrough shouldn't have recurring fees."
       }
     },
     {
