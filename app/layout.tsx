@@ -4,11 +4,12 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { createMetadata } from "@/lib/metadata";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 
 // Lazy load CookieConsent to prevent layout shift
 const CookieConsent = dynamic(
   () => import("@/components/CookieConsentOptimized"),
-  { 
+  {
     ssr: false,
     loading: () => null // Prevents layout shift during loading
   }
@@ -50,33 +51,54 @@ export default function RootLayout({
         {/* DNS prefetch for other domains */}
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://cdn.contentful.com" />
-        
-        {/* Lazy load Google Analytics to prevent render blocking */}
-        <script
+      </head>
+      <body className={inter.className}>
+        {/* Google Analytics with Consent Mode */}
+        <Script
+          id="google-analytics-consent"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              
-              // Load Google Analytics after page load
-              window.addEventListener('load', function() {
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-DH4KGB266D';
-                document.head.appendChild(script);
-                script.onload = function() {
-                  gtag('config', 'G-DH4KGB266D', {
-                    'transport_type': 'beacon',
-                    'page_view': true
-                  });
-                };
+
+              // Default consent mode - starts as denied
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'wait_for_update': 500
               });
+
+              // Check if user already gave consent
+              if (localStorage.getItem('cookieConsent') === 'accepted') {
+                gtag('consent', 'update', {
+                  'analytics_storage': 'granted'
+                });
+              }
             `,
           }}
         />
-      </head>
-      <body className={inter.className}>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-DH4KGB266D`}
+        />
+        <Script
+          id="google-analytics-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('js', new Date());
+              gtag('config', 'G-DH4KGB266D', {
+                'send_page_view': true
+              });
+
+              // Debug: Log GA initialization
+              console.log('✅ Google Analytics initialized:', 'G-DH4KGB266D');
+              console.log('📊 Consent status:', localStorage.getItem('cookieConsent'));
+            `,
+          }}
+        />
+
         <Header />
         <main>{children}</main>
         <CookieConsent />
