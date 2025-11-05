@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
+import { generateHeadingId } from '@/lib/table-of-contents';
 
 interface MarkdownContentProps {
   content: string;
@@ -25,16 +26,24 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
               {children}
             </h1>
           ),
-          h2: ({ children }) => (
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">
-              {children}
-            </h2>
-          ),
-          h3: ({ children }) => (
-            <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">
-              {children}
-            </h3>
-          ),
+          h2: ({ children }) => {
+            const text = String(children);
+            const id = generateHeadingId(text);
+            return (
+              <h2 id={id} className="text-2xl font-semibold text-gray-900 mb-4 mt-8 scroll-mt-24">
+                {children}
+              </h2>
+            );
+          },
+          h3: ({ children }) => {
+            const text = String(children);
+            const id = generateHeadingId(text);
+            return (
+              <h3 id={id} className="text-xl font-semibold text-gray-900 mb-3 mt-6 scroll-mt-24">
+                {children}
+              </h3>
+            );
+          },
           p: ({ children }) => (
             <p className="text-gray-700 leading-relaxed mb-4">
               {children}

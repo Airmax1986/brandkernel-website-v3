@@ -9,6 +9,10 @@ import { Metadata } from "next";
 import { createBlogPostMetadata } from "@/lib/metadata";
 import { BlogBreadcrumbs } from "@/components/Breadcrumbs";
 import { getRelatedPosts } from "@/lib/related-posts";
+import { calculateReadingTime } from "@/lib/reading-time";
+import { extractHeadings, generateTOCStructuredData } from "@/lib/table-of-contents";
+import AuthorBio from "@/components/AuthorBio";
+import TableOfContents from "@/components/TableOfContents";
 import Link from "next/link";
 
 // This function now receives the correctly formatted data.
@@ -54,6 +58,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
   // Get all posts for related articles
   const allPosts = await getAllPostsGraphQL();
   const relatedPosts = getRelatedPosts(post, allPosts, 3);
+
+  // Calculate reading time
+  const readingTime = calculateReadingTime(post.content || '');
+
+  // Extract headings for Table of Contents
+  const headings = extractHeadings(post.content || '');
+  const showTOC = headings.length >= 3; // Only show TOC if there are at least 3 headings
 
   const baseUrl = 'https://www.brandkernel.io';
   const postUrl = `${baseUrl}/blog/${params.slug}`;
@@ -112,11 +123,16 @@ export default async function PostPage({ params }: { params: { slug: string } })
       />
       
       <div className="min-h-screen bg-white">
-        <article className="container mx-auto px-10 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-4xl">
+        <div className="container mx-auto px-6 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-7xl">
           {/* Breadcrumbs */}
           <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
-          
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+
+          {/* Grid Layout: Article + TOC */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            {/* Main Article Content */}
+            <article className={`${showTOC ? 'lg:col-span-8' : 'lg:col-span-12 max-w-4xl mx-auto'}`}>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             
             {/* Hero Image */}
             {imageUrl && (
@@ -144,9 +160,15 @@ export default async function PostPage({ params }: { params: { slug: string } })
                 )}
                 
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-gray-500 text-sm border-b border-gray-200 pb-6">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center flex-wrap gap-4">
                     <span className="font-medium">
                       By <span itemProp="author">{post.author?.name || 'BrandKernel Team'}</span>
+                    </span>
+                    <span className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {readingTime.text}
                     </span>
                     {post.tags && post.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2">
@@ -170,6 +192,16 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
               <div itemProp="articleBody">
                 <MarkdownContent content={post.content || 'No content available.'} />
+              </div>
+
+              {/* Author Bio */}
+              <div className="mt-12">
+                <AuthorBio
+                  name={post.author?.name || 'Maximilian Appelt'}
+                  bio="Founder of BrandKernel with 20+ years of brand consulting experience. Helping founders, freelancers, and creators discover their authentic brand identity through AI-powered strategic dialogue."
+                  linkedin="https://www.linkedin.com/in/maximilian-appelt/"
+                  website="https://www.brandkernel.io"
+                />
               </div>
 
               {/* Related Articles */}
@@ -254,6 +286,15 @@ export default async function PostPage({ params }: { params: { slug: string } })
             </div>
           </div>
         </article>
+
+        {/* Table of Contents Sidebar - Only on desktop */}
+        {showTOC && (
+          <aside className="hidden lg:block lg:col-span-4">
+            <TableOfContents headings={headings} />
+          </aside>
+        )}
+
+      </div>
       </div>
     </>
   );
