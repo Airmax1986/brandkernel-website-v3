@@ -64,14 +64,6 @@ export default function Header({
   // Header positioning
   const headerPosition = fixed ? 'fixed' : 'relative';
 
-  const handleJoinWaitlist = () => {
-    // Scroll to waitlist form or open modal
-    const waitlistElement = document.getElementById('waitlist');
-    if (waitlistElement) {
-      waitlistElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
       <motion.header
@@ -132,10 +124,10 @@ export default function Header({
                     {item.name}
                   </a>
                 ))}
-                <motion.button
-                  onClick={handleJoinWaitlist}
+                <motion.a
+                  href="/signup"
                   style={{ fontSize: '1rem', lineHeight: '1.5rem', fontWeight: 'normal' }}
-                  className="bg-brand-white text-brand-black px-3 py-1.5 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 "
+                  className="bg-brand-white text-brand-black px-3 py-1.5 rounded-full border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 inline-block"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   initial={{ opacity: 0, x: 20 }}
@@ -143,7 +135,7 @@ export default function Header({
                   transition={{ delay: 0.6 }}
                 >
                   Sign up
-                </motion.button>
+                </motion.a>
               </div>
 
               {/* Mobile Menu Button */}
@@ -262,19 +254,19 @@ export default function Header({
                   ))}
 
                   {/* Mobile Join Waitlist Button */}
-                  <motion.button
+                  <motion.a
+                    href="/signup"
                     onClick={() => {
-                      handleJoinWaitlist();
                       setIsMobileMenuOpen(false);
                     }}
-                    className="bg-brand-green text-brand-black font-semibold px-10 py-3 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 w-full text-center"
+                    className="bg-brand-green text-brand-black font-semibold px-10 py-3 rounded-brand hover:shadow-brand-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 w-full text-center inline-block"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     Join Waitlist
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
