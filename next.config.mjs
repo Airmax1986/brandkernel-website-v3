@@ -51,7 +51,7 @@ const nextConfig = {
               font-src 'self' https://fonts.gstatic.com data:;
               img-src 'self' data: https: blob:;
               media-src 'self';
-              connect-src 'self' https://www.google-analytics.com https://images.ctfassets.net https://cdn.contentful.com https://www.googletagmanager.com;
+              connect-src 'self' https://*.google-analytics.com https://images.ctfassets.net https://cdn.contentful.com https://www.googletagmanager.com;
               frame-src 'self';
               object-src 'none';
               base-uri 'self';

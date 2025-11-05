@@ -62,9 +62,9 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
 
-              // Default consent mode - starts as denied
+              // Default consent mode - TEMPORARILY GRANTED FOR TESTING
               gtag('consent', 'default', {
-                'analytics_storage': 'denied',
+                'analytics_storage': 'granted',
                 'ad_storage': 'denied',
                 'wait_for_update': 500
               });
