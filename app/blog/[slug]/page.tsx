@@ -197,7 +197,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
               <div className="mt-12">
                 <AuthorBio
                   name={post.author?.name || 'Maximilian Appelt'}
-                  bio="Founder of BrandKernel with 20+ years of brand consulting experience. Helping founders, freelancers, and creators discover their authentic brand identity through AI-powered strategic dialogue."
+                  bio="Founder of BrandKernel with 20+ years of brand consulting experience. Master of Arts in Visual Communication. Helping founders, freelancers, and creators discover their authentic brand identity through AI-powered strategic dialogue."
                   linkedin="https://www.linkedin.com/in/maximilian-appelt/"
                   website="https://www.brandkernel.io"
                 />
