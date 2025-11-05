@@ -115,15 +115,14 @@ export default async function PostPage({ params }: { params: { slug: string } })
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-white">
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-6 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-7xl">
+
+      <div className="container mx-auto px-6 pt-20 pb-8 md:px-12 md:pt-24 md:pb-12 max-w-7xl">
           {/* Breadcrumbs */}
           <BlogBreadcrumbs postTitle={post.title} className="mb-6" />
 
@@ -296,6 +295,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
         </div>
       </div>
-    </>
+    </div>
   );
 }

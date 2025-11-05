@@ -47,19 +47,18 @@ export default function Breadcrumbs({
   const schema = generateBreadcrumbSchema(allItems);
 
   return (
-    <>
+    <nav
+      className={`flex ${className}`}
+      aria-label="Breadcrumb"
+      role="navigation"
+    >
       {/* Schema markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      
+
       {/* Breadcrumb navigation */}
-      <nav 
-        className={`flex ${className}`} 
-        aria-label="Breadcrumb"
-        role="navigation"
-      >
         <ol className="flex items-center space-x-2 text-sm">
           {allItems.map((item, index) => (
             <li key={item.href} className="flex items-center">
@@ -96,8 +95,7 @@ export default function Breadcrumbs({
             </li>
           ))}
         </ol>
-      </nav>
-    </>
+    </nav>
   );
 }
 

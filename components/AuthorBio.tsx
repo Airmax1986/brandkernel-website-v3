@@ -36,7 +36,7 @@ export default function AuthorBio({
   };
 
   return (
-    <>
+    <div className="bg-gradient-to-r from-purple-50 to-orange-50 rounded-lg p-6 border border-purple-100">
       {/* Schema.org markup */}
       <script
         type="application/ld+json"
@@ -44,7 +44,6 @@ export default function AuthorBio({
       />
 
       {/* Author Bio Card */}
-      <div className="bg-gradient-to-r from-purple-50 to-orange-50 rounded-lg p-6 border border-purple-100">
         <div className="flex items-start gap-4">
           {/* Avatar */}
           {avatar && (
@@ -123,7 +122,6 @@ export default function AuthorBio({
             )}
           </div>
         </div>
-      </div>
-    </>
+    </div>
   );
 }
