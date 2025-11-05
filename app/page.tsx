@@ -84,6 +84,16 @@ export default async function HomePage() {
 
               {/* Waitlist Form */}
               <HeroWaitlistForm variant="mobile" />
+
+              {/* Signup Page Link */}
+              <div className="mt-6">
+                <a
+                  href="/signup"
+                  className="text-[#957FFF] hover:text-[#8a73f5] font-medium transition-colors duration-200 text-sm"
+                >
+                  Or join our waitlist →
+                </a>
+              </div>
             </div>
           </section>
         </div>
@@ -109,6 +119,16 @@ export default async function HomePage() {
 
               {/* Waitlist Form - Bottom of Hero */}
               <HeroWaitlistForm variant="desktop" />
+
+              {/* Signup Page Link */}
+              <div className="mt-4 text-center">
+                <a
+                  href="/signup"
+                  className="text-[#957FFF] hover:text-[#8a73f5] font-medium transition-colors duration-200 text-sm"
+                >
+                  Or join our waitlist →
+                </a>
+              </div>
             </div>
           </div>
 
@@ -455,6 +475,7 @@ export default async function HomePage() {
 
               {/* Navigation Links */}
               <div className="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+                <a href="/signup" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Sign Up</a>
                 <a href="/about" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">About</a>
                 <a href="/blog" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Blog</a>
                 <a href="/imprint" style={{ fontSize: '1rem', lineHeight: '1.5rem' }} className="text-neutral-400 hover:text-brand-white transition-colors duration-200">Imprint</a>
