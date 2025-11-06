@@ -12,6 +12,7 @@
  */
 
 import { getAllPostsGraphQL } from '../lib/contentful/contentful-graphql';
+import { Post } from '../lib/types';
 import fs from 'fs';
 import path from 'path';
 
@@ -87,7 +88,7 @@ async function analyzeContent() {
     console.log(`✅ Found ${posts.length} blog posts\n`);
     console.log('🔍 Analyzing content...\n');
 
-    const analyses: ContentAnalysis[] = posts.map(post => {
+    const analyses: ContentAnalysis[] = posts.map((post: Post) => {
       const contentText = `${post.title} ${post.summary || ''} ${post.description || ''} ${post.content || ''}`;
       const wordCount = countWords(post.content || '');
       const mainTopics = extractTopics(contentText);
