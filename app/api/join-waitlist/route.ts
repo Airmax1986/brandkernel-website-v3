@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { addToWaitlist, isEmailInWaitlist, getWaitlistStats, initializeDatabase } from '@/lib/database';
+import { checkRateLimit, getClientIP } from '@/lib/rate-limit';
 
 // Types for the API
 interface WaitlistRequest {
@@ -118,8 +119,32 @@ async function sendWelcomeEmail(email: string, position: number): Promise<boolea
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting check (5 requests per hour per IP)
+    const clientIP = getClientIP(request);
+    const rateLimitResult = await checkRateLimit(clientIP);
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Too many requests',
+          message: 'You have exceeded the rate limit. Please try again later.',
+          retryAfter: rateLimitResult.reset,
+        } as WaitlistResponse,
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': rateLimitResult.reset.toString(),
+            'Retry-After': Math.ceil((rateLimitResult.reset - Date.now()) / 1000).toString(),
+          },
+        }
+      );
+    }
+
     const body: WaitlistRequest = await request.json();
-    
+
     // Validate required fields
     if (!body.email) {
       return NextResponse.json(
