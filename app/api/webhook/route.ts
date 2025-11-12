@@ -40,6 +40,8 @@ const TIMESTAMP_TOLERANCE_MS = 5 * 60 * 1000; // 5 minutes
 const REPLAY_WINDOW_SECONDS = 600; // 10 minutes
 
 // Initialize Redis client (for rate limiting and replay prevention)
+// Redis is OPTIONAL - webhook will work without it but with reduced security
+// To enable: Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN in environment
 let redis: Redis | null = null;
 try {
   if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
@@ -47,6 +49,8 @@ try {
       url: process.env.UPSTASH_REDIS_REST_URL,
       token: process.env.UPSTASH_REDIS_REST_TOKEN,
     });
+  } else {
+    console.warn('Redis not configured - rate limiting and replay protection disabled');
   }
 } catch (error) {
   console.error('Failed to initialize Redis client:', error);
@@ -109,7 +113,7 @@ function validateAccessToken(request: NextRequest): boolean {
 }
 
 /**
- * Rate limiting check using Redis
+ * Rate limiting check using Redis with timeout
  * Implements sliding window rate limiting
  */
 async function checkRateLimit(identifier: string): Promise<boolean> {
@@ -120,27 +124,39 @@ async function checkRateLimit(identifier: string): Promise<boolean> {
   }
 
   try {
-    const key = `webhook:ratelimit:${identifier}`;
-    const now = Date.now();
-    const windowStart = now - 60000; // 1 minute window
+    // Add timeout to Redis operations (500ms max)
+    const rateLimitPromise = (async () => {
+      const key = `webhook:ratelimit:${identifier}`;
+      const now = Date.now();
+      const windowStart = now - 60000; // 1 minute window
 
-    // Remove old entries
-    await redis.zremrangebyscore(key, 0, windowStart);
+      // Remove old entries
+      await redis!.zremrangebyscore(key, 0, windowStart);
 
-    // Count requests in current window
-    const requestCount = await redis.zcard(key);
+      // Count requests in current window
+      const requestCount = await redis!.zcard(key);
 
-    if (requestCount >= MAX_REQUESTS_PER_MINUTE) {
-      return false;
-    }
+      if (requestCount >= MAX_REQUESTS_PER_MINUTE) {
+        return false;
+      }
 
-    // Add current request
-    await redis.zadd(key, { score: now, member: `${now}` });
+      // Add current request
+      await redis!.zadd(key, { score: now, member: `${now}` });
 
-    // Set expiry on the key
-    await redis.expire(key, 120); // 2 minutes
+      // Set expiry on the key
+      await redis!.expire(key, 120); // 2 minutes
 
-    return true;
+      return true;
+    })();
+
+    const timeoutPromise = new Promise<boolean>((resolve) => {
+      setTimeout(() => {
+        console.warn('Rate limit check timed out, allowing request');
+        resolve(true);
+      }, 500); // 500ms timeout
+    });
+
+    return await Promise.race([rateLimitPromise, timeoutPromise]);
   } catch (error) {
     console.error('Rate limit check failed:', error);
     // On error, allow the request (fail open for availability)
@@ -149,7 +165,7 @@ async function checkRateLimit(identifier: string): Promise<boolean> {
 }
 
 /**
- * Check for replay attacks using timestamp and Redis
+ * Check for replay attacks using timestamp and Redis with timeout
  */
 async function checkReplayAttack(timestamp: string, fingerprint: string): Promise<boolean> {
   // Validate timestamp format (ISO 8601)
@@ -175,17 +191,29 @@ async function checkReplayAttack(timestamp: string, fingerprint: string): Promis
   }
 
   try {
-    const key = `webhook:replay:${fingerprint}`;
-    const exists = await redis.get(key);
+    // Add timeout to Redis operations (500ms max)
+    const replayCheckPromise = (async () => {
+      const key = `webhook:replay:${fingerprint}`;
+      const exists = await redis!.get(key);
 
-    if (exists) {
-      console.warn(`Replay attack detected: ${sanitizeForLog(fingerprint)}`);
-      return false; // Request has been seen before
-    }
+      if (exists) {
+        console.warn(`Replay attack detected: ${sanitizeForLog(fingerprint)}`);
+        return false; // Request has been seen before
+      }
 
-    // Store fingerprint to prevent replay
-    await redis.setex(key, REPLAY_WINDOW_SECONDS, '1');
-    return true;
+      // Store fingerprint to prevent replay
+      await redis!.setex(key, REPLAY_WINDOW_SECONDS, '1');
+      return true;
+    })();
+
+    const timeoutPromise = new Promise<boolean>((resolve) => {
+      setTimeout(() => {
+        console.warn('Replay check timed out, allowing request');
+        resolve(true);
+      }, 500); // 500ms timeout
+    });
+
+    return await Promise.race([replayCheckPromise, timeoutPromise]);
   } catch (error) {
     console.error('Replay check failed:', error);
     // On error, allow the request (fail open for availability)
