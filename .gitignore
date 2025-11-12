@@ -221,3 +221,8 @@ temp/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Testing
+test-results/
+playwright-report/
+playwright/.cache/
