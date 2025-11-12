@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import { createMetadata } from "@/lib/metadata";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // Lazy load CookieConsent to prevent layout shift
 const CookieConsent = dynamic(
@@ -53,6 +55,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://cdn.contentful.com" />
       </head>
       <body className={inter.className}>
+        {/* Skip Navigation Link for Accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand-purple focus:px-4 focus:py-2 focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          Skip to main content
+        </a>
+
         {/* Google Analytics with Consent Mode */}
         <Script
           id="google-analytics-consent"
@@ -100,8 +110,10 @@ export default function RootLayout({
         />
 
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <CookieConsent />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
