@@ -6,6 +6,31 @@
 /* Syntax highlighting styles */
 @import 'highlight.js/styles/github.css';
 
+/* Locomotive Scroll - only import if enabled */
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+/* Locomotive Scroll Fixes */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-init,
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+}
+
 body {
   background-color: #FFFFFF;
   color: #000000;

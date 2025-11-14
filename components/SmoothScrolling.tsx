@@ -35,6 +35,19 @@ export default function SmoothScrolling({
         });
 
         locomotiveScrollRef.current = scrollInstance;
+
+        // Update on window resize
+        const handleResize = () => {
+          if (locomotiveScrollRef.current) {
+            locomotiveScrollRef.current.update();
+          }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
       } catch (error) {
         console.error('Failed to initialize Locomotive Scroll:', error);
       }
@@ -61,7 +74,11 @@ export default function SmoothScrolling({
   }
 
   return (
-    <div data-scroll-container ref={scrollRef}>
+    <div
+      data-scroll-container
+      ref={scrollRef}
+      style={{ minHeight: '100vh' }}
+    >
       {children}
     </div>
   );
