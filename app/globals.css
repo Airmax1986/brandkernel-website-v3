@@ -6,6 +6,9 @@
 /* Syntax highlighting styles */
 @import 'highlight.js/styles/github.css';
 
+/* Locomotive Scroll v5 */
+@import 'locomotive-scroll/locomotive-scroll.css';
+
 body {
   background-color: #FFFFFF;
   color: #000000;

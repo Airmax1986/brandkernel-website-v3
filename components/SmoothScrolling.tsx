@@ -1,85 +1,50 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function SmoothScrolling({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const locomotiveScrollRef = useRef<any>(null);
-  const [isMounted, setIsMounted] = useState(false);
+  const scrollRef = useRef<any>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted || typeof window === 'undefined') return;
-
-    let scrollInstance: any = null;
+    let locomotiveScroll: any = null;
 
     const initScroll = async () => {
       try {
-        if (!scrollRef.current) return;
-
-        // Dynamically import LocomotiveScroll
+        // Dynamically import Locomotive Scroll v5
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
 
-        scrollInstance = new LocomotiveScroll({
-          el: scrollRef.current,
-          smooth: true,
-          multiplier: 1,
-          class: 'is-revealed',
+        locomotiveScroll = new LocomotiveScroll({
+          lenisOptions: {
+            duration: 1.2,
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 2,
+            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          },
         });
 
-        locomotiveScrollRef.current = scrollInstance;
-
-        // Update on window resize
-        const handleResize = () => {
-          if (locomotiveScrollRef.current) {
-            locomotiveScrollRef.current.update();
-          }
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
+        scrollRef.current = locomotiveScroll;
       } catch (error) {
-        console.error('Failed to initialize Locomotive Scroll:', error);
+        console.error('Failed to initialize Locomotive Scroll v5:', error);
       }
     };
 
-    // Small delay to ensure DOM is ready
-    const timeoutId = setTimeout(() => {
-      initScroll();
-    }, 100);
+    initScroll();
 
     // Cleanup
     return () => {
-      clearTimeout(timeoutId);
-      if (locomotiveScrollRef.current) {
-        locomotiveScrollRef.current.destroy();
-        locomotiveScrollRef.current = null;
+      if (scrollRef.current) {
+        scrollRef.current.destroy();
+        scrollRef.current = null;
       }
     };
-  }, [isMounted]);
+  }, []);
 
-  // Render children directly until mounted to prevent hydration issues
-  if (!isMounted) {
-    return <>{children}</>;
-  }
-
-  return (
-    <div
-      data-scroll-container
-      ref={scrollRef}
-      style={{ minHeight: '100vh' }}
-    >
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 }

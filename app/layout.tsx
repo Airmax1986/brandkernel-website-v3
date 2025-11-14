@@ -15,6 +15,14 @@ const CookieConsent = dynamic(
   }
 );
 
+// Lazy load SmoothScrolling (Locomotive Scroll v5)
+const SmoothScrolling = dynamic(
+  () => import("@/components/SmoothScrolling"),
+  {
+    ssr: false,
+  }
+);
+
 const inter = Inter({ 
   subsets: ["latin"], 
   weight: ["300", "500", "700"],
@@ -99,8 +107,10 @@ export default function RootLayout({
           }}
         />
 
-        <Header />
-        <main>{children}</main>
+        <SmoothScrolling>
+          <Header />
+          <main>{children}</main>
+        </SmoothScrolling>
         <CookieConsent />
       </body>
     </html>
