@@ -15,15 +15,6 @@ const CookieConsent = dynamic(
   }
 );
 
-// Lazy load SmoothScrolling to prevent issues with SSR
-const SmoothScrolling = dynamic(
-  () => import("@/components/SmoothScrolling"),
-  {
-    ssr: false,
-    loading: () => null
-  }
-);
-
 const inter = Inter({ 
   subsets: ["latin"], 
   weight: ["300", "500", "700"],
@@ -108,10 +99,8 @@ export default function RootLayout({
           }}
         />
 
-        <SmoothScrolling>
-          <Header />
-          <main>{children}</main>
-        </SmoothScrolling>
+        <Header />
+        <main>{children}</main>
         <CookieConsent />
       </body>
     </html>
